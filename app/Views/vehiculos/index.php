@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
 
 </head>
 
@@ -50,7 +50,7 @@
 
         <h3 data-speed="-2" class="home-parallax">find your car</h3>
 
-        <img data-speed="5" class="home-parallax" src="image/home-img.png" alt="">
+        <img data-speed="5" class="home-parallax" src="assets/public/assets/image/home-img.png" alt="">
 
         <a data-speed="7" href="#" class="btn home-parallax">explore cars</a>
 
@@ -101,7 +101,7 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide box">
-                    <img src="image/vehicle-1.png" alt="">
+                    <img src="public/assets/image/vehicle-1.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="price"> <span>price : </span> $62,000/- </div>
@@ -117,7 +117,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/vehicle-2.png" alt="">
+                    <img src="public/assets/image/vehicle-2.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="price"> <span>price : </span> $62,000/- </div>
@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/vehicle-3.png" alt="">
+                    <img src="public/assets/image/vehicle-3.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="price"> <span>price : </span> $62,000/- </div>
@@ -149,7 +149,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/vehicle-4.png" alt="">
+                    <img src="public/assets/image/vehicle-4.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="price"> <span>price : </span> $62,000/- </div>
@@ -165,7 +165,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/vehicle-5.png" alt="">
+                    <img src="public/assets/image/vehicle-5.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="price"> <span>price : </span> $62,000/- </div>
@@ -181,7 +181,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/vehicle-6.png" alt="">
+                    <img src="public/assets/image/vehicle-6.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="price"> <span>price : </span> $62,000/- </div>
@@ -265,7 +265,7 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide box">
-                    <img src="image/car-1.png" alt="">
+                    <img src="public/assets/image/car-1.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -281,7 +281,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/car-2.png" alt="">
+                    <img src="public/assets/image/car-2.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -297,7 +297,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/car-3.png" alt="">
+                    <img src="public/assets/image/car-3.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -313,7 +313,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/car-4.png" alt="">
+                    <img src="public/assets/image/car-4.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -339,7 +339,7 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide box">
-                    <img src="image/car-5.png" alt="">
+                    <img src="public/assets/image/car-5.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -355,7 +355,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/car-6.png" alt="">
+                    <img src="public/assets/image/car-6.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -371,7 +371,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/car-7.png" alt="">
+                    <img src="public/assets/image/car-7.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -387,7 +387,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/car-8.png" alt="">
+                    <img src="public/assets/image/car-8.png" alt="">
                     <div class="content">
                         <h3>new model</h3>
                         <div class="stars">
@@ -431,7 +431,7 @@
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-1.png" alt="">
+                    <img src="public/assets/image/pic-1.png" alt="">
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
                         <h3>john deo</h3>
@@ -446,7 +446,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-2.png" alt="">
+                    <img src="public/assets/image/pic-2.png" alt="">
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
                         <h3>john deo</h3>
@@ -461,7 +461,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-3.png" alt="">
+                    <img src="public/assets/image/pic-3.png" alt="">
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
                         <h3>john deo</h3>
@@ -476,7 +476,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-4.png" alt="">
+                    <img src="public/assets/image/pic-4.png" alt="">
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
                         <h3>john deo</h3>
@@ -491,7 +491,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-5.png" alt="">
+                    <img src="public/assets/image/pic-5.png" alt="">
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
                         <h3>john deo</h3>
@@ -506,7 +506,7 @@
                 </div>
 
                 <div class="swiper-slide box">
-                    <img src="image/pic-6.png" alt="">
+                    <img src="public/assets/image/pic-6.png" alt="">
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
                         <h3>john deo</h3>
@@ -595,7 +595,7 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-    <script src="js/script.js"></script>
+    <script src="public/assets/js/script.js"></script>
 
 </body>
 

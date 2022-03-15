@@ -14,7 +14,7 @@
     <!-- bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
 
 </head>
 
@@ -77,7 +77,7 @@
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide box">
-                            <img src="image/car-1.png" alt="">
+                            <img src="public/assets/image/car-1.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="swiper-slide box">
-                            <img src="image/car-2.png" alt="">
+                            <img src="public/assets/image/car-2.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -109,7 +109,7 @@
                         </div>
 
                         <div class="swiper-slide box">
-                            <img src="image/car-3.png" alt="">
+                            <img src="public/assets/image/car-3.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -125,7 +125,7 @@
                         </div>
 
                         <div class="swiper-slide box">
-                            <img src="image/car-4.png" alt="">
+                            <img src="public/assets/image/car-4.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -151,7 +151,7 @@
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide box">
-                            <img src="image/car-5.png" alt="">
+                            <img src="public/assets/image/car-5.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -167,7 +167,7 @@
                         </div>
 
                         <div class="swiper-slide box">
-                            <img src="image/car-6.png" alt="">
+                            <img src="public/assets/image/car-6.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -183,7 +183,7 @@
                         </div>
 
                         <div class="swiper-slide box">
-                            <img src="image/car-7.png" alt="">
+                            <img src="public/assets/image/car-7.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -199,7 +199,7 @@
                         </div>
 
                         <div class="swiper-slide box">
-                            <img src="image/car-8.png" alt="">
+                            <img src="public/assets/image/car-8.png" alt="">
                             <div class="content">
                                 <h3>new model</h3>
                                 <div class="stars">
@@ -276,7 +276,7 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-    <script src="js/script.js"></script>
+    <script src="public/assets/js/script.js"></script>
 
 </body>
 
