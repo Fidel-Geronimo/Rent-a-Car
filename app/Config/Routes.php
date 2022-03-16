@@ -51,3 +51,6 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 $routes->get('catalogo', 'Home::catalogo');
 $routes->get('admin', 'AdminController::index');
+$routes->get('admin/clientes', 'ClientesController::index');
+$routes->get('admin/empleados', 'EmpleadosController::index');
+$routes->get('admin/reportes', 'ReportesController::index');

@@ -4,18 +4,17 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 
-class AdminController extends Controller
+class ClientesController extends Controller
 {
-
     public function index()
     {
         $colorBotonesPanel = [
-            "dashboard" => "active bg-gradient-primary",
-            "clientes" => "",
+            "dashboard" => "",
+            "clientes" => "active bg-gradient-primary",
             "empleados" => "",
             "reportes" => "",
             "perfil" => "",
         ];
-        return view('admin/renta', $colorBotonesPanel);
+        return view('admin/clientes', $colorBotonesPanel);
     }
 }

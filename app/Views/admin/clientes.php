@@ -1,12 +1,11 @@
 <?= $this->include("includes/header"); ?>
-
-
-
 <div class="container-fluid py-4">
     <div class="card">
         <div class="card-header">
-            <h3>Empleados<a href="" class="btn bg-gradient-primary float-end">Nuevo</a></h3>
+            <h3>Clientes <a href="" class="btn bg-gradient-primary float-end">Nueva</a><a href="" class="btn bg-gradient-primary float-end me-3"><i class="material-icons">history</i></a></h3>
         </div>
+
+
         <div class="card-body">
             <table class="table table-striped">
                 <thead>
@@ -41,6 +40,4 @@
     </div>
 </div>
 </main>
-
-
 <?= $this->include("includes/footer"); ?>
