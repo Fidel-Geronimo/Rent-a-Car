@@ -1,0 +1,11 @@
+CRITICAL - 2022-03-16 18:03:40 --> Undefined variable $email
+#0 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#4 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(21): view('admin/clientes', Array)
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->index()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

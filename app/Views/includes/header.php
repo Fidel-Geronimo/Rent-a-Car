@@ -9,6 +9,10 @@
     <title>
         Admin
     </title>
+    <!-- alertify -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/public/assets/alertify/alertify.css" />
+
+
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
@@ -137,7 +141,6 @@
         <script src="<?= base_url() ?>/public/assets/admin/js/plugins/chartjs.min.js"></script>
         <!-- kit de iconos -->
 
-
         <script>
             var win = navigator.platform.indexOf('Win') > -1;
             if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -152,5 +155,39 @@
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="<?= base_url() ?>/public/assets/admin/js/material-dashboard.min.js?v=3.0.0"></script>
 </body>
+<!-- Modal de clintes -->
+<div class="modal fade" id="clientModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="clientModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="clientModalLabel">Nuevo Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input id="nombre" type="text" class="form-control nombre" placeholder="Nombre">
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="apellido" type="text" class="form-control apellido" placeholder="Apellido">
+                    <label for="apellido">Apellido</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="emai" type="email" class="form-control email" placeholder="Correo Electronico">
+                    <label for="email">Correo Electronico</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="telefono" type="number" class="form-control telefono" placeholder="Correo Electronico">
+                    <label for="telefono">Numero De Telefono</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary btnClientSave">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>

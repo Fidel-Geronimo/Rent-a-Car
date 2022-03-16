@@ -2,7 +2,7 @@
 <div class="container-fluid py-4">
     <div class="card">
         <div class="card-header">
-            <h3>Clientes <a href="" class="btn bg-gradient-primary float-end">Nueva</a><a href="" class="btn bg-gradient-primary float-end me-3"><i class="material-icons">history</i></a></h3>
+            <h3>Clientes <a href="" data-bs-toggle="modal" data-bs-target="#clientModal" class="btn bg-gradient-primary float-end"><i class="material-icons opacity-10">add</i> Nuevo</a><a href="" class="btn bg-gradient-primary float-end me-3"><i class="material-icons">history</i></a></h3>
         </div>
 
 
