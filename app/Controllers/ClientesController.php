@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\clientesModel;
-use CodeIgniter\HTTP\Request;
+
+use App\Models\ClientesModel;
 
 class ClientesController extends Controller
 {
 
     public function index()
     {
+        $clientes = new clientesModel;
+
+        $datos['clientes'] = $clientes ->findAll();
         $colorBotonesPanel = [
             "dashboard" => "",
             "clientes" => "active bg-gradient-primary",
@@ -31,7 +34,7 @@ class ClientesController extends Controller
             "telefono" => $this->request->getPost('telefono')
         ];
         $clientes->save($data);
-        $data = ['status' => 'Agregado Correctamente'];
+        $data = ['status' => 'Cliente Registrado!'];
         return $this->response->setJSON($data);
     }
 }
