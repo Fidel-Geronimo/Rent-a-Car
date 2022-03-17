@@ -55,3 +55,4 @@ $routes->get('admin/clientes', 'ClientesController::index');
 $routes->get('admin/empleados', 'EmpleadosController::index');
 $routes->get('admin/reportes', 'ReportesController::index');
 $routes->post('admin/clientes/nuevo', 'ClientesController::nuevo');
+$routes->post('admin/empleados/nuevo', 'EmpleadosController::nuevo');

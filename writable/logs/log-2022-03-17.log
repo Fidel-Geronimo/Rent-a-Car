@@ -1,0 +1,115 @@
+CRITICAL - 2022-03-17 08:11:27 --> Undefined variable $dashboard
+#0 C:\xampp\htdocs\rentacar\app\Views\includes\header.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 42)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\View\View.php(424): CodeIgniter\View\View->render('includes/header', NULL, true)
+#4 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(1): CodeIgniter\View\View->include('includes/header')
+#5 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#8 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(23): view('admin/clientes', Array)
+#9 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->index()
+#10 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#11 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-03-17 08:14:20 --> Array to string conversion
+#0 C:\xampp\htdocs\rentacar\app\Views\includes\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 50)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\View\View.php(424): CodeIgniter\View\View->render('includes/header', NULL, true)
+#4 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(1): CodeIgniter\View\View->include('includes/header')
+#5 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#8 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(24): view('admin/clientes', Array)
+#9 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->index()
+#10 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#11 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-03-17 08:16:00 --> Undefined variable $colorBotonesPanel
+#0 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 23)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->index()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-17 08:16:10 --> Undefined variable $data
+#0 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#4 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(23): view('admin/clientes', Array, Array)
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->index()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-17 08:16:18 --> Undefined variable $data
+#0 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#4 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(23): view('admin/clientes', Array, Array)
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->index()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-17 08:37:59 --> Undefined variable $dashboard
+#0 C:\xampp\htdocs\rentacar\app\Views\includes\header.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 42)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\View\View.php(424): CodeIgniter\View\View->render('includes/header', NULL, true)
+#4 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(1): CodeIgniter\View\View->include('includes/header')
+#5 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#8 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(29): view('admin/clientes')
+#9 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->nuevo()
+#10 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#11 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-03-17 08:38:27 --> Undefined variable $data
+#0 C:\xampp\htdocs\rentacar\app\Views\admin\clientes.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 21)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/clientes', Array, true)
+#4 C:\xampp\htdocs\rentacar\app\Controllers\ClientesController.php(36): view('admin/clientes', Array)
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\ClientesController->nuevo()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-17 10:58:30 --> Undefined property: App\Controllers\EmpleadosController::$1647532710_c0cc2d6cd922a08cc590.png
+#0 C:\xampp\htdocs\rentacar\app\Controllers\EmpleadosController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 31)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\EmpleadosController->nuevo()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-17 10:59:20 --> Allowed fields must be specified for model: App\Models\EmpleadosModel
+#0 C:\xampp\htdocs\rentacar\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\Empl...')
+#1 C:\xampp\htdocs\rentacar\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\rentacar\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\rentacar\app\Controllers\EmpleadosController.php(36): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\EmpleadosController->nuevo()
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-03-17 11:00:08 --> Column 'telefono' cannot be null
+ERROR - 2022-03-17 11:00:39 --> Column 'telefono' cannot be null
+ERROR - 2022-03-17 11:02:34 --> Column 'telefono' cannot be null
+ERROR - 2022-03-17 11:03:11 --> Column 'telefono' cannot be null
+CRITICAL - 2022-03-17 11:22:32 --> syntax error, unexpected token "}"
+#0 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

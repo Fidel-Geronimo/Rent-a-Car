@@ -18,6 +18,8 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- Data table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <!-- CSS Files -->
     <link id="pagestyle" href="<?= base_url() ?>/public/assets/admin/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
 </head>
@@ -164,28 +166,71 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <div class="modal-body">
-                <div class="form-floating mb-3">
-                    <input id="nombre" type="text" class="form-control nombre" placeholder="Nombre">
-                    <label for="nombre">Nombre</label>
+            <form id="clientForm" action="<?= base_url('admin/clientes/nuevo') ?>" method="POST">
+                <div class="modal-body">
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Nombre</label>
+                        <input required id="nombre" name="nombre" type="text" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Apellido</label>
+                        <input required id="apellido" name="apellido" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Email</label>
+                        <input required id="email" name="email" type="email" class="form-control">
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Telefono</label>
+                        <input required id="telefono" name="telefono" type="number" class="form-control">
+                    </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <input id="apellido" type="text" class="form-control apellido" placeholder="Apellido">
-                    <label for="apellido">Apellido</label>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnClientSave">Registrar</button>
                 </div>
-                <div class="form-floating mb-3">
-                    <input id="emai" type="email" class="form-control email" placeholder="Correo Electronico">
-                    <label for="email">Correo Electronico</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input id="telefono" type="number" class="form-control telefono" placeholder="Correo Electronico">
-                    <label for="telefono">Numero De Telefono</label>
-                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal de Empleados -->
+<div class="modal fade" id="modalEmpleado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="empleadoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="empleadoModal">Nuevo Empleado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary btnClientSave">Registrar</button>
-            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form action="<?= base_url('admin/empleados/nuevo') ?>" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Email</label>
+                        <input id="email" name="email" type="email" class="form-control">
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Telefono</label>
+                        <input id="telefono" name="telefono" type="number" class="form-control">
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Funcion</label>
+                        <input id="funcion" name="funcion" type="text" class="form-control">
+                    </div>
+                    <div class="">
+                        <label for="">Foto</label><br>
+                        <input type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnEmpleadoSave">Registrar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
