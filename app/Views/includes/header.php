@@ -11,8 +11,6 @@
     </title>
     <!-- alertify -->
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/public/assets/alertify/alertify.css" />
-
-
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
@@ -194,6 +192,46 @@
         </div>
     </div>
 </div>
+
+<!-- Modal de editar Cliente -->
+<div class="modal fade" id="clientModalEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="clientModalLabelEdit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="clientModalLabelEdit">Nuevo Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form id="clientFormEdit" action="<?= base_url('admin/clientes/editar') ?>" method="POST">
+                <div class="modal-body">
+                    <input name="idCliente" id="idCliente" type="hidden" value="">
+                    <div class="input-group input-group-static mb-4">
+                        <label>Nombre</label>
+                        <input required id="nombreCliente" name="nombre" type="text" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group input-group-static mb-4">
+                        <label>Apellido</label>
+                        <input required id="apellidoCliente" name="apellido" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <label>Email</label>
+                        <input required id="emailCliente" name="email" type="email" class="form-control">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <label>Telefono</label>
+                        <input required id="telefonoCliente" name="telefono" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnClientSave">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Modal de Empleados -->
 <div class="modal fade" id="modalEmpleado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="empleadoModal" aria-hidden="true">
     <div class="modal-dialog">
@@ -203,32 +241,77 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <form action="<?= base_url('admin/empleados/nuevo') ?>" method="POST" enctype="multipart/form-data">
+            <form id="empleadoForm" action="<?= base_url('admin/empleados/nuevo') ?>" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Nombre</label>
-                        <input id="nombre" name="nombre" type="text" type="text" class="form-control">
+                        <input required id="nombre" name="nombre" type="text" type="text" class="form-control">
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Email</label>
-                        <input id="email" name="email" type="email" class="form-control">
+                        <input required id="email" name="email" type="email" class="form-control">
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Telefono</label>
-                        <input id="telefono" name="telefono" type="number" class="form-control">
+                        <input required id="telefono" name="telefono" type="number" class="form-control">
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Funcion</label>
-                        <input id="funcion" name="funcion" type="text" class="form-control">
+                        <input required id="funcion" name="funcion" type="text" class="form-control">
                     </div>
                     <div class="">
                         <label for="">Foto</label><br>
-                        <input type="file" class="form-control" id="foto" name="foto">
+                        <input required accept="image/png,image/jpeg,image/jpg" type="file" class="form-control" id="foto" name="foto">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary btnEmpleadoSave">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Edicion Empleados -->
+<div class="modal fade" id="modalEmpleadoEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="empleadoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="empleadoModal">Edicion Empleado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form id="empleadoFormEdit" action="<?= base_url('admin/empleados/editar') ?>" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input name="idEmpleado" id="idEmpleado" type="hidden" value="">
+                    <div class="input-group input-group-static mb-4">
+                        <label>Nombre</label>
+                        <input required id="nombreEmpleado" name="nombre" type="text" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <label>Email</label>
+                        <input required id="emailEmpleado" name="email" type="email" class="form-control">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <label>Telefono</label>
+                        <input required id="telefonoEmpleado" name="telefono" type="number" class="form-control">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <label>Funcion</label>
+                        <input required id="funcionEmpleado" name="funcion" type="text" class="form-control">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <img id="fotoEmpleado" src="" class="img-fluid mx-auto d-block shadow border-radius-lg"" alt=" ...">
+                    </div>
+                    <div class="">
+                        <label for="">Foto</label><br>
+                        <input accept="image/png,image/jpeg,image/jpg" type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnEmpleadoSave">Editar</button>
                 </div>
             </form>
         </div>

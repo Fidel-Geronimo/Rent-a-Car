@@ -2,6 +2,7 @@
 
 <!-- jquery 3.6.0 -->
 <script src="<?= base_url() ?>/public/assets/js/jquery-3.6.0.min.js"></script>
+<!-- validacion de formularios -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <!-- alertify -->
 <script src="<?= base_url() ?>/public/assets/alertify/alertify.js"></script>
