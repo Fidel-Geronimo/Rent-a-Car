@@ -44,6 +44,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a id="clientes" class="nav-link text-white <?= $vehiculos ?>" href="<?= base_url("admin/vehiculos") ?>">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">directions_car</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Vehiculos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a id="clientes" class="nav-link text-white <?= $clientes ?>" href="<?= base_url("admin/clientes") ?>">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">groups</i>

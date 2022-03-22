@@ -11,6 +11,7 @@ class AdminController extends Controller
     {
         $colorBotonesPanel = [
             "dashboard" => "active bg-gradient-primary",
+            "vehiculos" => "",
             "clientes" => "",
             "empleados" => "",
             "reportes" => "",

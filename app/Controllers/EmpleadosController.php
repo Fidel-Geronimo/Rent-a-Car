@@ -16,6 +16,7 @@ class EmpleadosController extends Controller
         $datos = [
             "dashboard" => "",
             "clientes" => "",
+            "vehiculos" => "",
             "empleados" => "active bg-gradient-primary",
             "reportes" => "",
             "perfil" => "",

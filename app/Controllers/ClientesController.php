@@ -18,6 +18,7 @@ class ClientesController extends Controller
         $data = [
             "dashboard" => "",
             "clientes" => "active bg-gradient-primary",
+            "vehiculos" => "",
             "empleados" => "",
             "reportes" => "",
             "perfil" => "",

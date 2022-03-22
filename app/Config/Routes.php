@@ -62,3 +62,4 @@ $routes->post('admin/empleados/verData', 'EmpleadosController::verData');
 $routes->post('admin/empleados/editar', 'EmpleadosController::editar');
 $routes->post('admin/clientes/editar', 'ClientesController::editar');
 $routes->post('admin/clientes/verData', 'ClientesController::verData');
+$routes->get('admin/vehiculos', 'vehiculosController::index');
