@@ -1,8 +1,8 @@
-# Título del Proyecto
+# Rent A Car
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Este es un sistema para un Rent A Car, posee un panel administrativo para gestionar las solicitudes de los clientes, cabe a estacar que tanmbien cuenta con una parte para el cliente, donde este podra realizar sus solicitudes a nuestro negocio y posterior a eso ser gestionadas por el personal administrativo del local mediante el panel administrativo.
 
-## Comenzando 🚀
+## Comenzando 😍
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
