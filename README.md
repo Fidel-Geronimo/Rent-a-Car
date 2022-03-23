@@ -2,15 +2,9 @@
 
 Este es un sistema para un Rent A Car, posee un panel administrativo para gestionar las solicitudes de los clientes, cabe a estacar que tanmbien cuenta con una parte para el cliente, donde este podra realizar sus solicitudes a nuestro negocio y posterior a eso ser gestionadas por el personal administrativo del local mediante el panel administrativo.
 
-## Comenzando 😍
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+Lista de Tecnologias utilizadas:
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
