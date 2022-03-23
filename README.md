@@ -6,28 +6,16 @@ Este es un sistema para un Rent A Car, posee un panel administrativo para gestio
 
 Lista de Tecnologias utilizadas:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+* [CodeIgniter 4](https://codeigniter.com/) - El framework web usado
+* [PHP](https://www.php.net/) - Lenguaje Usado En El Framework
+* [Bootstrap 5](https://getbootstrap.com/) - Usado para Diseñar El Fronted
+* [Jquery](https://jquery.com/) - Libreria Usada Para manipulación de documentos HTML y el manejo de eventos.
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+Este proyecto es construido por motivos universitarios. Aqui los responsables
 
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
+* **Fidel Geronimo** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
