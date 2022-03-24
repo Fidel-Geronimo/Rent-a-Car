@@ -14,12 +14,13 @@ Lista de Tecnologias utilizadas:
 * [PHP](https://www.php.net/) - Lenguaje Usado En El Framework
 * [Bootstrap 5](https://getbootstrap.com/) - Usado para Diseñar El Fronted
 * [Jquery](https://jquery.com/) - Libreria Usada Para manipulación de documentos HTML y el manejo de eventos.
+* [CloudTables](https://datatables.net/) - Libreria Para Organizacion y Paginacion De Tablas
 
 ## Autores ✒️
 
 Este proyecto es construido por motivos universitarios. Aqui los responsables
 
-* **Fidel Geronimo** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
+* **Fidel Geronimo** - *Trabajo Completo* - [FidelGeronimo](https://github.com/Fidel-Geronimo)
 
 ## Licencia 📄
 
