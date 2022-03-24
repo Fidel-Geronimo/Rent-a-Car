@@ -43,6 +43,7 @@ class AdminControllerRenta extends Controller
             "idvehiculo" => $idVehiculo
         ];
         print_r($data);
+        print("a");
         $renta->insert($data);
 
         // $apellido =  $this->request->getVar('apellido');
