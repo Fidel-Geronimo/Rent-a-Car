@@ -50,7 +50,8 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
 $routes->get('catalogo', 'Home::catalogo');
-$routes->get('admin', 'AdminController::index');
+$routes->get('admin', 'AdminControllerRenta::index');
+$routes->post('admin/nuevaRentaAdmin', 'AdminControllerRenta::nuevaRentaAdmin');
 $routes->get('admin/clientes', 'ClientesController::index');
 $routes->get('admin/empleados', 'EmpleadosController::index');
 $routes->get('admin/reportes', 'ReportesController::index');
@@ -63,6 +64,7 @@ $routes->post('admin/empleados/editar', 'EmpleadosController::editar');
 $routes->post('admin/clientes/editar', 'ClientesController::editar');
 $routes->post('admin/clientes/verData', 'ClientesController::verData');
 $routes->get('admin/clientes/verDataRenta', 'ClientesController::verDataRenta');
+$routes->post('admin/clientes/rellenarInputs', 'ClientesController::rellenarInputs');
 $routes->get('admin/vehiculos', 'vehiculosController::index');
 $routes->post('admin/vehiculos/nuevo', 'vehiculosController::nuevo');
 $routes->post('admin/vehiculos/verData', 'vehiculosController::verData');

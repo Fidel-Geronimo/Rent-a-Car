@@ -80,69 +80,111 @@
 
 
 <script>
-    // boton editar Vehiculo
-    $(".btnEditarVehiculo").click(function(e) {
+    $(document).ready(function() {
 
-        let idVehiculo = $(this).closest('tr').find(".idVehiculo").text();
-        // console.log(idVehiculo);
 
-        $.ajax({
-            method: "POST",
-            url: "vehiculos/verData",
-            data: {
-                'idVehiculo': idVehiculo
-            },
-            success: function(response) {
-                // console.log(response);
-                $.each(response, function(key, vehiculo) {
-                    $("#idVehiculo").val(vehiculo['id']);
-                    $("#descripcionEdit").val(vehiculo['descripcion']);
-                    $("#modeloEdit").val(vehiculo['modelo']);
-                    $("#marcaEdit").val(vehiculo['marca']);
-                    $("#precioEdit").val(vehiculo['precio']);
-                    $("#placaEdit").val(vehiculo['placa']);
-                    $("#chasisEdit").val(vehiculo['chasis']);
-                    $("#motorEdit").val(vehiculo['motor']);
-                    $("#personasVehiculoEdit").val(vehiculo['personas']);
-                    $("#maletasVehiculoEdit").val(vehiculo['maletas']);
-                    $("#estadoVehiculoEdit").val(vehiculo['estado']);
-                    $("#combustibleVehiculoEdit").val(vehiculo['tipocombustible']);
-                    $("#transmisionVehiculoEdit").val(vehiculo['transmision']);
-                    $("#tipoVehiculoEdit").val(vehiculo['tipovehiculo']);
-                    $("#fotoVehiculo").attr("src", '<?= base_url("/public/uploads") ?>/' + vehiculo['foto']);
-                    $("#modalVehiculoEdit").modal("show")
-                });
+        // boton editar Vehiculo
+        $(".btnEditarVehiculo").click(function(e) {
 
-            }
+            let idVehiculo = $(this).closest('tr').find(".idVehiculo").text();
+            // console.log(idVehiculo);
+
+            $.ajax({
+                method: "POST",
+                url: "vehiculos/verData",
+                data: {
+                    'idVehiculo': idVehiculo
+                },
+                success: function(response) {
+                    // console.log(response);
+                    $.each(response, function(key, vehiculo) {
+                        $("#idVehiculo").val(vehiculo['id']);
+                        $("#descripcionEdit").val(vehiculo['descripcion']);
+                        $("#modeloEdit").val(vehiculo['modelo']);
+                        $("#marcaEdit").val(vehiculo['marca']);
+                        $("#precioEdit").val(vehiculo['precio']);
+                        $("#placaEdit").val(vehiculo['placa']);
+                        $("#chasisEdit").val(vehiculo['chasis']);
+                        $("#motorEdit").val(vehiculo['motor']);
+                        $("#personasVehiculoEdit").val(vehiculo['personas']);
+                        $("#maletasVehiculoEdit").val(vehiculo['maletas']);
+                        $("#estadoVehiculoEdit").val(vehiculo['estado']);
+                        $("#combustibleVehiculoEdit").val(vehiculo['tipocombustible']);
+                        $("#transmisionVehiculoEdit").val(vehiculo['transmision']);
+                        $("#tipoVehiculoEdit").val(vehiculo['tipovehiculo']);
+                        $("#fotoVehiculo").attr("src", '<?= base_url("/public/uploads") ?>/' + vehiculo['foto']);
+                        $("#modalVehiculoEdit").modal("show")
+                    });
+
+                }
+            });
+
         });
 
-    });
+        // Vehiculo End
 
-    // Vehiculo End
+        // -=====================Formulario de Renta=========================
 
-    // -=====================Formulario de Renta=========================
+        $(".btnRentarVehiculo").click(function(e) {
+            let idVehiculoRenta = $(this).closest('tr').find(".idVehiculo").text();
+            $("#idVehiculoRenta").val(idVehiculoRenta);
 
-    $(".btnRentarVehiculo").click(function(e) {
-
-        $.ajax({
-            type: "GET",
-            url: "clientes/verDataRenta",
-            success: function(response) {
-                // console.log(response);
-                $.each(response, function(key, datos) {
+            $.ajax({
+                type: "GET",
+                url: "clientes/verDataRenta",
+                success: function(response) {
+                    // console.log(response);
+                    $("#clienteRenta").empty();
                     $('#clienteRenta').prepend($('<option />', {
-                        text: datos['nombre'],
-                        value: datos['id']
+                        text: 'Seleccion El Cliente',
+                        value: '0'
                     }));
-                    $("#vehiculoModalRenta").modal("show")
+                    $.each(response, function(key, datos) {
+                        $('#clienteRenta').prepend($('<option />', {
+                            text: datos['nombre'],
+                            value: datos['id']
+                        }));
+                        $("#vehiculoModalRenta").modal("show")
+                    });
+                }
+            });
+
+        });
+        // onchange del select de cliente
+        $("#clienteRenta").change(function(e) {
+            let idCliente = $("#clienteRenta").val();
+            if (idCliente != 0) {
+                $("#clienteRenta option[value='0']").remove();
+                // console.log(idCliente);
+                $.ajax({
+                    type: "POST",
+                    url: "clientes/rellenarInputs",
+                    data: {
+                        'idCliente': idCliente
+                    },
+                    success: function(response) {
+                        // console.log(response.email);
+                        $.each(response, function(key, datosCliente) {
+                            $("#telefonoRenta").val(datosCliente['telefono']);
+                            $("#emailRenta").val(datosCliente['email']);
+                        });
+                    }
                 });
             }
+
+
         });
-
+        // -=====================Formulario de Renta END=========================
+        // ======================Captura Valor fechas ==========================
+        $("#fechaRecogida").change(function(e) {
+            let min = $("#fechaRecogida").val();
+            // console.log(min);
+            $("#fechaDevolucion").val(min);
+            $("#fechaDevolucion").attr({
+                "min": min // values (or variables) here
+            });
+        });
     });
-    $("#clienteRenta").change(function(e) {
-        console.log("klk");
 
-    });
-    // -=====================Formulario de Renta END=========================
+    // ======================Captura Valor fechas END ==========================
 </script>

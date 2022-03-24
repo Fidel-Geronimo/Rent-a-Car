@@ -39,7 +39,6 @@ class ClientesController extends Controller
         if ($nombre != "" || $apellido != "" || $email != "" || $telefono != "") {
             $datos = [
                 "nombre" => $this->request->getVar('nombre'),
-                "apellido" => $this->request->getVar('apellido'),
                 "email" => $this->request->getVar('email'),
                 "telefono" => $this->request->getVar('telefono')
             ];
@@ -79,12 +78,18 @@ class ClientesController extends Controller
         $data = $clientes->findAll();
         return $this->response->setJSON($data);
     }
+    public function rellenarInputs()
+    {
+        $clientes = new ClientesModel;
+        $idCliente = $this->request->getPost('idCliente');
+        $data['cliente']  = $clientes->find($idCliente);
+        return $this->response->setJSON($data);
+    }
     public function editar()
     {
         $clientes = new ClientesModel;
         $data = [
             "nombre" => $this->request->getVar('nombre'),
-            "apellido" => $this->request->getVar('apellido'),
             "email" => $this->request->getVar('email'),
             "telefono" => $this->request->getVar('telefono')
         ];

@@ -29,7 +29,7 @@
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
                 <img src="<?= base_url() ?>/public/assets/admin/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold text-white">Material Dashboard 2</span>
+                <span class="ms-1 font-weight-bold text-white">Admin Panel</span>
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">
@@ -175,13 +175,8 @@
             <form id="clientForm" action="<?= base_url('admin/clientes/nuevo') ?>" method="POST">
                 <div class="modal-body">
                     <div class="input-group input-group-dynamic mb-4">
-                        <label class="form-label">Nombre</label>
+                        <label class="form-label">Nombre Completo</label>
                         <input required id="nombre" name="nombre" type="text" type="text" class="form-control">
-                    </div>
-
-                    <div class="input-group input-group-dynamic mb-4">
-                        <label class="form-label">Apellido</label>
-                        <input required id="apellido" name="apellido" type="text" class="form-control">
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Email</label>
@@ -216,11 +211,6 @@
                     <div class="input-group input-group-static mb-4">
                         <label>Nombre</label>
                         <input required id="nombreCliente" name="nombre" type="text" type="text" class="form-control">
-                    </div>
-
-                    <div class="input-group input-group-static mb-4">
-                        <label>Apellido</label>
-                        <input required id="apellidoCliente" name="apellido" type="text" class="form-control">
                     </div>
                     <div class="input-group input-group-static mb-4">
                         <label>Email</label>
@@ -588,22 +578,47 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <form id="vehiculoNuevoForm" action="<?= base_url('admin/vehiculos/nuevo') ?>" method="POST" enctype="multipart/form-data">
+            <form id="vehiculoNuevoForm" action="<?= base_url('admin/nuevaRentaAdmin') ?>" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
+                    <input name="idVehiculoRenta" id="idVehiculoRenta" type="hidden" value="">
                     <div class="input-group input-group-static mb-4">
                         <label for="clienteRenta" class="ms-0">Cliente</label>
-                        <select class="form-control" id="clienteRenta" name="clienteRenta">
-
+                        <select readonly class="form-control" id="clienteRenta" name="clienteRenta">
+                            <option value="" selected>Seleccion El Cliente</option>
                         </select>
                     </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        <label class="form-label">Telefono</label>
-                        <input readonly required id="telefonoRenta" name="telefonoRenta" type="tel" class="form-control">
+                    <div class="input-group input-group-static mb-4">
+                        <label>Telefono</label>
+                        <input required id="telefonoRenta" name="telefonoRenta" type="tel" class="form-control">
                     </div>
-                    <div class="input-group input-group-dynamic mb-4">
-                        <label class="form-label">Correo Electronico</label>
-                        <input readonly required id="emailRenta" name="emailRenta" type="tel" class="form-control">
+                    <div class="input-group input-group-static mb-4">
+                        <label>Correo Electronico</label>
+                        <input readonly required id="emailRenta" name="emailRenta" type="email" class="form-control">
                     </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static my-3">
+                                <label>Fecha De Recogida</label>
+                                <?php $hoy = date("Y-m-d"); ?>
+                                <input name="fechaRecogida" id="fechaRecogida" required min="<?= $hoy ?>" type="date" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                                <label>Hora De Recogida</label>
+                                <input name="horaRecogida" id="horaRecogida" required type="time" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static my-3">
+                                <label>Fecha De Devolucion</label>
+                                <input name="fechaDevolucion" id="fechaDevolucion" required min="" type="date" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                                <label>Hora De Devolucion</label>
+                                <input name="horaDevolucion" id="horaDevolucion" required type="time" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

@@ -33,7 +33,6 @@ session_start();
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-xs"><?= $datos['nombre'] ?></h6>
-                                                    <p class="text-xs text-secondary mb-0"><?= $datos['apellido'] ?></p>
                                                 </div>
                                             </div>
                                         </td>
@@ -92,7 +91,6 @@ session_start();
                 $.each(response, function(key, cliente) {
                     $("#idCliente").val(cliente['id']);
                     $("#nombreCliente").val(cliente['nombre']);
-                    $("#apellidoCliente").val(cliente['apellido']);
                     $("#emailCliente").val(cliente['email']);
                     $("#telefonoCliente").val(cliente['telefono']);
                     $("#clientModalEdit").modal("show")
