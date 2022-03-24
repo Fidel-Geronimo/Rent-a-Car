@@ -189,7 +189,7 @@
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Telefono</label>
-                        <input required id="telefono" name="telefono" type="number" class="form-control">
+                        <input required id="telefono" name="telefono" type="tel" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -228,7 +228,7 @@
                     </div>
                     <div class="input-group input-group-static mb-4">
                         <label>Telefono</label>
-                        <input required id="telefonoCliente" name="telefono" type="number" class="form-control">
+                        <input required id="telefonoCliente" name="telefono" type="tel" class="form-control">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -261,7 +261,7 @@
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Telefono</label>
-                        <input required id="telefono" name="telefono" type="number" class="form-control">
+                        <input required id="telefono" name="telefono" type="tel" class="form-control">
                     </div>
                     <div class="input-group input-group-dynamic mb-4">
                         <label class="form-label">Funcion</label>
@@ -303,7 +303,7 @@
                     </div>
                     <div class="input-group input-group-static mb-4">
                         <label>Telefono</label>
-                        <input required id="telefonoEmpleado" name="telefono" type="number" class="form-control">
+                        <input required id="telefonoEmpleado" name="telefono" type="tel" class="form-control">
                     </div>
                     <div class="input-group input-group-static mb-4">
                         <label>Funcion</label>
@@ -320,6 +320,294 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary btnEmpleadoSave">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Vehiculos -->
+<div class="modal fade" id="modalVehiculo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="vehiculoModalEdit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vehiculoModal">Nuevo Vehiculo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form id="vehiculoNuevoForm" action="<?= base_url('admin/vehiculos/nuevo') ?>" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Descripcion</label>
+                        <input required id="descripcion" name="descripcion" type="text" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-dynamic mb-4">
+                                <label class="form-label">Marca</label>
+                                <input required id="marca" name="marca" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-dynamic mb-4">
+                                <label class="form-label">Modelo</label>
+                                <input required id="modelo" name="modelo" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-dynamic mb-4">
+                                <label class="form-label">Precio Alquiler</label>
+                                <input required id="precio" name="precio" type="number" class="form-control">
+                            </div>
+                            <div class="input-group input-group-dynamic mb-4">
+                                <label class="form-label">No. Chasis</label>
+                                <input required id="chasis" name="chasis" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-dynamic mb-4">
+                                <label class="form-label">No. Motor</label>
+                                <input required id="motor" name="motor" type="text" class="form-control">
+                            </div>
+                            <div class="input-group input-group-dynamic mb-4">
+                                <label class="form-label">No. Placa</label>
+                                <input required id="placa" name="placa" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="tipoVehiculo" class="ms-0">Tipo De Vehiculo</label>
+                                <select class="form-control" id="tipoVehiculo" name="tipoVehiculo">
+                                    <option>Coche</option>
+                                    <option>Jeepeta</option>
+                                    <option>Furgoneta</option>
+                                </select>
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="transmisionVehiculo" class="ms-0">Transimision</label>
+                                <select class="form-control" id="transmisionVehiculo" name="transmisionVehiculo">
+                                    <option>Automatico</option>
+                                    <option>Manual</option>
+                                    <option>Hibrido</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="combustibleVehiculo" class="ms-0">Combustible</label>
+                                <select class="form-control" id="combustibleVehiculo" name="combustibleVehiculo">
+                                    <option>Gasolina</option>
+                                    <option>Gasoil</option>
+                                    <option>Gas</option>
+                                </select>
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="estadoVehiculo" class="ms-0">Estado</label>
+                                <select class="form-control" id="estadoVehiculo" name="estadoVehiculo">
+                                    <option>Nuevo</option>
+                                    <option>Usado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="maletasVehiculo" class="ms-0">Maletas</label>
+                                <select class="form-control" id="maletasVehiculo" name="maletasVehiculo">
+                                    <option>2</option>
+                                    <option>4</option>
+                                    <option>5+</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="personasVehiculo" class="ms-0">Personas</label>
+                                <select class="form-control" id="personasVehiculo" name="personasVehiculo">
+                                    <option>2</option>
+                                    <option>4</option>
+                                    <option>5+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="">Foto</label><br>
+                        <input accept="image/png,image/jpeg,image/jpg" type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnVehiculoNuevo">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Edicion Vehiculos -->
+<div class="modal fade" id="modalVehiculoEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="vehiculoModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vehiculoModalEdit">Edicion Vehiculo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form id="vehiculoNuevoForm" action="<?= base_url('admin/vehiculos/editar') ?>" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input id="idVehiculo" name="idVehiculo" type="hidden" value="">
+                    <div class="input-group input-group-static mb-4">
+                        <label>Descripcion</label>
+                        <input required id="descripcionEdit" name="descripcionEdit" type="text" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label>Marca</label>
+                                <input required id="marcaEdit" name="marcaEdit" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label>Modelo</label>
+                                <input required id="modeloEdit" name="modeloEdit" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label>Precio Alquiler</label>
+                                <input required id="precioEdit" name="precioEdit" type="number" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label>No. Chasis</label>
+                                <input required id="chasisEdit" name="chasisEdit" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label>No. Motor</label>
+                                <input required id="motorEdit" name="motorEdit" type="text" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label>No. Placa</label>
+                                <input required id="placaEdit" name="placaEdit" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="tipoVehiculoEdit" class="ms-0">Tipo De Vehiculo</label>
+                                <select class="form-control" id="tipoVehiculoEdit" name="tipoVehiculoEdit">
+                                    <option>Coche</option>
+                                    <option>Jeepeta</option>
+                                    <option>Furgoneta</option>
+                                </select>
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="transmisionVehiculoEdit" class="ms-0">Transimision</label>
+                                <select class="form-control" id="transmisionVehiculoEdit" name="transmisionVehiculoEdit">
+                                    <option>Automatico</option>
+                                    <option>Manual</option>
+                                    <option>Hibrido</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="combustibleVehiculoEdit" class="ms-0">Combustible</label>
+                                <select class="form-control" id="combustibleVehiculoEdit" name="combustibleVehiculoEdit">
+                                    <option>Gasolina</option>
+                                    <option>Gasoil</option>
+                                    <option>Gas</option>
+                                </select>
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="estadoVehiculoEdit" class="ms-0">Estado</label>
+                                <select class="form-control" id="estadoVehiculoEdit" name="estadoVehiculoEdit">
+                                    <option>Nuevo</option>
+                                    <option>Usado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="maletasVehiculoEdit" class="ms-0">Maletas</label>
+                                <select class="form-control" id="maletasVehiculoEdit" name="maletasVehiculoEdit">
+                                    <option>2</option>
+                                    <option>4</option>
+                                    <option>5+</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group input-group-static mb-4">
+                                <label for="personasVehiculoEdit" class="ms-0">Personas</label>
+                                <select class="form-control" id="personasVehiculoEdit" name="personasVehiculoEdit">
+                                    <option>2</option>
+                                    <option>4</option>
+                                    <option>5+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <img id="fotoVehiculo" src="" class="img-fluid mx-auto d-block shadow border-radius-lg"" alt=" ...">
+                    </div>
+                    <div class="">
+                        <label for="">Foto</label><br>
+                        <input accept="image/png,image/jpeg,image/jpg" type="file" class="form-control" id="foto" name="foto">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnVehiculoSave">Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal de Rentar de vehiculos -->
+<div class="modal fade" id="vehiculoModalRenta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="vehiculoModalRenta" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vehiculoModal">Nueva Renta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form id="vehiculoNuevoForm" action="<?= base_url('admin/vehiculos/nuevo') ?>" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="input-group input-group-static mb-4">
+                        <label for="clienteRenta" class="ms-0">Cliente</label>
+                        <select class="form-control" id="clienteRenta" name="clienteRenta">
+
+                        </select>
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Telefono</label>
+                        <input readonly required id="telefonoRenta" name="telefonoRenta" type="tel" class="form-control">
+                    </div>
+                    <div class="input-group input-group-dynamic mb-4">
+                        <label class="form-label">Correo Electronico</label>
+                        <input readonly required id="emailRenta" name="emailRenta" type="tel" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary btnVehiculoNuevo">Registrar</button>
                 </div>
             </form>
         </div>

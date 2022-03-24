@@ -73,6 +73,12 @@ class ClientesController extends Controller
 
         return $this->response->setJSON($data);
     }
+    public function verDataRenta()
+    {
+        $clientes = new ClientesModel;
+        $data = $clientes->findAll();
+        return $this->response->setJSON($data);
+    }
     public function editar()
     {
         $clientes = new ClientesModel;
