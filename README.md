@@ -2,6 +2,10 @@
 
 Este es un sistema para un Rent A Car, posee un panel administrativo para gestionar las solicitudes de los clientes, cabe a estacar que tanmbien cuenta con una parte para el cliente, donde este podra realizar sus solicitudes a nuestro negocio y posterior a eso ser gestionadas por el personal administrativo del local mediante el panel administrativo.
 
+## Project status ⭕
+Este Proyecto se encuentra actualmente en desarrollo, no cuenta con una version beta de prueba.
+Estaremos actualizando el repositorio con las respectivos updates del sistema.❤
+
 ## Construido con 🛠️
 
 Lista de Tecnologias utilizadas:
@@ -17,22 +21,28 @@ Este proyecto es construido por motivos universitarios. Aqui los responsables
 
 * **Fidel Geronimo** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+* Este proyecto no posee ninguna licencia actualmente, es totalmente **Open source.**
+
+## Vista Previa Del Sistema 📷
+
+### Primer Vistazo del cliente: 
+![image](https://user-images.githubusercontent.com/98572888/159933442-cf1bcaa6-84ce-40e9-9473-cce4cf0e3392.png)
+
+### Catalogo de Vehiculos Disponibles
+![image](https://user-images.githubusercontent.com/98572888/159933604-4ca3d1b0-ecc2-4398-a368-f83ed09a37ae.png)
+
+### Panel Administrativo:
+![image](https://user-images.githubusercontent.com/98572888/159933982-1bbe0783-1d4b-4a70-b524-38f86f636ac0.png)
+
+### Gestion De Empleados:
+![image](https://user-images.githubusercontent.com/98572888/159934050-3e93d985-bacd-42e3-b943-84eaa74cbef7.png)
+
 
 ## Expresiones de Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+* Agradecientos a nuestro profesor Jean Carlos Arnaud Batista que nos ha instruido de la mejor manera por ete camino del Desarrollo.
+* Gracias a el yo junto a mis compañeros de clases hemos podido construir esta como otras aplicaciones interesantes. 
 
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
 
