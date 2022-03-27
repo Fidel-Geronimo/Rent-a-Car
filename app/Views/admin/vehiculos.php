@@ -127,7 +127,7 @@
 
         $(".btnRentarVehiculo").click(function(e) {
             let idVehiculoRenta = $(this).closest('tr').find(".idVehiculo").text();
-            $("#idVehiculoRenta").val(idVehiculoRenta);
+            $("#idVehiculoRenta").val(idVehiculoRenta.split(" ").join(""));
 
             $.ajax({
                 type: "GET",
@@ -186,5 +186,20 @@
         });
     });
 
+    // obtencion de los valores antes de facturar
+    $('.btnSiguiente').click(function(e) {
+        e.preventDefault();
+        // captura de todos los datos del formulario de renta Admin
+        let cliente = $("#clienteRenta").val();
+        let telefono = $("#telefonoRenta").val();
+        let email = $("#emailRenta").val();
+        let fechaRecogida = $("#fechaRecogida").val();
+        let fechaDevolucion = $("#fechaDevolucion").val();
+        let horaRecogida = $("#horaRecogida").val();
+        let horaDevolucion = $("#horaDevolucion").val();
+        $("#vehiculoModalRenta").modal("hide");
+        $("#modalInspeccion").modal("show");
+
+    });
     // ======================Captura Valor fechas END ==========================
 </script>

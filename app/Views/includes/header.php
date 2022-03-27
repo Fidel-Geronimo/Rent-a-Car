@@ -540,7 +540,6 @@
                                     <option>5+</option>
                                 </select>
                             </div>
-
                         </div>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
@@ -578,7 +577,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <form id="vehiculoNuevoForm" action="<?= base_url('admin/nuevaRentaAdmin') ?>" method="POST" enctype="multipart/form-data">
+            <form id="vehiculoNuevoForm">
                 <div class="modal-body">
                     <input name="idVehiculoRenta" id="idVehiculoRenta" type="hidden" value="">
                     <div class="input-group input-group-static mb-4">
@@ -622,9 +621,67 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary btnVehiculoNuevo">Registrar</button>
+                    <button type="submit" class="btn btn-primary btnSiguiente">Siguiente</button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+<!-- modal de Proceso de inspeccion -->
+<!-- Modal -->
+<div class="modal fade" id="modalInspeccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalInspeccionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Inspeccion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Gato
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="" for="flexCheckChecked">
+                        Luces Xenon
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Goma De Repuesto
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Roturas De Cristal
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Kit De Herramientas
+                    </label>
+                </div>
+                <div class="container mt-4">
+                    <label for="combustible" class="ms-0">Cantidad De Conbustible</label>
+                    <select class="form-control" id="combustible" name="combustible">
+                        <option>1/2</option>
+                        <option>1/3</option>
+                        <option>3/4</option>
+                        <option>Lleno</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-bs-toggle="modal" data-bs-target="#vehiculoModalRenta" type="button" class="btn btn-secondary">Atras</button>
+                <button type="button" class="btn btn-primary">Registtrar</button>
+            </div>
         </div>
     </div>
 </div>

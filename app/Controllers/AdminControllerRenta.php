@@ -43,8 +43,8 @@ class AdminControllerRenta extends Controller
             "idvehiculo" => $idVehiculo
         ];
         print_r($data);
-        print("a");
         $renta->insert($data);
+        // return $this->response->redirect(base_url("admin"));
 
         // $apellido =  $this->request->getVar('apellido');
         // $email = $this->request->getVar('email');
@@ -61,6 +61,6 @@ class AdminControllerRenta extends Controller
         // } else {
         //     $_SESSION["notificacion"] = "Algo Salio Mal!";
         // }
-        // return $this->response->redirect(base_url("admin/clientes"));
+        // 
     }
 }
