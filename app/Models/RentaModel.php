@@ -10,6 +10,7 @@ class RentaModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'cliente',
+        'foto',
         'telefono',
         'email',
         'fecharecogida',
@@ -17,6 +18,15 @@ class RentaModel extends Model
         'horarecogida',
         'horadevolucion',
         'fecha',
-        'idvehiculo'
+        'idvehiculo',
+        'gato',
+        'luces',
+        'goma',
+        'kitherramientas',
+        'combustible',
+        'descripcionvehiculo',
+        'marcavehiculo',
+        'modelovehiculo',
+        'preciorenta',
     ];
 }

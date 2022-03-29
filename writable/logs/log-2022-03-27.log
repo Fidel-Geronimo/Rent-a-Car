@@ -1,0 +1,16 @@
+ERROR - 2022-03-27 10:40:03 --> Column 'goma' cannot be null
+ERROR - 2022-03-27 10:42:42 --> Column 'kitHerramientas' cannot be null
+ERROR - 2022-03-27 10:44:02 --> Column 'kitHerramientas' cannot be null
+ERROR - 2022-03-27 10:46:20 --> Column 'gato' cannot be null
+ERROR - 2022-03-27 10:46:44 --> Column 'kitHerramientas' cannot be null
+ERROR - 2022-03-27 10:52:21 --> Column 'luces' cannot be null
+ERROR - 2022-03-27 10:52:58 --> Column 'gato' cannot be null
+ERROR - 2022-03-27 10:53:34 --> Column 'gato' cannot be null
+ERROR - 2022-03-27 10:53:45 --> Column 'gato' cannot be null
+ERROR - 2022-03-27 10:55:19 --> Column 'gato' cannot be null
+ERROR - 2022-03-27 10:59:13 --> Column 'kitherramientas' cannot be null
+ERROR - 2022-03-27 11:00:08 --> Column 'kitherramientas' cannot be null
+ERROR - 2022-03-27 11:00:50 --> Column 'kitherramientas' cannot be null
+ERROR - 2022-03-27 11:00:58 --> Column 'kitherramientas' cannot be null
+ERROR - 2022-03-27 11:02:31 --> Column 'luces' cannot be null
+ERROR - 2022-03-27 11:02:49 --> Column 'kitherramientas' cannot be null

@@ -24,49 +24,49 @@
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <tr>
-                                    <td class="align-middle text-center text-sm idVehiculo">
-                                        <span class="text-secondary text-xs font-weight-normal">1</span>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="text-secondary text-xs font-weight-normal">Fidel Geronimo</span>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex px-2 py-1">
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-xs">Mitsubitchi Lanzer</h6>
-                                                <p class="text-xs text-secondary mb-0">Mitsubitchi</p>
-                                                <p class="text-xs text-secondary mb-0">2022</p>
+                                <?php foreach ($data as $datos) : ?>
+                                    <tr>
+                                        <td class="align-middle text-center text-sm idVehiculo">
+                                            <span class="text-secondary text-xs font-weight-normal"><?= $datos['id'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="text-secondary text-xs font-weight-normal"><?= $datos['cliente'] ?></span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-xs"><?= $datos['descripcionvehiculo'] ?></h6>
+                                                    <p class="text-xs text-secondary mb-0"><?= $datos['marcavehiculo'] ?></p>
+                                                    <p class="text-xs text-secondary mb-0"><?= $datos['modelovehiculo'] ?></p>
+                                                </div>
+                                                <div>
+                                                    <img src="<?= base_url("public/uploads") . '/' . $datos['foto']; ?>" class="avatar avatar-xl me-3">
+                                                </div>
                                             </div>
-                                            <div>
-                                                <img src="<?= base_url("public/uploads/1648083484_2d277bea50f488082d5b.png") ?>" class="avatar avatar-xl me-3">
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-normal">400</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <span class="text-secondary text-xs font-weight-normal">22-02-2022 --</span>
+                                                </div>
+                                                <div>
+                                                    <span class="text-secondary text-xs font-weight-normal">25-02-2022</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-normal">400</span>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <div class="d-flex px-2 py-1">
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <span class="text-secondary text-xs font-weight-normal">22-02-2022 --</span>
-                                            </div>
-                                            <div>
-                                                <span class="text-secondary text-xs font-weight-normal">25-02-2022</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-normal">22-03-2022</span>
-                                    </td>
-                                    <td class="align-middle">
-                                        <a class="btn btn-success btnRentarVehiculo"><span class="material-icons">receipt</span></a>
-                                        <a class="btn btn-info btnEditarVehiculo"><span class="material-icons">edit</span></a>
-                                        <a href="" class="btn btn-danger "><span class="material-icons">delete</span></a>
-                                    </td>
-                                </tr>
-
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-normal">22-03-2022</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a class="btn btn-success btnRentarVehiculo"><span class="material-icons">receipt</span></a>
+                                            <a class="btn btn-info btnEditarVehiculo"><span class="material-icons">edit</span></a>
+                                            <a href="" class="btn btn-danger "><span class="material-icons">delete</span></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

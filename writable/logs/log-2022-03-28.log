@@ -1,0 +1,85 @@
+ERROR - 2022-03-28 21:36:18 --> Column 'cliente' cannot be null
+ERROR - 2022-03-28 21:36:18 --> Column 'cliente' cannot be null
+ERROR - 2022-03-28 21:44:05 --> Column 'cliente' cannot be null
+ERROR - 2022-03-28 21:48:26 --> Column 'cliente' cannot be null
+ERROR - 2022-03-28 21:50:38 --> Column 'cliente' cannot be null
+CRITICAL - 2022-03-28 22:13:28 --> Undefined array key "id"
+#0 C:\xampp\htdocs\rentacar\app\Views\admin\renta.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/renta', Array, true)
+#4 C:\xampp\htdocs\rentacar\app\Controllers\AdminControllerRenta.php(25): view('admin/renta', Array)
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->index()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-28 22:17:46 --> Undefined variable $gato
+#0 C:\xampp\htdocs\rentacar\app\Controllers\AdminControllerRenta.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 48)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-28 22:19:59 --> Undefined variable $gato
+#0 C:\xampp\htdocs\rentacar\app\Controllers\AdminControllerRenta.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 48)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-28 22:32:02 --> Unsupported operand types: array * int
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:33:10 --> Unsupported operand types: array * int
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:33:11 --> Unsupported operand types: array * int
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:33:50 --> Unsupported operand types: array * int
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:33:55 --> Undefined variable $precioRenta
+#0 C:\xampp\htdocs\rentacar\app\Controllers\AdminControllerRenta.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 55)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-28 22:34:54 --> Unsupported operand types: array * int
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:35:37 --> Unsupported operand types: array * int
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:40:28 --> Class "App\Controllers\DateTime" not found
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-28 22:42:59 --> Call to a member function diff() on string
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

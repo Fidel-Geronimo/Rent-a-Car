@@ -6,12 +6,14 @@ use CodeIgniter\Controller;
 use App\Models\RentaModel; //modelo de las rentas
 use App\Models\ClientesModel; //modelo de los clientes
 use App\Models\VehiculoModel; //modelo de los vehiculos
+use CodeIgniter\I18n\Time; //hora
 
 class AdminControllerRenta extends Controller
 {
 
     public function index()
     {
+        $renta = new RentaModel;
         $colorBotonesPanel = [
             "dashboard" => "active bg-gradient-primary",
             "vehiculos" => "",
@@ -19,6 +21,7 @@ class AdminControllerRenta extends Controller
             "empleados" => "",
             "reportes" => "",
             "perfil" => "",
+            "data" => $renta->orderBy('fecha', 'DESC')->findAll()
         ];
         return view('admin/renta', $colorBotonesPanel);
     }
@@ -28,39 +31,39 @@ class AdminControllerRenta extends Controller
         $renta = new RentaModel;
         $clientes = new ClientesModel;
         $vehiculo = new VehiculoModel;
-        //===================================
-        $idVehiculo = $this->request->getPost('idVehiculoRenta');
-        $idCliente = $this->request->getVar('clienteRenta');
+        $idVehiculo = $this->request->getPost('idVehiculo');
+        $idCliente = $this->request->getPost('idCliente');
+        // $myTime = new Time($this->request->getPost('fechaDevolucion'));
+        // $diferencia = $myTime->difference($this->request->getPost('fechaDevolucion'));
+        // $dias = $diferencia->getDays();
+        $time = Time::parse('March 10, 2017', 'America/Chicago');
+        $diff = $time->difference('July 4, 1975 13:32:05', 'America/Chicago');
+
+        $precioRenta = $vehiculo->where('id', $idVehiculo)->findColumn('precio');
+        $precioRentaTotal = intval($precioRenta) * $diff->getDays();;
+        //===============================================================
         $data = [
             "cliente" => $clientes->where('id', $idCliente)->findColumn('nombre'),
             "foto" => $vehiculo->where('id', $idVehiculo)->findColumn('foto'),
-            "telefono" => $this->request->getVar('telefonoRenta'),
-            "email" => $this->request->getVar('emailRenta'),
-            "fecharecogida" => $this->request->getVar('fechaRecogida'),
-            "fechadevolucion" => $this->request->getVar('fechaDevolucion'),
-            "horarecogida" => $this->request->getVar('horaRecogida'),
-            "horadevolucion" => $this->request->getVar('horaDevolucion'),
-            "idvehiculo" => $idVehiculo
+            "telefono" => $this->request->getPost('telefonoRenta'),
+            "email" => $this->request->getPost('emailRenta'),
+            "fecharecogida" => $this->request->getPost('fechaRecogida'),
+            "fechadevolucion" => $this->request->getPost('fechaDevolucion'),
+            "horarecogida" => $this->request->getPost('horaRecogida'),
+            "horadevolucion" => $this->request->getPost('horaDevolucion'),
+            "idvehiculo" => $idVehiculo,
+            "gato" => $this->request->getPost('gato'),
+            "luces" => $this->request->getPost('luces'),
+            "goma" => $this->request->getPost('goma'),
+            "kitherramientas" => $this->request->getPost('kitHerramientas'),
+            "combustible" => $this->request->getPost('combustible'),
+            "descripcionvehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('descripcion'),
+            "marcavehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('marca'),
+            "modelovehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('modelo'),
+            "preciorenta" => $precioRentaTotal
         ];
-        print_r($data);
         $renta->insert($data);
-        // return $this->response->redirect(base_url("admin"));
-
-        // $apellido =  $this->request->getVar('apellido');
-        // $email = $this->request->getVar('email');
-        // $telefono = $this->request->getVar('telefono');
-
-        // if ($nombre != "" || $apellido != "" || $email != "" || $telefono != "") {
-        //     $datos = [
-        //         "nombre" => $this->request->getVar('nombre'),
-        //         "email" => $this->request->getVar('email'),
-        //         "telefono" => $this->request->getVar('telefono')
-        //     ];
-        //     $clientes->insert($datos);
-        //     $_SESSION["notificacion"] = "Cliente Registrado!";
-        // } else {
-        //     $_SESSION["notificacion"] = "Algo Salio Mal!";
-        // }
-        // 
+        $respuesta = ['notificacion' => $diff];
+        return $this->response->setJSON($respuesta);
     }
 }

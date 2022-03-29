@@ -78,7 +78,6 @@
 </script>
 <!-- ==========================End==================================== -->
 
-
 <script>
     $(document).ready(function() {
 
@@ -175,6 +174,7 @@
 
         });
         // -=====================Formulario de Renta END=========================
+
         // ======================Captura Valor fechas ==========================
         $("#fechaRecogida").change(function(e) {
             let min = $("#fechaRecogida").val();
@@ -189,16 +189,82 @@
     // obtencion de los valores antes de facturar
     $('.btnSiguiente').click(function(e) {
         e.preventDefault();
+        let idvehiculorenta = $("#idVehiculoRenta").val().replace(/\s+/g, '');
+
         // captura de todos los datos del formulario de renta Admin
-        let cliente = $("#clienteRenta").val();
-        let telefono = $("#telefonoRenta").val();
-        let email = $("#emailRenta").val();
+        let idcliente = $("#clienteRenta").val();
+        let idVehiculo = idvehiculorenta;
+        let telefonoRenta = $("#telefonoRenta").val();
+        let emailRenta = $("#emailRenta").val();
         let fechaRecogida = $("#fechaRecogida").val();
         let fechaDevolucion = $("#fechaDevolucion").val();
         let horaRecogida = $("#horaRecogida").val();
         let horaDevolucion = $("#horaDevolucion").val();
-        $("#vehiculoModalRenta").modal("hide");
-        $("#modalInspeccion").modal("show");
+
+        if (idVehiculo == "" || idcliente == "" ||
+            telefonoRenta == "" || telefonoRenta == "" || emailRenta == "" ||
+            fechaRecogida == "" || fechaDevolucion == "" || horaRecogida == "" || horaDevolucion == "") {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.error("Hay Campos Vacios");
+        } else {
+            $("#vehiculoModalRenta").modal("hide");
+            $("#modalInspeccion").modal("show");
+            $(".btnRegistrarRenta").click(function(e) {
+                let gato = 0;
+                let luces = 0;
+                let goma = 0;
+                let kitHerramientas = 0;
+                // console.log(kitHerramientas);
+                if ($('.gato').is(':checked')) {
+                    gato = 1;
+                }
+                if ($('.luces').is(':checked')) {
+                    luces = 1;
+                }
+                if ($('.goma').is(':checked')) {
+                    goma = 1;
+                }
+                if ($('.kitHerramientas').is(':checked')) {
+                    kitHerramientas = 1;
+                }
+
+                let combustible = $('#combustible').val();
+                let datos = {
+                    'idCliente': idcliente,
+                    'idVehiculo': idVehiculo,
+                    'telefonoRenta': telefonoRenta,
+                    'emailRenta': emailRenta,
+                    'fechaRecogida': fechaRecogida,
+                    'fechaDevolucion': fechaDevolucion,
+                    'horaRecogida': horaRecogida,
+                    'horaDevolucion': horaDevolucion,
+                    'gato': gato,
+                    'luces': luces,
+                    'goma': goma,
+                    'kitHerramientas': kitHerramientas,
+                    'combustible': combustible
+                }
+                $.ajax({
+                    type: "post",
+                    url: "nuevaRentaAdmin",
+                    data: datos,
+                    success: function(response) {
+                        $('.formularioInspeccion')[0].reset();
+                        $('#rentaVehiculo')[0].reset();
+                        $("#modalInspeccion").modal("hide");
+                        alertify.set('notifier', 'position', 'top-right');
+                        alertify.success(response.notificacion);
+                        // console.log(response);
+
+
+                    }
+                });
+
+
+            });
+        }
+
+
 
     });
     // ======================Captura Valor fechas END ==========================

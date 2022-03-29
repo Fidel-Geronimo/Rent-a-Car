@@ -577,7 +577,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <form id="vehiculoNuevoForm">
+            <form id="rentaVehiculo">
                 <div class="modal-body">
                     <input name="idVehiculoRenta" id="idVehiculoRenta" type="hidden" value="">
                     <div class="input-group input-group-static mb-4">
@@ -636,51 +636,46 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Inspeccion</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Gato
-                    </label>
+            <form class="formularioInspeccion">
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input gato" type="checkbox" value="1" id="gato">
+                        <label class="form-check-label" for="gato">
+                            Gato
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input luces" type="checkbox" value="1" id="luces">
+                        <label class="" for="luces">
+                            Luces Xenon
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input goma" type="checkbox" value="1" id="goma">
+                        <label class="form-check-label" for="goma">
+                            Goma De Repuesto
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input kitHerramientas" type="checkbox" value="1" id="herramientas">
+                        <label class="form-check-label" for="herramientas">
+                            Kit De Herramientas
+                        </label>
+                    </div>
+                    <div class="container mt-4">
+                        <label for="combustible" class="ms-0">Cantidad De Conbustible</label>
+                        <select class="form-control" id="combustible" name="combustible">
+                            <option>1/2</option>
+                            <option>1/3</option>
+                            <option>3/4</option>
+                            <option>Lleno</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label class="" for="flexCheckChecked">
-                        Luces Xenon
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Goma De Repuesto
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Roturas De Cristal
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label class="form-check-label" for="flexCheckChecked">
-                        Kit De Herramientas
-                    </label>
-                </div>
-                <div class="container mt-4">
-                    <label for="combustible" class="ms-0">Cantidad De Conbustible</label>
-                    <select class="form-control" id="combustible" name="combustible">
-                        <option>1/2</option>
-                        <option>1/3</option>
-                        <option>3/4</option>
-                        <option>Lleno</option>
-                    </select>
-                </div>
-            </div>
+            </form>
             <div class="modal-footer">
                 <button data-bs-toggle="modal" data-bs-target="#vehiculoModalRenta" type="button" class="btn btn-secondary">Atras</button>
-                <button type="button" class="btn btn-primary">Registtrar</button>
+                <button type="button" class="btn btn-primary btnRegistrarRenta">Registtrar</button>
             </div>
         </div>
     </div>
