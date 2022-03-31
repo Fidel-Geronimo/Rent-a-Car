@@ -628,7 +628,6 @@
     </div>
 </div>
 <!-- modal de Proceso de inspeccion -->
-<!-- Modal -->
 <div class="modal fade" id="modalInspeccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalInspeccionLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -680,5 +679,124 @@
         </div>
     </div>
 </div>
+
+<!-- Modal de Info renta -->
+<div class="modal fade" id="modalInfoRenta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="vehiculoModalRenta" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vehiculoModal">Info Renta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form id="rentaVehiculo">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="mb-4">
+                                <img src="<?= base_url("public/uploads/1648083037_69b52a37739de8113957.png") ?>" class="img-thumbnail float-start" alt="...">
+                            </div>
+                            <div class="col-6">
+                                <h4> Cliente:</h4>
+                                <div class="input-group input-group-static mb-4">
+                                    <label>Cliente</label>
+                                    <input readonly id="clienteRentaInfo" name="clienteRentaInfo" type="text" class="form-control">
+                                </div>
+                                <div class="input-group input-group-static mb-4">
+                                    <label>Telefono</label>
+                                    <input readonly id="telefonoRentaInfo" name="telefonoRentaInfo" type="text" class="form-control">
+                                </div>
+                                <div class="input-group input-group-static mb-4">
+                                    <label>Correo Electronico</label>
+                                    <input readonly id="emailRentaInfo" name="emailRentaInfo" type="text" class="form-control">
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="input-group input-group-static my-3">
+                                            <label>Fecha De Recogida</label>
+                                            <input id="fechaRecogidaInfo" readonly type="date" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-static my-3">
+                                            <label>Hora De Recogida</label>
+                                            <input id="horaRecogidaInfo" readonly type="time" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-group input-group-static my-3">
+                                            <label>Fecha De Devolucion</label>
+                                            <input id="fechaDevolucionInfo" readonly type="date" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-static my-3">
+                                            <label>Hora De Devolucion</label>
+                                            <input id="horaDevolucionInfo" readonly type="time" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h4>Vehiculo:</h4>
+                                <div class="input-group input-group-static mb-4">
+                                    <label>Descripcion</label>
+                                    <input readonly id="descripcionRentaInfo" name="descripcionRentaInfo" type="text" class="form-control">
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Marca</label>
+                                            <input readonly id="marcaRentaInfo" name="marcaRentaInfo" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Modelo</label>
+                                            <input readonly id="modeloRentaInfo" name="modeloEdit" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Precio Alquiler</label>
+                                            <input readonly id="precioRentaInfo" name="precioRentaInfo" type="number" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>No. Chasis</label>
+                                            <input readonly id="chasisRentaInfo" name="chasisRentaInfo" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Transmision</label>
+                                            <input readonly id="transmisionRentaInfo" name="transmisionRentaInfo" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>No. Motor</label>
+                                            <input readonly id="motorRentaInfo" name="motorRentaInfo" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>No. Placa</label>
+                                            <input readonly id="placaRentaInfo" name="placaRentaInfo" type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-static mb-4">
+                                            <label>Tipo Vehiculo</label>
+                                            <input readonly id="tipoRentaInfo" name="tipoRentaInfo" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Full screen modal -->
+
 
 </html>

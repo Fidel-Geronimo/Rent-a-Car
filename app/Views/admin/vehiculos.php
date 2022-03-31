@@ -200,6 +200,13 @@
         let fechaDevolucion = $("#fechaDevolucion").val();
         let horaRecogida = $("#horaRecogida").val();
         let horaDevolucion = $("#horaDevolucion").val();
+        // ========================================================================
+
+        // diferencia entre dos fechas
+        var fechaInicio = new Date(fechaRecogida).getTime();
+        var fechaFin = new Date(fechaDevolucion).getTime();
+        var diferenciaDias = (fechaFin - fechaInicio) / (1000 * 60 * 60 * 24);
+        // ========================================================================
 
         if (idVehiculo == "" || idcliente == "" ||
             telefonoRenta == "" || telefonoRenta == "" || emailRenta == "" ||
@@ -210,11 +217,12 @@
             $("#vehiculoModalRenta").modal("hide");
             $("#modalInspeccion").modal("show");
             $(".btnRegistrarRenta").click(function(e) {
+                let combustible = $('#combustible').val();
+                // validacion de los chech box
                 let gato = 0;
                 let luces = 0;
                 let goma = 0;
                 let kitHerramientas = 0;
-                // console.log(kitHerramientas);
                 if ($('.gato').is(':checked')) {
                     gato = 1;
                 }
@@ -227,8 +235,8 @@
                 if ($('.kitHerramientas').is(':checked')) {
                     kitHerramientas = 1;
                 }
+                // ===============================================================================
 
-                let combustible = $('#combustible').val();
                 let datos = {
                     'idCliente': idcliente,
                     'idVehiculo': idVehiculo,
@@ -242,7 +250,8 @@
                     'luces': luces,
                     'goma': goma,
                     'kitHerramientas': kitHerramientas,
-                    'combustible': combustible
+                    'combustible': combustible,
+                    'diasTotales': diferenciaDias
                 }
                 $.ajax({
                     type: "post",
@@ -255,8 +264,6 @@
                         alertify.set('notifier', 'position', 'top-right');
                         alertify.success(response.notificacion);
                         // console.log(response);
-
-
                     }
                 });
 
@@ -267,5 +274,4 @@
 
 
     });
-    // ======================Captura Valor fechas END ==========================
 </script>

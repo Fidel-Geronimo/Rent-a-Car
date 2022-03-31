@@ -33,15 +33,16 @@ class AdminControllerRenta extends Controller
         $vehiculo = new VehiculoModel;
         $idVehiculo = $this->request->getPost('idVehiculo');
         $idCliente = $this->request->getPost('idCliente');
-        // $myTime = new Time($this->request->getPost('fechaDevolucion'));
-        // $diferencia = $myTime->difference($this->request->getPost('fechaDevolucion'));
-        // $dias = $diferencia->getDays();
-        $time = Time::parse('March 10, 2017', 'America/Chicago');
-        $diff = $time->difference('July 4, 1975 13:32:05', 'America/Chicago');
 
+        // calculo de diferencia de fechas
+        $dias = $this->request->getPost('diasTotales');
         $precioRenta = $vehiculo->where('id', $idVehiculo)->findColumn('precio');
-        $precioRentaTotal = intval($precioRenta) * $diff->getDays();;
-        //===============================================================
+        if ($dias == 0) {
+            $dias = 1;
+        }
+        $preciototal = (int)$precioRenta[0] * (int)$dias;
+
+        // //===============================================================
         $data = [
             "cliente" => $clientes->where('id', $idCliente)->findColumn('nombre'),
             "foto" => $vehiculo->where('id', $idVehiculo)->findColumn('foto'),
@@ -60,10 +61,31 @@ class AdminControllerRenta extends Controller
             "descripcionvehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('descripcion'),
             "marcavehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('marca'),
             "modelovehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('modelo'),
-            "preciorenta" => $precioRentaTotal
+            "chasisvehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('chasis'),
+            "transmisionvehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('transmision'),
+            "motorvehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('motor'),
+            "placavehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('placa'),
+            "tipovehiculo" => $vehiculo->where('id', $idVehiculo)->findColumn('tipovehiculo'),
+            "preciorenta" =>  $preciototal
         ];
         $renta->insert($data);
-        $respuesta = ['notificacion' => $diff];
+        $respuesta = ['notificacion' => 'Renta Registrada'];
         return $this->response->setJSON($respuesta);
+    }
+
+    public function borrar($id)
+    {
+        $renta = new RentaModel;
+        $renta->where('id', $id)->delete($id);
+        // $_SESSION["notificacion"] = "Empleado Eliminado!";
+
+        return $this->response->redirect(base_url("admin"));
+    }
+    public function info()
+    {
+        $renta = new RentaModel;
+        $idRenta = $this->request->getPost("idRenta");
+        $data = $renta->find($idRenta);
+        return $this->response->setJSON($data);
     }
 }

@@ -51,6 +51,7 @@ if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 $routes->get('catalogo', 'Home::catalogo');
 $routes->get('admin', 'AdminControllerRenta::index');
+$routes->post('admin/info', 'AdminControllerRenta::info');
 $routes->post('admin/nuevaRentaAdmin', 'AdminControllerRenta::nuevaRentaAdmin');
 $routes->get('admin/clientes', 'ClientesController::index');
 $routes->get('admin/empleados', 'EmpleadosController::index');
@@ -70,3 +71,4 @@ $routes->post('admin/vehiculos/nuevo', 'vehiculosController::nuevo');
 $routes->post('admin/vehiculos/verData', 'vehiculosController::verData');
 $routes->post('admin/vehiculos/editar', 'vehiculosController::editar');
 $routes->get('admin/vehiculos/borrar/(:num)', 'vehiculosController::borrar/$1');
+$routes->get('admin/borrar/(:num)', 'AdminControllerRenta::borrar/$1');

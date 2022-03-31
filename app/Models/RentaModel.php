@@ -27,6 +27,11 @@ class RentaModel extends Model
         'descripcionvehiculo',
         'marcavehiculo',
         'modelovehiculo',
-        'preciorenta',
+        'chasisvehiculo',
+        'transmisionvehiculo',
+        'motorvehiculo',
+        'placavehiculo',
+        'tipovehiculo',
+        'preciorenta'
     ];
 }

@@ -26,7 +26,7 @@
                             <tbody>
                                 <?php foreach ($data as $datos) : ?>
                                     <tr>
-                                        <td class="align-middle text-center text-sm idVehiculo">
+                                        <td class="align-middle text-center text-sm idRenta">
                                             <span class="text-secondary text-xs font-weight-normal"><?= $datos['id'] ?></span>
                                         </td>
                                         <td class="align-middle text-center text-sm">
@@ -45,25 +45,25 @@
                                             </div>
                                         </td>
                                         <td class="align-middle text-center">
-                                            <span class="text-secondary text-xs font-weight-normal">400</span>
+                                            <span class="text-secondary text-xs font-weight-normal"><?= $datos['preciorenta'] ?></span>
                                         </td>
                                         <td class="align-middle text-center">
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">
-                                                    <span class="text-secondary text-xs font-weight-normal">22-02-2022 --</span>
+                                                    <span class="text-secondary text-xs font-weight-normal"><?= $datos['fecharecogida'] ?>---</span>
                                                 </div>
                                                 <div>
-                                                    <span class="text-secondary text-xs font-weight-normal">25-02-2022</span>
+                                                    <span class="text-secondary text-xs font-weight-normal"><?= $datos['fechadevolucion'] ?></span>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="align-middle text-center">
-                                            <span class="text-secondary text-xs font-weight-normal">22-03-2022</span>
+                                            <span class="text-secondary text-xs font-weight-normal"><?= $datos['fecha'] ?></span>
                                         </td>
                                         <td class="align-middle">
-                                            <a class="btn btn-success btnRentarVehiculo"><span class="material-icons">receipt</span></a>
-                                            <a class="btn btn-info btnEditarVehiculo"><span class="material-icons">edit</span></a>
-                                            <a href="" class="btn btn-danger "><span class="material-icons">delete</span></a>
+                                            <a class="btn btn-success btnRecibirVehiculo"><span class="material-icons">done</span></a>
+                                            <a class="btn btn-info btnInfo"><span class="material-icons">info</span></a>
+                                            <a href="<?= base_url("admin/borrar/" . $datos['id']); ?>" class="btn btn-danger "><span class="material-icons">delete</span></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -79,3 +79,38 @@
 
 
 <?= $this->include("includes/footer"); ?>
+
+<script>
+    $(".btnInfo").click(function(e) {
+        let idRenta = $(this).closest('tr').find(".idRenta").text().replace(/\s+/g, ''); //captura del valor del id Renta
+
+        $.ajax({
+            type: "post",
+            url: "admin/info",
+            data: {
+                'idRenta': idRenta
+            },
+            success: function(response) {
+                $("#clienteRentaInfo").val(response.cliente);
+                $("#telefonoRentaInfo").val(response.telefono);
+                $("#emailRentaInfo").val(response.email);
+                $("#fechaRecogidaInfo").val(response.fecharecogida);
+                $("#horaRecogidaInfo").val(response.horarecogida);
+                $("#fechaDevolucionInfo").val(response.fechadevolucion);
+                $("#horaDevolucionInfo").val(response.horadevolucion);
+                $("#descripcionRentaInfo").val(response.descripcionvehiculo);
+                $("#marcaRentaInfo").val(response.marcavehiculo);
+                $("#modeloRentaInfo").val(response.modelovehiculo);
+                $("#precioRentaInfo").val(response.preciorenta);
+                $("#chasisRentaInfo").val(response.chasisvehiculo);
+                $("#transmisionRentaInfo").val(response.transmisionvehiculo);
+                $("#motorRentaInfo").val(response.motorvehiculo);
+                $("#placaRentaInfo").val(response.placavehiculo);
+                $("#tipoRentaInfo").val(response.tipovehiculo);
+
+                $("#modalInfoRenta").modal("show")
+                // console.log(response.cliente);
+            }
+        });
+    });
+</script>
