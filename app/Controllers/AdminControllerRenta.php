@@ -6,7 +6,7 @@ use CodeIgniter\Controller;
 use App\Models\RentaModel; //modelo de las rentas
 use App\Models\ClientesModel; //modelo de los clientes
 use App\Models\VehiculoModel; //modelo de los vehiculos
-use CodeIgniter\I18n\Time; //hora
+use App\Models\RentasCompletadasModel; //Modelo de rentas Completas
 
 class AdminControllerRenta extends Controller
 {
@@ -21,7 +21,7 @@ class AdminControllerRenta extends Controller
             "empleados" => "",
             "reportes" => "",
             "perfil" => "",
-            "data" => $renta->orderBy('fecha', 'DESC')->findAll()
+            "data" => $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll()
         ];
         return view('admin/renta', $colorBotonesPanel);
     }
@@ -53,6 +53,7 @@ class AdminControllerRenta extends Controller
             "horarecogida" => $this->request->getPost('horaRecogida'),
             "horadevolucion" => $this->request->getPost('horaDevolucion'),
             "idvehiculo" => $idVehiculo,
+            "idcliente" => $idCliente,
             "gato" => $this->request->getPost('gato'),
             "luces" => $this->request->getPost('luces'),
             "goma" => $this->request->getPost('goma'),
@@ -87,5 +88,32 @@ class AdminControllerRenta extends Controller
         $idRenta = $this->request->getPost("idRenta");
         $data = $renta->find($idRenta);
         return $this->response->setJSON($data);
+    }
+    public function Devolucion()
+    {
+        $rentaCompleta = new RentasCompletadasModel();
+        $renta = new RentaModel;
+        $idRenta = $this->request->getPost('idRenta');
+        $idCliente = $renta->where('id', $idRenta)->findColumn('idcliente');
+        $idVehiculo = $renta->where('id', $idRenta)->findColumn('idvehiculo');
+        $data = [
+            'idcliente' => $idCliente,
+            'idvehiculo' => $idVehiculo,
+            'gato' => $this->request->getPost('gatoDevolucion'),
+            'kitherramientas' => $this->request->getPost('kitHerramientasDevolucion'),
+            'goma' => $this->request->getPost('gomaDevolucion'),
+            'abolladuras' => $this->request->getPost('abolladurasDevolucion'),
+            'rayaduras' => $this->request->getPost('rayadurasDevolucion'),
+            'piezasfaltantes' => $this->request->getPost('piezasFaltantesDevolucion'),
+
+        ];
+        $estado = ['estado' => '1'];
+        $rentaCompleta->insert($data);
+        $renta->update($idRenta, $estado);
+        $respuesta = [
+            'notificacion' => 'Devolucion Completada',
+            'datos' => $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll()
+        ];
+        return $this->response->setJSON($respuesta);
     }
 }

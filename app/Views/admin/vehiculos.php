@@ -203,9 +203,9 @@
         // ========================================================================
 
         // diferencia entre dos fechas
-        var fechaInicio = new Date(fechaRecogida).getTime();
-        var fechaFin = new Date(fechaDevolucion).getTime();
-        var diferenciaDias = (fechaFin - fechaInicio) / (1000 * 60 * 60 * 24);
+        let fechaInicio = new Date(fechaRecogida).getTime();
+        let fechaFin = new Date(fechaDevolucion).getTime();
+        let diferenciaDias = (fechaFin - fechaInicio) / (1000 * 60 * 60 * 24);
         // ========================================================================
 
         if (idVehiculo == "" || idcliente == "" ||
@@ -216,7 +216,7 @@
         } else {
             $("#vehiculoModalRenta").modal("hide");
             $("#modalInspeccion").modal("show");
-            $(".btnRegistrarRenta").click(function(e) {
+            $(".btnRegistrarRenta").one("click", function() {
                 let combustible = $('#combustible').val();
                 // validacion de los chech box
                 let gato = 0;
@@ -266,8 +266,6 @@
                         // console.log(response);
                     }
                 });
-
-
             });
         }
 

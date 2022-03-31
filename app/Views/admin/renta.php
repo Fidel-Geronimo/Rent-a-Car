@@ -81,36 +81,101 @@
 <?= $this->include("includes/footer"); ?>
 
 <script>
-    $(".btnInfo").click(function(e) {
-        let idRenta = $(this).closest('tr').find(".idRenta").text().replace(/\s+/g, ''); //captura del valor del id Renta
+    $(document).ready(function() {
 
-        $.ajax({
-            type: "post",
-            url: "admin/info",
-            data: {
-                'idRenta': idRenta
-            },
-            success: function(response) {
-                $("#clienteRentaInfo").val(response.cliente);
-                $("#telefonoRentaInfo").val(response.telefono);
-                $("#emailRentaInfo").val(response.email);
-                $("#fechaRecogidaInfo").val(response.fecharecogida);
-                $("#horaRecogidaInfo").val(response.horarecogida);
-                $("#fechaDevolucionInfo").val(response.fechadevolucion);
-                $("#horaDevolucionInfo").val(response.horadevolucion);
-                $("#descripcionRentaInfo").val(response.descripcionvehiculo);
-                $("#marcaRentaInfo").val(response.marcavehiculo);
-                $("#modeloRentaInfo").val(response.modelovehiculo);
-                $("#precioRentaInfo").val(response.preciorenta);
-                $("#chasisRentaInfo").val(response.chasisvehiculo);
-                $("#transmisionRentaInfo").val(response.transmisionvehiculo);
-                $("#motorRentaInfo").val(response.motorvehiculo);
-                $("#placaRentaInfo").val(response.placavehiculo);
-                $("#tipoRentaInfo").val(response.tipovehiculo);
 
-                $("#modalInfoRenta").modal("show")
-                // console.log(response.cliente);
-            }
+        //========================== modal info================
+        $(".btnInfo").click(function(e) {
+            let idRenta = $(this).closest('tr').find(".idRenta").text().replace(/\s+/g, ''); //captura del valor del id Renta
+
+            $.ajax({
+                type: "post",
+                url: "admin/info",
+                data: {
+                    'idRenta': idRenta
+                },
+                success: function(response) {
+                    $("#imagenVehiculoInfo").attr("src", '<?= base_url("/public/uploads") ?>/' + response.foto);
+                    $("#clienteRentaInfo").val(response.cliente);
+                    $("#telefonoRentaInfo").val(response.telefono);
+                    $("#emailRentaInfo").val(response.email);
+                    $("#fechaRecogidaInfo").val(response.fecharecogida);
+                    $("#horaRecogidaInfo").val(response.horarecogida);
+                    $("#fechaDevolucionInfo").val(response.fechadevolucion);
+                    $("#horaDevolucionInfo").val(response.horadevolucion);
+                    $("#descripcionRentaInfo").val(response.descripcionvehiculo);
+                    $("#marcaRentaInfo").val(response.marcavehiculo);
+                    $("#modeloRentaInfo").val(response.modelovehiculo);
+                    $("#precioRentaInfo").val(response.preciorenta);
+                    $("#chasisRentaInfo").val(response.chasisvehiculo);
+                    $("#transmisionRentaInfo").val(response.transmisionvehiculo);
+                    $("#motorRentaInfo").val(response.motorvehiculo);
+                    $("#placaRentaInfo").val(response.placavehiculo);
+                    $("#tipoRentaInfo").val(response.tipovehiculo);
+                    $("#modalInfoRenta").modal("show");
+                    // console.log(response.cliente);
+                }
+            });
+        });
+        //========================== modal info end================
+        //================== modal Recibir Vehiculo================
+
+        $('.btnRecibirVehiculo').click(function(e) {
+            // captura de todos los datos del formulario de renta Admin
+            let idRenta = $(this).closest('tr').find(".idRenta").text().replace(/\s+/g, '');
+            $("#modalDevolucionInspeccion").modal("show");
+            $('.btnConfirmarDevolucion').one('click', function(e) {
+                let gatoDevolucion = 0;
+                let kitHerramientasDevolucion = 0;
+                let gomaDevolucion = 0;
+                let rayadurasDevolucion = 0;
+                let abolladurasDevolucion = 0;
+                let piezasFaltantesDevolucion = 0;
+                if ($('.gatoDevolucion').is(':checked')) {
+                    gatoDevolucion = 1;
+                }
+                if ($('.kitHerramientasDevolucion').is(':checked')) {
+                    kitHerramientasDevolucion = 1;
+                }
+                if ($('.gomaDevolucion').is(':checked')) {
+                    gomaDevolucion = 1;
+                }
+                if ($('.abolladurasDevolucion').is(':checked')) {
+                    abolladurasDevolucion = 1;
+                }
+                if ($('.rayadurasDevolucion').is(':checked')) {
+                    rayadurasDevolucion = 1;
+                }
+                if ($('.piezasDevolucion').is(':checked')) {
+                    piezasFaltantesDevolucion = 1;
+                }
+                let datosDevolucion = {
+                    'idRenta': idRenta,
+                    'gatoDevolucion': gatoDevolucion,
+                    'kitHerramientasDevolucion': kitHerramientasDevolucion,
+                    'gomaDevolucion': gomaDevolucion,
+                    'abolladurasDevolucion': abolladurasDevolucion,
+                    'rayadurasDevolucion': rayadurasDevolucion,
+                    'piezasFaltantesDevolucion': piezasFaltantesDevolucion
+                }
+                let tabla;
+                $.ajax({
+                    type: "post",
+                    url: "admin/Devolucion",
+                    data: datosDevolucion,
+                    success: function(response) {
+                        window.location.href = "admin";
+                        // $('.formularioDevolucion')[0].reset();
+                        // $("#modalDevolucionInspeccion").modal("hide");
+                        // alertify.set('notifier', 'position', 'top-right');
+                        // alertify.success(response.notificacion);
+                        // console.log(response);
+                    }
+                });
+            });
+
         });
     });
+
+    //================== modal Recibir Vehiculo end================
 </script>

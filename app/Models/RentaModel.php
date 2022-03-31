@@ -19,6 +19,7 @@ class RentaModel extends Model
         'horadevolucion',
         'fecha',
         'idvehiculo',
+        'idcliente',
         'gato',
         'luces',
         'goma',
@@ -32,6 +33,7 @@ class RentaModel extends Model
         'motorvehiculo',
         'placavehiculo',
         'tipovehiculo',
-        'preciorenta'
+        'preciorenta',
+        'estado'
     ];
 }

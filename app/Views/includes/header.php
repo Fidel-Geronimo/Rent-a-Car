@@ -674,7 +674,7 @@
             </form>
             <div class="modal-footer">
                 <button data-bs-toggle="modal" data-bs-target="#vehiculoModalRenta" type="button" class="btn btn-secondary">Atras</button>
-                <button type="button" class="btn btn-primary btnRegistrarRenta">Registtrar</button>
+                <button type="button" class="btn btn-primary btnRegistrarRenta">Registrar</button>
             </div>
         </div>
     </div>
@@ -689,12 +689,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <form id="rentaVehiculo">
-                <div class="modal-body">
+            <form>
+                <div class=" modal-body">
                     <div class="container">
                         <div class="row">
                             <div class="mb-4">
-                                <img src="<?= base_url("public/uploads/1648083037_69b52a37739de8113957.png") ?>" class="img-thumbnail float-start" alt="...">
+                                <img id="imagenVehiculoInfo" src="<?= base_url("public/uploads/1648083037_69b52a37739de8113957.png") ?>" class="img-thumbnail mx-auto d-block" alt="...">
                             </div>
                             <div class="col-6">
                                 <h4> Cliente:</h4>
@@ -796,7 +796,74 @@
         </div>
     </div>
 </div>
-<!-- Full screen modal -->
+<!-- modal de Proceso de Devolucion e inspeccion -->
+<div class="modal fade" id="modalDevolucionInspeccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalInspeccionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Devolucion/Inspeccion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="formularioDevolucion">
+                <div class="modal-body">
+                    <div class="container">
+
+
+                        <div class="row">
+                            <div class="col-6">
+                                <h5>Agregados</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input gatoDevolucion" type="checkbox" value="1" id="gatoDevolucion">
+                                    <label class="form-check-label" for="gatoDevolucion">
+                                        Gato
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input kitHerramientasDevolucion" type="checkbox" value="1" id="herramientasDevolucion">
+                                    <label class="form-check-label" for="herramientasDevolucion">
+                                        Kit De Herramientas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input gomaDevolucion" type="checkbox" value="1" id="gomaDevolucion">
+                                    <label class="form-check-label" for="gomaDevolucion">
+                                        Goma De Repuesto
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h5>Defectos</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input abolladurasDevolucion" type="checkbox" value="1" id="abolladurasDevolucion">
+                                    <label class="form-check-label" for="abolladurasDevolucion">
+                                        Abolladuras
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input rayadurasDevolucion" type="checkbox" value="1" id="rayadurasDevolucion">
+                                    <label class="form-check-label" for="rayadurasDevolucion">
+                                        Rayaduras
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input piezasDevolucion" type="checkbox" value="1" id="piezasDevolucion">
+                                    <label class="form-check-label" for="piezasDevolucion">
+                                        Falta De Piezas
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary btnConfirmarDevolucion">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 </html>
