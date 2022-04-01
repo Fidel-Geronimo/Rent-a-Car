@@ -49,7 +49,7 @@ $routes->get('/', 'Home::index');
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
-$routes->get('catalogo', 'Home::catalogo');
+$routes->get('catalogo', 'CatalogoController::index');
 $routes->get('admin', 'AdminControllerRenta::index');
 $routes->post('admin/info', 'AdminControllerRenta::info');
 $routes->post('admin/Devolucion', 'AdminControllerRenta::Devolucion');

@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <header class="header">
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -45,6 +46,7 @@
 
     <div class="container">
         <h1 class="heading"> <span>Vehiculos</span> Disponibles </h1>
+
         <!-- <div class="row row-cols-auto">
             <div class="col">
                 <button class="btn btn-primary ms-4" type="button">Todos</button>
@@ -67,81 +69,23 @@
         </div> -->
         <section class="featured" id="featured">
             <div class="featured-catalogo">
-                <div class="box me-4">
-                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
-                    <div class="content">
-                        <h3>new model</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                <?php foreach ($data as $datos) : ?>
+                    <div class="box me-4">
+                        <img src="<?= base_url("public/uploads") .  '/' . $datos['foto'] ?>" alt="">
+                        <div class="content">
+                            <h3><?= $datos['descripcion'] ?></h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="price">$<?= $datos['precio'] ?>/dia</div>
+                            <a href="#" class="btn">Revisar</a>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
                     </div>
-                </div>
-                <div class="box me-4">
-                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
-                    <div class="content">
-                        <h3>new model</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
-                    </div>
-                </div>
-                <div class="box me-4">
-                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
-                    <div class="content">
-                        <h3>new model</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
-                    </div>
-                </div>
-                <div class="box me-4">
-                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
-                    <div class="content">
-                        <h3>new model</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
-                    </div>
-                </div>
-                <div class="box me-4">
-                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
-                    <div class="content">
-                        <h3>new model</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
     </div>
     </section>
