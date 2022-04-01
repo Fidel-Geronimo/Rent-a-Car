@@ -14,6 +14,8 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/assets/css/style.css">
 
+    <title>0Humo Rent A Car</title>
+
 </head>
 
 <body>
@@ -594,8 +596,8 @@
     </section>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
     <script src="<?= base_url() ?>/public/assets/js/script.js"></script>
+
 
 </body>
 

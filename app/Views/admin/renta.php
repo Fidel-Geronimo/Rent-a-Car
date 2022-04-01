@@ -5,8 +5,12 @@
         <div class="col-12">
             <div class="card my-4">
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                        <h4 class="text-white text-capitalize ps-3">Rentas Activas <a data-bs-toggle="modal" data-bs-target="#modalVehiculo" class="btn bg-gradient-info me-3 float-end"><i class="material-icons opacity-10">add</i> Nuevo</a></h4>
+                    <div class="d-flex justify-content-between bg-gradient-primary shadow-primary border-radius-lg pt-4">
+                        <h4 class="text-white text-capitalize ps-3">Rentas Activas </h4>
+                        <button type="button" class="btn btn-info me-3" data-bs-toggle="modal" data-bs-target="#modalSolicitudes">
+                            <span>Solicitudes</span>
+                            <span class="badge badge-sm badge-circle badge-danger border border-white border-2">4</span>
+                        </button>
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">

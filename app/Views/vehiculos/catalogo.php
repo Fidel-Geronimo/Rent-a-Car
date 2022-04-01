@@ -11,9 +11,6 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- custom css file link  -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/assets/css/style.css">
 
 </head>
@@ -48,7 +45,7 @@
 
     <div class="container">
         <h1 class="heading"> <span>Vehiculos</span> Disponibles </h1>
-        <div class="row row-cols-auto">
+        <!-- <div class="row row-cols-auto">
             <div class="col">
                 <button class="btn btn-primary ms-4" type="button">Todos</button>
             </div>
@@ -67,162 +64,244 @@
             <div class="col">
                 <button class="btn btn-primary ms-4" type="button">Gas</button>
             </div>
-        </div>
-
-        <div class="row ">
-            <section class="featured" id="featured">
-
-                <div class="swiper featured-slider">
-
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
+        </div> -->
+        <section class="featured" id="featured">
+            <div class="featured-catalogo">
+                <div class="box me-4">
+                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-2.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-3.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-4.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
+                        <div class="price">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
                 </div>
-
-                <div class="swiper featured-slider">
-
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-5.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
+                <div class="box me-4">
+                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-6.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-7.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide box">
-                            <img src="<?= base_url() ?>/public/assets/image/car-8.png" alt="">
-                            <div class="content">
-                                <h3>new model</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="price">$55,000/-</div>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
+                        <div class="price">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
                     </div>
-
-                    <div class="swiper-pagination"></div>
-
                 </div>
-
-            </section>
-        </div>
+                <div class="box me-4">
+                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+                <div class="box me-4">
+                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+                <div class="box me-4">
+                    <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
+                    <div class="content">
+                        <h3>new model</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">$55,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+            </div>
     </div>
+    </section>
+
+
+    <!-- <div class="row">
+            <section class="featured" id="featured">
+                <div class="col">
+                    <div class="swiper featured-slider">
+                        <div class="swiper-wrapper">
+                            <div class="box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-2.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                            <div class=" box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-3.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                            <div class=" box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-4.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+
+
+                    <div class="swiper featured-slider">
+                        <div class="swiper-wrapper">
+
+                            <div class=" box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-5.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                            <div class=" box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-6.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                            <div class=" box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-7.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                            <div class=" box">
+                                <img src="<?= base_url() ?>/public/assets/image/car-8.png" alt="">
+                                <div class="content">
+                                    <h3>new model</h3>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="price">$55,000/-</div>
+                                    <a href="#" class="btn">check out</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    </div>
+
+    </section>
+    </div>
+    </div>
+    </div> -->
     <!-- carros -->
 
 
