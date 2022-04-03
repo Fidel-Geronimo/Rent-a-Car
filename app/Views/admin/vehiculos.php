@@ -112,7 +112,7 @@
                         $("#transmisionVehiculoEdit").val(vehiculo['transmision']);
                         $("#tipoVehiculoEdit").val(vehiculo['tipovehiculo']);
                         $("#fotoVehiculo").attr("src", '<?= base_url("/public/uploads") ?>/' + vehiculo['foto']);
-                        $("#modalVehiculoEdit").modal("show")
+                        $("#modalVehiculoEdit").modal("show");
                     });
 
                 }

@@ -22,6 +22,7 @@
     transition: .2s linear;
 }
 
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -29,9 +30,27 @@ html {
     scroll-behavior: smooth;
 }
 
+#modalInfoVehiculo,
+#modalRentaVehiculo {
+    font-size: 180% !important;
+}
+
+.inputs-personalizados {
+    font-size: 90% !important;
+}
+
+
+#modalInfoVehiculoLabel,
+#vehiculoModal {
+    font-size: 120% !important;
+
+}
+
 section {
     padding: 2rem 9%;
 }
+
+
 
 .heading {
     padding-bottom: 2rem;
@@ -61,6 +80,19 @@ section {
     display: inline-block;
     margin-top: 1rem;
     padding: .8rem 3rem;
+    background: var(--light-yellow);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn-edit {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem 3rem;
     background: var(--light-yellow);
     color: var(--white);
     cursor: pointer;
@@ -222,6 +254,27 @@ section {
     width: 100%;
     margin: 1rem 0;
 }
+
+/* detalle vehiculo */
+
+.home-detalle {
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home-detalle h3 {
+    color: var(--black);
+    font-size: 4.5vw;
+    text-transform: uppercase;
+}
+
+.home-detalle img {
+    width: 70%;
+    margin: 1rem 0;
+}
+
+/* detalle vehiculo End */
 
 .icons-container {
     display: grid;
