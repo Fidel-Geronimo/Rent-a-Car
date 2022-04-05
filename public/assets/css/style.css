@@ -30,6 +30,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.error {
+    color: #e91e63;
+}
+
 #modalInfoVehiculo,
 #modalRentaVehiculo {
     font-size: 180% !important;

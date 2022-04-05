@@ -1,3 +1,13 @@
+// // Validations forms
+// jQuery.extend(jQuery.validator.messages, {
+//   required: "Rellea Este Campo.",
+//   email: "Introduce Un Email Valido."
+// });
+// $("#rentaCliente").validate(); //validacion del formulario de Renta Cliente
+// =====================
+
+
+
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 

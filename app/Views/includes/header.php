@@ -694,7 +694,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="mb-4">
-                                <img id="imagenVehiculoInfo" src="<?= base_url("public/uploads/1648083037_69b52a37739de8113957.png") ?>" class="img-thumbnail mx-auto d-block" alt="...">
+                                <img id="imagenVehiculoInfo" src="" class="img-thumbnail mx-auto d-block" alt="...">
                             </div>
                             <div class="col-6">
                                 <h4> Cliente:</h4>

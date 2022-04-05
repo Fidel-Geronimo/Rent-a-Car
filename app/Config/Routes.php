@@ -71,5 +71,7 @@ $routes->post('admin/clientes/rellenarInputs', 'ClientesController::rellenarInpu
 $routes->get('admin/vehiculos', 'vehiculosController::index');
 $routes->post('admin/vehiculos/nuevo', 'vehiculosController::nuevo');
 $routes->post('admin/vehiculos/verData', 'vehiculosController::verData');
+$routes->post('rentacar/vehiculos/verData', 'vehiculosController::verData');
 $routes->post('admin/vehiculos/editar', 'vehiculosController::editar');
 $routes->get('admin/vehiculos/borrar/(:num)', 'vehiculosController::borrar/$1');
+$routes->post('catalogo/rentar', 'SolicitudController::nuevaSolicitud');

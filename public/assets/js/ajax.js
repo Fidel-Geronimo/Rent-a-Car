@@ -17,6 +17,7 @@ $(document).ready(function () {
     $("#empleadoForm").validate(); //validacion del formulario al crear un empleado
     $("#empleadoFormEdit").validate(); //validacion del formulario al Editar un empleado
 
+
     // Clientes End 
 
 
