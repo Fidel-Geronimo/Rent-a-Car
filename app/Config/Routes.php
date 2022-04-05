@@ -75,3 +75,5 @@ $routes->post('rentacar/vehiculos/verData', 'vehiculosController::verData');
 $routes->post('admin/vehiculos/editar', 'vehiculosController::editar');
 $routes->get('admin/vehiculos/borrar/(:num)', 'vehiculosController::borrar/$1');
 $routes->post('catalogo/rentar', 'SolicitudController::nuevaSolicitud');
+$routes->get('admin/solicitudes', 'AdminControllerRenta::solicitudesBoton');
+$routes->get('admin/solicitudesPendientes', 'SolicitudController::index');

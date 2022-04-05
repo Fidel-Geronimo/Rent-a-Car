@@ -1,4 +1,5 @@
-<?= $this->include("includes/header"); ?>
+<?= $this->include("includes/header");
+session_start(); ?>
 
 <div class="container-fluid py-4">
     <div class="row">
@@ -7,9 +8,9 @@
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="d-flex justify-content-between bg-gradient-primary shadow-primary border-radius-lg pt-4">
                         <h4 class="text-white text-capitalize ps-3">Rentas Activas </h4>
-                        <button type="button" class="btn btn-info me-3" data-bs-toggle="modal" data-bs-target="#modalSolicitudes">
+                        <button type="button" class="btn btn-info me-3">
                             <span>Solicitudes</span>
-                            <span class="badge badge-sm badge-circle badge-danger border border-white border-2">4</span>
+                            <span class="conteoSolicitudes badge badge-sm badge-circle badge-danger border border-white border-2"><?= $solicitudes ?></span>
                         </button>
                     </div>
                 </div>
@@ -28,7 +29,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($data as $datos) : ?>
+                                <?php
+                                foreach ($data as $datos) : ?>
                                     <tr>
                                         <td class="align-middle text-center text-sm idRenta">
                                             <span class="text-secondary text-xs font-weight-normal"><?= $datos['id'] ?></span>
@@ -86,7 +88,6 @@
 
 <script>
     $(document).ready(function() {
-
 
         //========================== modal info================
         $(".btnInfo").click(function(e) {
@@ -180,6 +181,69 @@
 
         });
     });
-
     //================== modal Recibir Vehiculo end================
+
+
+    //================== modal Solicitudes================
+    $(".btn-info").click(function(e) {
+
+        $.ajax({
+            type: "get",
+            url: "admin/solicitudesPendientes",
+            success: function(response) {
+                // $.each(response.datos, function(indexInArray, valor) {
+                //     $("#TablasolicitudesPendientes>tbody").append(`<tr>
+                //     <td class="align-middle text-center">
+                //          <span class="text-secondary text-xs font-weight-normal">${valor['cliente']}</span>
+                //     </td>
+                //     <td class="align-middle text-center">
+                //          <span class="text-secondary text-xs font-weight-normal">${valor['cliente']}</span>
+                //     </td>
+                // // </tr>`);
+
+                // });
+                console.log(response);
+
+                // $("#clienteRentaInfo").val(response.cliente);
+                // $("#telefonoRentaInfo").val(response.telefono);
+                // $("#emailRentaInfo").val(response.email);
+                // $("#fechaRecogidaInfo").val(response.fecharecogida);
+                // $("#horaRecogidaInfo").val(response.horarecogida);
+                // $("#fechaDevolucionInfo").val(response.fechadevolucion);
+                // $("#horaDevolucionInfo").val(response.horadevolucion);
+                // $("#descripcionRentaInfo").val(response.descripcionvehiculo);
+                // $("#marcaRentaInfo").val(response.marcavehiculo);
+                // $("#modeloRentaInfo").val(response.modelovehiculo);
+                // $("#precioRentaInfo").val(response.preciorenta);
+                // $("#chasisRentaInfo").val(response.chasisvehiculo);
+                // $("#transmisionRentaInfo").val(response.transmisionvehiculo);
+                // $("#motorRentaInfo").val(response.motorvehiculo);
+                // $("#placaRentaInfo").val(response.placavehiculo);
+                // $("#tipoRentaInfo").val(response.tipovehiculo);
+                $("#modalSolicitudes").modal('show');
+
+            }
+        });
+
+
+    });
+    //================== modal Solicitudes end================
+
+
+    //================== Actualizacion de la notificacion de solicitudes================
+    setInterval(() => {
+        $.ajax({
+            type: "get",
+            url: "admin/solicitudes",
+            success: function(response) {
+                $(".conteoSolicitudes").text(response.conteo);
+                if (response.notificacion) {
+                    alertify.set('notifier', 'position', 'bottom-right');
+                    alertify.warning(response.notificacion);
+                }
+            }
+        });
+    }, 1000);
+
+    //================== Actualizacion de la notificacion de solicitudes END================
 </script>

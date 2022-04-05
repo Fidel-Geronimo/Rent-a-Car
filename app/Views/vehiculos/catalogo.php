@@ -66,8 +66,13 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
-                        <form>
+                        <div class="svg-loader">
+                            <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+                                <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                        </div>
+                        <form id="detalleForm" style="display: none;">
                             <div class="container">
                                 <div class="row">
                                     <div class="container">
@@ -141,7 +146,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn-edit" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn-edit btnCerrar">Cerrar</button>
                         <button type="button" class="btn-edit btnReservar">Reservar</button>
                     </div>
                 </div>
@@ -154,6 +159,12 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="vehiculoModal">Renta Vehiculo</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div style="display: none;" class="svg-loader">
+                        <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+                            <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+                        </svg>
                     </div>
                     <form id="rentaCliente" method="post">
                         <div class=" modal-body">
@@ -227,6 +238,7 @@
                 <?php endforeach; ?>
             </div>
     </div>
+
     </section>
     <!-- carros -->
 
@@ -277,6 +289,12 @@
         <div class="credit"> created by mr. web designer | all rights reserved </div>
 
     </section>
+    <!-- <div class="svg-loader">
+        <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+            <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+            <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+        </svg>
+    </div> -->
 
     <!-- 
     <!-- jquery 3.6.0 -->
@@ -301,7 +319,10 @@
             //=============================== boton revisar======================
             $(".btnRevisar").click(function(e) {
                 let idVehiculo = $(this).val();
-
+                $('#detalleForm')[0].reset();
+                $("#detalleForm").hide();
+                $(".svg-loader").show();
+                $("#modalInfoVehiculo").modal('show');
                 $.ajax({
                     method: "POST",
                     url: "rentacar/vehiculos/verData",
@@ -322,10 +343,14 @@
                             $("#maletasVehiculos").val(vehiculo['maletas']);
                             $("#personasVehiculos").val(vehiculo['personas']);
                             $("#fotoVehiculo").attr("src", '<?= base_url("/public/uploads") ?>/' + vehiculo['foto']);
-                            $("#modalInfoVehiculo").modal('show');
+                            $(".svg-loader").slideUp();
+                            $("#detalleForm").fadeIn(1000);
                         });
                     }
                 });
+            });
+            $(".btnCerrar").click(function(e) {
+                $("#modalInfoVehiculo").modal('hide');
             });
             //=============================== boton revisar end ======================
 
@@ -396,6 +421,9 @@
                         'horaDevolucion': horaDevolucion,
                         'diasTotales': diferenciaDias
                     }
+                    $("#rentaCliente").slideUp(500, function() {
+                        $(".svg-loader").fadeIn(250);
+                    });
 
                     $.ajax({
                         type: "post",
@@ -403,6 +431,7 @@
                         data: datos,
                         success: function(response) {
                             $('#rentaCliente')[0].reset();
+                            $("#rentaCliente").show(1000);
                             $("#modalRentaVehiculo").modal("hide");
                             alertify.set('notifier', 'position', 'top-right');
                             alertify.success(response.respuesta);

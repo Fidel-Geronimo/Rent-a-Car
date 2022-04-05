@@ -2,11 +2,14 @@
 
 namespace App\Controllers;
 
+session_start();
+
 use CodeIgniter\Controller;
 use App\Models\RentaModel; //modelo de las rentas
 use App\Models\ClientesModel; //modelo de los clientes
 use App\Models\VehiculoModel; //modelo de los vehiculos
 use App\Models\RentasCompletadasModel; //Modelo de rentas Completas
+use App\Models\SolicitudModel; //Modelo de rentas Solicitudes
 
 class AdminControllerRenta extends Controller
 {
@@ -14,6 +17,8 @@ class AdminControllerRenta extends Controller
     public function index()
     {
         $renta = new RentaModel;
+        $solicitudes = new SolicitudModel();
+
         $colorBotonesPanel = [
             "dashboard" => "active bg-gradient-primary",
             "vehiculos" => "",
@@ -21,11 +26,26 @@ class AdminControllerRenta extends Controller
             "empleados" => "",
             "reportes" => "",
             "perfil" => "",
-            "data" => $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll()
+            "data" => $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll(),
+            'solicitudes' => $solicitudes->countAll()
         ];
         return view('admin/renta', $colorBotonesPanel);
     }
 
+    public function solicitudesBoton()
+    {
+        $solicitudes = new SolicitudModel();
+        $data = ['conteo' => $solicitudes->countAll()];
+        if (isset($_SESSION['SolicitudNueva'])) {
+            $dataNotification = [
+                'conteo' => $solicitudes->countAll(),
+                'notificacion' => 'Solicitud Nueva'
+            ];
+            unset($_SESSION['SolicitudNueva']);
+            return $this->response->setJSON($dataNotification);
+        }
+        return $this->response->setJSON($data);
+    }
 
 
     public function nuevaRentaAdmin()

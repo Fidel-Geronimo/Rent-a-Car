@@ -24,7 +24,6 @@ session_start(); ?>
                             </thead>
                             <tbody>
                                 <?php foreach ($data as $datos) : ?>
-
                                     <tr>
                                         <td class="idEmpleado">
                                             <p class="text-xs font-weight-bold mb-0"><?= $datos['id'] ?></p>
