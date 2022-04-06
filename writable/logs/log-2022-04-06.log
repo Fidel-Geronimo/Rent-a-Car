@@ -1,0 +1,142 @@
+CRITICAL - 2022-04-06 00:57:45 --> Call to undefined method App\Models\VehiculoModel::insert_id
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(72): CodeIgniter\Model->__call('insert_id', Array)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:00:12 --> Call to undefined method App\Models\VehiculoModel::insert_id
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(72): CodeIgniter\Model->__call('insert_id', Array)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:00:35 --> Undefined property: App\Controllers\vehiculosController::$db
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 72)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:00:51 --> Undefined property: App\Controllers\vehiculosController::$db
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 72)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:25:34 --> Undefined property: App\Controllers\vehiculosController::$db
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 73)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:27:25 --> Undefined property: App\Controllers\vehiculosController::$db
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:29:57 --> Undefined property: App\Controllers\vehiculosController::$db
+#0 C:\xampp\htdocs\rentacar\app\Controllers\vehiculosController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\vehiculosController->verData()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\vehiculosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:44:37 --> mysqli_result::fetch_object(): Argument #1 ($class) must be a valid class name, id given
+#0 C:\xampp\htdocs\rentacar\system\Database\MySQLi\Result.php(148): mysqli_result->fetch_object('id')
+#1 C:\xampp\htdocs\rentacar\system\Database\BaseResult.php(149): CodeIgniter\Database\MySQLi\Result->fetchObject('id')
+#2 C:\xampp\htdocs\rentacar\system\Database\BaseResult.php(106): CodeIgniter\Database\BaseResult->getCustomResultObject('id')
+#3 C:\xampp\htdocs\rentacar\system\Database\BaseResult.php(389): CodeIgniter\Database\BaseResult->getResult('id')
+#4 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(37): CodeIgniter\Database\BaseResult->getLastRow('id')
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-06 01:46:32 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:48:02 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:50:14 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:51:14 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:53:23 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:55:50 --> Attempt to read property "insert_id" on bool
+#0 C:\xampp\htdocs\rentacar\system\Database\MySQLi\Connection.php(565): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 565)
+#1 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(38): CodeIgniter\Database\MySQLi\Connection->insertID()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-06 01:56:59 --> Undefined variable $results
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:58:18 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:58:39 --> Undefined variable $results
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 01:59:15 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:59:33 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 01:59:58 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-06 02:00:15 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

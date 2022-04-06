@@ -11,6 +11,7 @@ class SolicitudModel extends Model
     protected $allowedFields = [
         'idvehiculo',
         'cliente',
+        'idcliente',
         'precioVehiculo',
         'modeloVehiculo',
         'marcaVehiculo',

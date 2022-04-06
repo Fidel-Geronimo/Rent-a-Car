@@ -69,7 +69,6 @@ class vehiculosController extends Controller
         $vehiculo = new VehiculoModel;
         $idVehiculo = $this->request->getPost('idVehiculo');
         $data['vehiculo'] = $vehiculo->find($idVehiculo);
-
         return $this->response->setJSON($data);
     }
     public function editar()
