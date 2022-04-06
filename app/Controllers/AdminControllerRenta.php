@@ -93,7 +93,7 @@ class AdminControllerRenta extends Controller
         ];
         $renta->insert($data);
         $respuesta = ['notificacion' => 'Renta Registrada'];
-        return $this->response->setJSON($respuesta);
+        return $this->response->setJSON($data);
     }
 
     // public function nuevaRentaCliente()

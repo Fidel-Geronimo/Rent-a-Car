@@ -627,7 +627,7 @@
         </div>
     </div>
 </div>
-<!-- modal de Proceso de inspeccion -->
+<!-- modal de Proceso de inspeccion Admin-->
 <div class="modal fade" id="modalInspeccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalInspeccionLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -675,6 +675,59 @@
             <div class="modal-footer">
                 <button data-bs-toggle="modal" data-bs-target="#vehiculoModalRenta" type="button" class="btn btn-secondary">Atras</button>
                 <button type="button" class="btn btn-primary btnRegistrarRenta">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal de Proceso de inspeccion Solicitudes-->
+<div class="modal fade" id="modalInspeccionSolicitudes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalInspeccionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Inspeccion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="formularioInspeccion">
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input gato" type="checkbox" value="1" id="gato">
+                        <label class="form-check-label" for="gato">
+                            Gato
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input luces" type="checkbox" value="1" id="luces">
+                        <label class="" for="luces">
+                            Luces Xenon
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input goma" type="checkbox" value="1" id="goma">
+                        <label class="form-check-label" for="goma">
+                            Goma De Repuesto
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input kitHerramientas" type="checkbox" value="1" id="herramientasSolicitud">
+                        <label class="form-check-label" for="herramientasSolicitud">
+                            Kit De Herramientas
+                        </label>
+                    </div>
+                    <div class="container mt-4">
+                        <label for="combustible" class="ms-0">Cantidad De Conbustible</label>
+                        <select class="form-control" id="combustibleSolicitud" name="combustible">
+                            <option>1/2</option>
+                            <option>1/3</option>
+                            <option>3/4</option>
+                            <option>Lleno</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button data-bs-toggle="modal" data-bs-target="#modalSolicitudes" type="button" class="btn btn-secondary">Atras</button>
+                <button type="button" class="btn btn-primary btnRegistrarRentaSolicitada">Registrar</button>
             </div>
         </div>
     </div>

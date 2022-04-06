@@ -200,6 +200,7 @@ session_start(); ?>
                             </div>
                             <div class="d-flex flex-column justify-content-center">
                                 <input class="idVehiculoSolicitud" type="hidden" value="${datos['idvehiculo']}">
+                                <input class="idSolicitud" type="hidden" value="${datos['id']}">
                                 <h6 class="prueba mb-0 text-xs">${datos['descripcionvehiculo']}</h6>
                                 <p class="text-xs text-secondary mb-0">${datos['marcaVehiculo']}</p>
                                 <p class="text-xxs text-secondary mb-0">${datos['modeloVehiculo']}</p>
@@ -236,8 +237,8 @@ session_start(); ?>
                          <span class="text-secondary text-xs font-weight-normal">${datos['fecha']}</span>
                     </td>
                     <td class="align-middle">
-                        <a class="btn btn-success btnAceptarSolicitud"><span class="material-icons">done</span></a>
-                        <a class="btn btn-danger btnEliminarSolicitud"><span class="material-icons">delete</span></a>
+                        <button value="${datos['idcliente']}" class="btn btn-success btnAceptarSolicitud"><span class="material-icons">done</span></button>
+                        <button value="${datos['idcliente']}" class="btn btn-danger btnEliminarSolicitud"><span class="material-icons">delete</span></button>
                     </td>
                 // </tr>`);
                 });
@@ -287,6 +288,111 @@ session_start(); ?>
             $("#modalInfoVehiculoSolicitud").modal("hide");
             $("#modalSolicitudes").modal("show");
         });
+        $(".btnAceptarSolicitud").click(function(e) {
+            let idClienteSolicitud = $(this).val();
+            let idSolicitud = $(".idSolicitud").val();
+            $.ajax({
+                type: "post",
+                url: "admin/procesarSolicitud",
+                data: {
+                    "idCliente": idClienteSolicitud
+                },
+                success: function(response) {
+                    $("#modalSolicitudes").modal("hide");
+                    $("#modalInspeccionSolicitudes").modal("show");
+                    registrarNuevarenta(response, idClienteSolicitud, idSolicitud);
+                    // console.log(response);
+                }
+            });
+
+        });
+
+        function registrarNuevarenta(data, idClienteSolicitud, idSolicitud) {
+            $(".btnRegistrarRentaSolicitada").one("click", function() {
+                let combustible = $('#combustibleSolicitud').val();
+                let idVehiculo;
+                let telefonoRenta;
+                let emailRenta;
+                let fechaRecogida;
+                let fechaDevolucion;
+                let horaRecogida;
+                let horaDevolucion;
+                let diferenciaDias;
+                // validacion de los chech box
+                let gato = 0;
+                let luces = 0;
+                let goma = 0;
+                let kitHerramientas = 0;
+                if ($('.gato').is(':checked')) {
+                    gato = 1;
+                }
+                if ($('.luces').is(':checked')) {
+                    luces = 1;
+                }
+                if ($('.goma').is(':checked')) {
+                    goma = 1;
+                }
+                if ($('.kitHerramientas').is(':checked')) {
+                    kitHerramientas = 1;
+                }
+                $.each(data.datos, function(id, datosSolicitud) {
+                    idVehiculo = datosSolicitud['idvehiculo']
+                    telefonoRenta = datosSolicitud['telefono']
+                    emailRenta = datosSolicitud['email']
+                    fechaRecogida = datosSolicitud['fecharecogida']
+                    fechaDevolucion = datosSolicitud['fechadevolucion']
+                    horaRecogida = datosSolicitud['horarecogida']
+                    horaDevolucion = datosSolicitud['horadevolucion']
+                    diferenciaDias = datosSolicitud['diastotales']
+                });
+                // console.log(data);
+
+                // ===============================================================================
+
+                let datos = {
+                    'idCliente': idClienteSolicitud,
+                    'idVehiculo': idVehiculo,
+                    'telefonoRenta': telefonoRenta,
+                    'emailRenta': emailRenta,
+                    'fechaRecogida': fechaRecogida,
+                    'fechaDevolucion': fechaDevolucion,
+                    'horaRecogida': horaRecogida,
+                    'horaDevolucion': horaDevolucion,
+                    'gato': gato,
+                    'luces': luces,
+                    'goma': goma,
+                    'kitHerramientas': kitHerramientas,
+                    'combustible': combustible,
+                    'diasTotales': diferenciaDias
+                }
+                // console.log(datos);
+                $.ajax({
+                    type: "post",
+                    url: "admin/nuevaRentaAdmin",
+                    data: datos,
+                    success: function(response) {
+                        // $('.formularioInspeccion')[0].reset();
+                        // $('#rentaVehiculo')[0].reset();
+                        // $("#modalInspeccion").modal("hide");
+                        // alertify.set('notifier', 'position', 'top-right');
+                        // alertify.success(response.notificacion);
+                        $.ajax({
+                            type: "post",
+                            url: "admin/eliminarSolicitud",
+                            data: {
+                                "idSolicitud": idSolicitud
+                            },
+                            success: function(response) {
+                                window.location.href = "admin";
+                                // console.log(response);
+                            }
+                        });
+
+                        // console.log(response);
+                    }
+                });
+            });
+        }
     }
     //================== Detalle Vehiculo Solicitud end================
 

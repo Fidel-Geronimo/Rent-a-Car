@@ -96,7 +96,7 @@
                     'idVehiculo': idVehiculo
                 },
                 success: function(response) {
-                    console.log(response);
+                    // console.log(response);
                     $.each(response, function(key, vehiculo) {
                         $("#idVehiculo").val(vehiculo['id']);
                         $("#descripcionEdit").val(vehiculo['descripcion']);

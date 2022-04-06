@@ -18,6 +18,22 @@ class SolicitudController extends Controller
         return $this->response->setJSON($data);
     }
 
+    public function ProcesarSolicitud()
+    {
+        $solicitud = new SolicitudModel();
+        $idCliente = $this->request->getPost('idCliente');
+        $data = ['datos' => $solicitud->where('idcliente', $idCliente)->find()];
+        return $this->response->setJSON($data);
+    }
+    public function EliminarSolicitud()
+    {
+        $solicitud = new SolicitudModel();
+        $idSolicitud = $this->request->getPost('idSolicitud');
+        $solicitud->where('id', $idSolicitud)->delete();
+        $respuesta = ['notificacion'];
+        return $this->response->setJSON($respuesta);
+    }
+
     public function nuevaSolicitud()
     {
 
