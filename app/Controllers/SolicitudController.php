@@ -25,7 +25,8 @@ class SolicitudController extends Controller
         $datos = [
             'cliente' =>  $this->request->getPost('nombreCliente'),
             'idvehiculo' => $idVehiculo,
-            'fotoVehiculo' => $vehiculo->where('id', $idVehiculo)->findColumn('foto'),
+            'fotovehiculo' => $vehiculo->where('id', $idVehiculo)->findColumn('foto'),
+            'descripcionvehiculo' => $vehiculo->where('id', $idVehiculo)->findColumn('descripcion'),
             'modeloVehiculo' => $vehiculo->where('id', $idVehiculo)->findColumn('modelo'),
             'marcaVehiculo' => $vehiculo->where('id', $idVehiculo)->findColumn('marca'),
             'precioVehiculo' => $vehiculo->where('id', $idVehiculo)->findColumn('precio'),

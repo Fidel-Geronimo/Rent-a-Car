@@ -77,3 +77,4 @@ $routes->get('admin/vehiculos/borrar/(:num)', 'vehiculosController::borrar/$1');
 $routes->post('catalogo/rentar', 'SolicitudController::nuevaSolicitud');
 $routes->get('admin/solicitudes', 'AdminControllerRenta::solicitudesBoton');
 $routes->get('admin/solicitudesPendientes', 'SolicitudController::index');
+$routes->post('admin/infoVehiculoSolicitud/verData', 'vehiculosController::verData');

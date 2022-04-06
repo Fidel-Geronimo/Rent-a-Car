@@ -54,6 +54,7 @@
                                             <a class="btn btn-info btnEditarVehiculo"><span class="material-icons">edit</span></a>
                                             <a href="<?= base_url("admin/vehiculos/borrar/" . $datos['id']); ?>" class="btn btn-danger "><span class="material-icons">delete</span></a>
                                         </td>
+
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
@@ -268,8 +269,5 @@
                 });
             });
         }
-
-
-
     });
 </script>

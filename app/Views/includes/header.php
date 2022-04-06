@@ -796,6 +796,7 @@
         </div>
     </div>
 </div>
+
 <!-- modal de Proceso de Devolucion e inspeccion -->
 <div class="modal fade" id="modalDevolucionInspeccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalInspeccionLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -884,7 +885,6 @@
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fechas Reservadas</th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hora Reservadas</th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fecha Solicitud</th>
-
                                 <th class="text-secondary opacity-7"></th>
                             </tr>
                         </thead>
@@ -901,6 +901,83 @@
         </div>
     </div>
 </div>
+<!-- Modal de Info solicitud vehiculo entrate -->
+<div class="modal fade" id="modalInfoVehiculoSolicitud" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoVehiculoSolicitud" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="infoVehiculoSolicitud">Info Vehiculo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
+            <form>
+                <div class=" modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="mb-4">
+                                <img id="imagenVehiculoInfoSolicitud" src="" class="img-thumbnail mx-auto d-block" alt="...">
+                            </div>
+                            <h4>Vehiculo:</h4>
+                            <div class="input-group input-group-static mb-4">
+                                <label>Descripcion</label>
+                                <input readonly id="descripcionRentaInfoSolicitud" name="descripcionRentaInfoSolicitud" type="text" class="form-control">
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Marca</label>
+                                        <input readonly id="marcaRentaInfoSolicitud" name="marcaRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Modelo</label>
+                                        <input readonly id="modeloRentaInfoSolicitud" name="modeloRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Precio Alquiler</label>
+                                        <input readonly id="precioRentaInfoSolicitud" name="precioRentaInfoSolicitud" type="number" class="form-control">
+                                    </div>
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>No. Chasis</label>
+                                        <input readonly id="chasisRentaInfoSolicitud" name="chasisRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Transmision</label>
+                                        <input readonly id="transmisionRentaInfoSolicitud" name="transmisionRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>No. Motor</label>
+                                        <input readonly id="motorRentaInfoSolicitud" name="motorRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>No. Placa</label>
+                                        <input readonly id="placaRentaInfoSolicitud" name="placaRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                    <div class="input-group input-group-static mb-4">
+                                        <label>Tipo Vehiculo</label>
+                                        <input readonly id="tipoRentaInfoSolicitud" name="tipoRentaInfoSolicitud" type="text" class="form-control">
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btnInfoVehiculoSolicitud">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 </html>

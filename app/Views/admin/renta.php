@@ -8,7 +8,7 @@ session_start(); ?>
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="d-flex justify-content-between bg-gradient-primary shadow-primary border-radius-lg pt-4">
                         <h4 class="text-white text-capitalize ps-3">Rentas Activas </h4>
-                        <button type="button" class="btn btn-info me-3">
+                        <button type="button" class="btn btn-info btnSolicitudes me-3">
                             <span>Solicitudes</span>
                             <span class="conteoSolicitudes badge badge-sm badge-circle badge-danger border border-white border-2"><?= $solicitudes ?></span>
                         </button>
@@ -92,7 +92,6 @@ session_start(); ?>
         //========================== modal info================
         $(".btnInfo").click(function(e) {
             let idRenta = $(this).closest('tr').find(".idRenta").text().replace(/\s+/g, ''); //captura del valor del id Renta
-
             $.ajax({
                 type: "post",
                 url: "admin/info",
@@ -182,52 +181,116 @@ session_start(); ?>
         });
     });
     //================== modal Recibir Vehiculo end================
-
-
     //================== modal Solicitudes================
-    $(".btn-info").click(function(e) {
-
+    $(".btnSolicitudes").click(function(e) {
+        $("#TablasolicitudesPendientes > tbody").empty();
         $.ajax({
             type: "get",
             url: "admin/solicitudesPendientes",
             success: function(response) {
-                // $.each(response.datos, function(indexInArray, valor) {
-                //     $("#TablasolicitudesPendientes>tbody").append(`<tr>
-                //     <td class="align-middle text-center">
-                //          <span class="text-secondary text-xs font-weight-normal">${valor['cliente']}</span>
-                //     </td>
-                //     <td class="align-middle text-center">
-                //          <span class="text-secondary text-xs font-weight-normal">${valor['cliente']}</span>
-                //     </td>
-                // // </tr>`);
-
-                // });
-                console.log(response);
-
-                // $("#clienteRentaInfo").val(response.cliente);
-                // $("#telefonoRentaInfo").val(response.telefono);
-                // $("#emailRentaInfo").val(response.email);
-                // $("#fechaRecogidaInfo").val(response.fecharecogida);
-                // $("#horaRecogidaInfo").val(response.horarecogida);
-                // $("#fechaDevolucionInfo").val(response.fechadevolucion);
-                // $("#horaDevolucionInfo").val(response.horadevolucion);
-                // $("#descripcionRentaInfo").val(response.descripcionvehiculo);
-                // $("#marcaRentaInfo").val(response.marcavehiculo);
-                // $("#modeloRentaInfo").val(response.modelovehiculo);
-                // $("#precioRentaInfo").val(response.preciorenta);
-                // $("#chasisRentaInfo").val(response.chasisvehiculo);
-                // $("#transmisionRentaInfo").val(response.transmisionvehiculo);
-                // $("#motorRentaInfo").val(response.motorvehiculo);
-                // $("#placaRentaInfo").val(response.placavehiculo);
-                // $("#tipoRentaInfo").val(response.tipovehiculo);
+                $.each(response.datos, function(indexInArray, datos) {
+                    $("#TablasolicitudesPendientes>tbody").append(`<tr>
+                    <td class="align-middle text-center">
+                         <span class="text-secondary text-xs font-weight-normal">${datos['cliente']}</span>
+                    </td>
+                    <td>
+                        <div class="d-flex px-2 py-1">
+                            <div>
+                                <img alt='${datos['idvehiculo']}' src="<?= base_url() ?>/public/uploads/${datos['fotovehiculo']}" class="imagenVehiculoSolicitud avatar avatar-xl me-3">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                <input class="idVehiculoSolicitud" type="hidden" value="${datos['idvehiculo']}">
+                                <h6 class="prueba mb-0 text-xs">${datos['descripcionvehiculo']}</h6>
+                                <p class="text-xs text-secondary mb-0">${datos['marcaVehiculo']}</p>
+                                <p class="text-xxs text-secondary mb-0">${datos['modeloVehiculo']}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="align-middle text-center">
+                         <span class="text-secondary text-xs font-weight-normal">${datos['telefono']}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                         <span class="text-secondary text-xs font-weight-normal">${datos['email']}</span>
+                    </td>
+                    <td class="align-middle text-center">
+                        <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                                <span class="text-secondary text-xs font-weight-normal">${datos['fecharecogida']}---</span>
+                            </div>
+                            <div>
+                                <span class="text-secondary text-xs font-weight-normal">${datos['fechadevolucion']}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="align-middle text-center">
+                        <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                                <span class="text-secondary text-xs font-weight-normal">${datos['horarecogida']}---</span>
+                            </div>
+                            <div>
+                                <span class="text-secondary text-xs font-weight-normal">${datos['horadevolucion']}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="align-middle text-center">
+                         <span class="text-secondary text-xs font-weight-normal">${datos['fecha']}</span>
+                    </td>
+                    <td class="align-middle">
+                        <a class="btn btn-success btnAceptarSolicitud"><span class="material-icons">done</span></a>
+                        <a class="btn btn-danger btnEliminarSolicitud"><span class="material-icons">delete</span></a>
+                    </td>
+                // </tr>`);
+                });
                 $("#modalSolicitudes").modal('show');
-
+                // console.log(response);
+                acciones();
             }
         });
 
 
     });
     //================== modal Solicitudes end================
+
+    //================== Detalle Vehiculo Solicitud================
+    function acciones() {
+        $(".imagenVehiculoSolicitud").click(function(e) {
+            let idVehiculoSolicitud = $(this).attr("alt");
+            // console.log(idVehiculoSolicitud);
+            $.ajax({
+                type: "post",
+                url: "admin/infoVehiculoSolicitud/verData",
+                data: {
+                    "idVehiculo": idVehiculoSolicitud
+                },
+                success: function(response) {
+                    $("#modalSolicitudes").modal("hide");
+                    $.each(response, function(key, datos) {
+                        $("#imagenVehiculoInfoSolicitud").attr("src", '<?= base_url("/public/uploads") ?>/' + datos['foto']);
+                        $("#descripcionRentaInfoSolicitud").val(datos['descripcion']);
+                        $("#marcaRentaInfoSolicitud").val(datos['marca']);
+                        $("#modeloRentaInfoSolicitud").val(datos['modelo']);
+                        $("#precioRentaInfoSolicitud").val(datos['precio']);
+                        $("#chasisRentaInfoSolicitud").val(datos['chasis']);
+                        $("#motorRentaInfoSolicitud").val(datos['motor']);
+                        $("#transmisionRentaInfoSolicitud").val(datos['transmision']);
+                        $("#placaRentaInfoSolicitud").val(datos['placa']);
+                        $("#tipoRentaInfoSolicitud").val(datos['tipovehiculo']);
+                        $("#modalInfoVehiculoSolicitud").modal("show");
+                        console.log(response);
+                    });
+
+                }
+            });
+
+        });
+        $(".btnInfoVehiculoSolicitud").click(function(e) {
+            $("#modalInfoVehiculoSolicitud").modal("hide");
+            $("#modalSolicitudes").modal("show");
+        });
+    }
+    //================== Detalle Vehiculo Solicitud end================
+
+
 
 
     //================== Actualizacion de la notificacion de solicitudes================
