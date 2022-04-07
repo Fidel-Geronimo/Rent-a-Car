@@ -82,7 +82,7 @@ $routes->post('admin/vehiculos/editar', 'vehiculosController::editar');
 $routes->get('admin/vehiculos/borrar/(:num)', 'vehiculosController::borrar/$1');
 $routes->post('catalogo/rentar', 'SolicitudController::nuevaSolicitud');
 $routes->get('admin/solicitudes', 'AdminControllerRenta::solicitudesBoton');
-$routes->post('admin/Reportes', 'AdminControllerRenta::Reportes');
+$routes->post('admin/Reportes', 'ReportesController::Reportes');
 $routes->post('admin/verDataReporteCliente', 'AdminControllerRenta::verDataReporteCliente');
 $routes->get('admin/solicitudesPendientes', 'SolicitudController::index');
 $routes->post('admin/procesarSolicitud', 'SolicitudController::ProcesarSolicitud');

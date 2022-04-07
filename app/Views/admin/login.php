@@ -1,17 +1,14 @@
-<!--
-=========================================================
-* Material Dashboard 2 - v3.0.1
-=========================================================
+<?php
+session_start();
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
+if (isset($_SESSION["login"])) { ?>
+  <script>
+    window.location.href = "<?= base_url("admin") ?>";
+  </script>
+<?php
+}
 
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +20,8 @@
   <title>
     Material Dashboard 2 by Creative Tim
   </title>
+  <!-- alertify -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/public/assets/alertify/alertify.css" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
@@ -40,55 +39,6 @@
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-          <div class="container-fluid ps-2 pe-0">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
-              Material Dashboard 2
-            </a>
-            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon mt-2">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navigation">
-              <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../pages/dashboard.html">
-                    <i class="fa fa-chart-pie opacity-6 text-dark me-1"></i>
-                    Dashboard
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/profile.html">
-                    <i class="fa fa-user opacity-6 text-dark me-1"></i>
-                    Profile
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/sign-up.html">
-                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
-                    Sign Up
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/sign-in.html">
-                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
-                    Sign In
-                  </a>
-                </li>
-              </ul>
-              <ul class="navbar-nav d-lg-block d-none">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/product/material-dashboard" class="btn btn-sm mb-0 me-1 bg-gradient-dark">Free download</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <!-- End Navbar -->
       </div>
     </div>
   </div>
@@ -122,71 +72,39 @@
                 </div>
               </div>
               <div class="card-body">
-                <form action="<?= base_url("loginEntrar") ?>" role="form" class="text-start" method="POST">
+                <form autocomplete="off" role="form" class="text-start">
                   <div class="input-group input-group-static mb-4">
                     <label>Usuario</label>
                     <input id="usuario" name="usuario" type="text" class="form-control">
                   </div>
                   <div class="input-group input-group-static mb-4">
                     <label>Contraseña</label>
-                    <input id="pass" name="pass" type="text" class="form-control">
+                    <input id="pass" name="pass" type="password" class="form-control">
                   </div>
                   <div class="form-check form-switch d-flex align-items-center mb-3">
                     <input class="form-check-input" type="checkbox" id="rememberMe">
                     <label class="form-check-label mb-0 ms-2" for="rememberMe">Remember me</label>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+                    <button id="btnEntrar" type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Entrar</button>
                   </div>
-                  <p class="mt-4 text-sm text-center">
-                    Don't have an account?
-                    <a href="../pages/sign-up.html" class="text-primary text-gradient font-weight-bold">Sign up</a>
-                  </p>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer position-absolute bottom-2 py-2 w-100">
-        <div class="container">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-12 col-md-6 my-auto">
-              <div class="copyright text-center text-sm text-white text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart" aria-hidden="true"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold text-white" target="_blank">Creative Tim</a>
-                for a better web.
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-white" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-white" target="_blank">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-white" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-white" target="_blank">License</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   </main>
   <!--   Core JS Files   -->
+  <!-- jquery 3.6.0 -->
+  <script src="<?= base_url() ?>/public/assets/js/jquery-3.6.0.min.js"></script>
   <script src="<?= base_url() ?>/public/assets/admin/js/core/popper.min.js"></script>
   <script src="<?= base_url() ?>/public/assets/admin/js/core/bootstrap.min.js"></script>
   <script src="<?= base_url() ?>/public/assets/admin/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="<?= base_url() ?>/public/assets/admin/js/plugins/smooth-scrollbar.min.js"></script>
+  <!-- alertify -->
+  <script src="<?= base_url() ?>/public/assets/alertify/alertify.js"></script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -198,8 +116,34 @@
   </script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <!-- <script src="<?= base_url() ?>/public/assets/admin/js/material-dashboard.min.js?v=3.0.1"></script> -->
+  <script>
+    $(document).ready(function() {
+      $("#btnEntrar").click(function(e) {
+        let usuarios = $("#usuario").val();
+        let pass = $("#pass").val();
+
+        $.ajax({
+          type: "post",
+          url: "loginEntrar",
+          data: {
+            "usuario": usuarios,
+            "pass": pass
+          },
+          success: function(response) {
+            if (response.notificaion == 1) {
+              window.location.href = "admin";
+            } else {
+              alertify.set('notifier', 'position', 'top-right');
+              alertify.success("Usuario No Encontrado");
+            }
+            // console.log(response.notificaion);
+
+          }
+        });
+
+      });
+    });
+  </script>
 
 </body>
 

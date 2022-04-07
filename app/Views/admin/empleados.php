@@ -11,7 +11,7 @@ session_start(); ?>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive-sm">
-                        <table id="example" class="table table-borderless align-items-center mb-0">
+                        <table id="empleadosTable" class="table table-borderless align-items-center mb-0">
                             <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">id</th>
@@ -91,7 +91,12 @@ session_start(); ?>
                 success: function(response) {
                     // console.log(response);
                     // listarEmpleados();
-                    fila.hide(500);
+
+                    fila.hide(500, function() {
+                        $("#empleadosTable").dataTable().fnDestroy();
+                        fila.remove();
+                        listarEmpleados();
+                    });
                     alertify.set('notifier', 'position', 'top-right');
                     alertify.success(response.notification);
                 }
@@ -99,13 +104,33 @@ session_start(); ?>
         })
     });
 
+    function iniciarDataTable() {
+        $('#empleadosTable').DataTable({
+            language: {
+                "lengthMenu": "Mostrar _MENU_ registros",
+                "zeroRecords": "No se encontraron resultados",
+                "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar:",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast": "Último",
+                    "sNext": "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "sProcessing": "Procesando...",
+            },
+        });
+    }
+
     function listarEmpleados() {
         $.ajax({
             method: "get",
             url: "ListarEmpleados",
             success: function(response) {
                 // console.log(response);
-
+                $("#empleadosTable").dataTable().fnDestroy();
                 $(".bodyTablaEmpleados").html("");
                 $.each(response.empleado, function(key, empleados) {
                     $(".bodyTablaEmpleados").append(`
@@ -140,7 +165,7 @@ session_start(); ?>
                         </tr>
                         `);
                 });
-
+                iniciarDataTable()
 
 
             }
