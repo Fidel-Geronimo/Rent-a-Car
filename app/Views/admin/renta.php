@@ -181,8 +181,8 @@ session_start(); ?>
         });
     });
     //================== modal Recibir Vehiculo end================
-    //================== modal Solicitudes================
-    $(".btnSolicitudes").click(function(e) {
+    // ======================Leer solicitudes===================
+    function leerSolicitudes() {
         $("#TablasolicitudesPendientes > tbody").empty();
         $.ajax({
             type: "get",
@@ -247,8 +247,11 @@ session_start(); ?>
                 acciones();
             }
         });
-
-
+    }
+    // ======================Leer solicitudes End===================
+    //================== modal Solicitudes================
+    $(".btnSolicitudes").click(function(e) {
+        leerSolicitudes();
     });
     //================== modal Solicitudes end================
 
@@ -302,6 +305,27 @@ session_start(); ?>
                     $("#modalInspeccionSolicitudes").modal("show");
                     registrarNuevarenta(response, idClienteSolicitud, idSolicitud);
                     // console.log(response);
+                }
+            });
+
+        });
+        $(".btnEliminarSolicitud").click(function(e) {
+            let idSolicitud = $(".idSolicitud").val();
+            let fila = $(this).closest('tr');
+
+
+
+            $.ajax({
+                type: "post",
+                url: "admin/eliminarSolicitud",
+                data: {
+                    "idSolicitud": idSolicitud
+                },
+                success: function(response) {
+                    // $("#modalSolicitudes").modal("hide");
+                    // $("#modalInspeccionSolicitudes").modal("show");
+                    // registrarNuevarenta(response, idClienteSolicitud, idSolicitud);
+                    fila.remove();
                 }
             });
 

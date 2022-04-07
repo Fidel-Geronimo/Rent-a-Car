@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\RentaModel;
 
 class ReportesController extends Controller
 {
@@ -17,5 +18,11 @@ class ReportesController extends Controller
             "perfil" => "",
         ];
         return view('admin/reportes', $colorBotonesPanel);
+    }
+    public function info()
+    {
+        $renta = new RentaModel;
+        $data = $renta->find();
+        return $this->response->setJSON($data);
     }
 }

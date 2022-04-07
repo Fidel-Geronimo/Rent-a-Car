@@ -71,6 +71,12 @@ class vehiculosController extends Controller
         $data['vehiculo'] = $vehiculo->find($idVehiculo);
         return $this->response->setJSON($data);
     }
+    public function RellenarSelectReporte()
+    {
+        $vehiculo = new VehiculoModel;
+        $data = $vehiculo->findAll();
+        return $this->response->setJSON($data);
+    }
     public function editar()
     {
         $vehiculo = new VehiculoModel;

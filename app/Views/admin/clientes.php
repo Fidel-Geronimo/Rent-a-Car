@@ -78,7 +78,7 @@ session_start();
     $(".btnEditarCliente").click(function(e) {
 
         let idCliente = $(this).closest('tr').find(".idEmpleado").text();
-        console.log(idCliente);
+        // console.log(idCliente);
 
         $.ajax({
             method: "POST",

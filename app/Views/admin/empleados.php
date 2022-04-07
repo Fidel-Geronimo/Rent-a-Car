@@ -22,41 +22,12 @@ session_start(); ?>
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <?php foreach ($data as $datos) : ?>
-                                    <tr>
-                                        <td class="idEmpleado">
-                                            <p class="text-xs font-weight-bold mb-0"><?= $datos['id'] ?></p>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div>
-                                                    <img src="<?= base_url("/public/uploads/" . $datos["foto"]) ?>" class="avatar avatar-md me-3">
-                                                </div>
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-xs"><?= $datos['nombre'] ?></h6>
-                                                    <p class="text-xs text-secondary mb-0"><?= $datos['email'] ?></p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0"><?= $datos['funcion'] ?></p>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <span class="text-secondary text-xs font-weight-normal"><?= $datos['telefono'] ?></span>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <span class="text-secondary text-xs font-weight-normal"><?= $datos['fecha'] ?></span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <a href="#" class="btn btn-info btnEditar"><span class="material-icons">edit</span></a>
-                                            <a href="<?= base_url("admin/empleados/borrar/" . $datos['id']) ?>" class="btn btn-danger"><span class="material-icons">delete</span></a>
-                                        </td>
+                            <tbody class="bodyTablaEmpleados">
 
-                                    <?php endforeach; ?>
-                                    </tr>
+
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>
@@ -79,34 +50,100 @@ session_start(); ?>
 
 
 <script>
-    // boton editar Empleado
-    $(".btnEditar").click(function(e) {
+    $(document).ready(function() {
+        listarEmpleados();
+        // boton editar Empleado
+        $(document).on('click', '.btnEditar', function() {
+            let idEmpleado = $(this).closest('tr').find(".idEmpleado").text();
+            // console.log(idEmpleado)
+            $.ajax({
+                method: "POST",
+                url: "empleados/verData",
+                data: {
+                    'idEmpleado': idEmpleado
+                },
+                success: function(response) {
+                    // console.log(response);
+                    $.each(response, function(key, empleados) {
+                        $("#idEmpleado").val(empleados['id']);
+                        $("#nombreEmpleado").val(empleados['nombre']);
+                        $("#emailEmpleado").val(empleados['email']);
+                        $("#telefonoEmpleado").val(empleados['telefono']);
+                        $("#funcionEmpleado").val(empleados['funcion']);
+                        $("#fotoEmpleado").attr("src", '<?= base_url("/public/uploads") ?>/' + empleados['foto']);
+                        $("#modalEmpleadoEdit").modal("show")
+                    });
 
-        let idEmpleado = $(this).closest('tr').find(".idEmpleado").text();
-        // console.log(idEmpleado)
+                }
+            });
 
+        })
+        $(document).on('click', '.btnBorrar', function() {
+            let idEmpleado = $(this).closest('tr').find(".idEmpleado").text().replace(/\s+/g, '');
+            let fila = $(this).closest('tr');
+            // console.log(idEmpleado)
+            $.ajax({
+                method: "POST",
+                url: "empleados/borrar",
+                data: {
+                    'idEmpleado': idEmpleado
+                },
+                success: function(response) {
+                    // console.log(response);
+                    // listarEmpleados();
+                    fila.hide(500);
+                    alertify.set('notifier', 'position', 'top-right');
+                    alertify.success(response.notification);
+                }
+            });
+        })
+    });
+
+    function listarEmpleados() {
         $.ajax({
-            method: "POST",
-            url: "empleados/verData",
-            data: {
-                'idEmpleado': idEmpleado
-            },
+            method: "get",
+            url: "ListarEmpleados",
             success: function(response) {
                 // console.log(response);
-                $.each(response, function(key, empleados) {
-                    $("#idEmpleado").val(empleados['id']);
-                    $("#nombreEmpleado").val(empleados['nombre']);
-                    $("#emailEmpleado").val(empleados['email']);
-                    $("#telefonoEmpleado").val(empleados['telefono']);
-                    $("#funcionEmpleado").val(empleados['funcion']);
-                    $("#fotoEmpleado").attr("src", '<?= base_url("/public/uploads") ?>/' + empleados['foto']);
-                    $("#modalEmpleadoEdit").modal("show")
+
+                $(".bodyTablaEmpleados").html("");
+                $.each(response.empleado, function(key, empleados) {
+                    $(".bodyTablaEmpleados").append(`
+                        <tr>
+                            <td class="idEmpleado">
+                                <p class="text-xs font-weight-bold mb-0">${empleados.id}</p>
+                            </td>
+                            <td>
+                                <div class="d-flex px-2 py-1">
+                                    <div>
+                                        <img src="<?= base_url() ?>/public/uploads/${empleados.foto}" class="avatar avatar-md me-3">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="mb-0 text-xs">${empleados.nombre}</h6>
+                                        <p class="text-xs text-secondary mb-0">${empleados.email}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="text-xs font-weight-bold mb-0"${empleados.funcion}</p>
+                            </td>
+                            <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-normal">${empleados.telefono}</span>
+                            </td>
+                            <td class="align-middle text-center">
+                                <span class="text-secondary text-xs font-weight-normal">${empleados.fecha}</span>
+                            </td>
+                            <td class="align-middle">
+                                <a href="#" class="btn btn-info btnEditar"><span class="material-icons">edit</span></a>
+                                <a class="btn btn-danger btnBorrar"><span class="material-icons">delete</span></a>
+                            </td>
+                        </tr>
+                        `);
                 });
+
+
 
             }
         });
-
-    });
-
-    // Empleados End
+    }
 </script>

@@ -24,6 +24,12 @@ class EmpleadosController extends Controller
         ];
         return view('admin/empleados', $datos);
     }
+    public function ListarEmpleados()
+    {
+        $empleados = new EmpleadosModel();
+        $data['empleado'] = $empleados->orderBy('fecha', 'DESC')->findAll();
+        return $this->response->setJSON($data);
+    }
     public function nuevo()
     {
         $empleados = new EmpleadosModel;
@@ -44,17 +50,13 @@ class EmpleadosController extends Controller
         return $this->response->redirect(base_url("/admin/empleados"));
     }
 
-    public function borrar($id)
+    public function borrar()
     {
-        $empleados = new EmpleadosModel;
-        $datos = $empleados->where('id', $id)->first();
-        $ruta = ("./public/uploads/" . $datos['foto']);
-        unlink($ruta);
-
-        $empleados->where('id', $id)->delete($id);
-        $_SESSION["notificacion"] = "Empleado Eliminado!";
-
-        return $this->response->redirect(base_url("/admin/empleados"));
+        $empleados = new EmpleadosModel();
+        $idEmpleado = $this->request->getPost('idEmpleado');
+        $empleados->where('id', $idEmpleado)->delete();
+        $data['notification'] = "Empleado Eliminado!";
+        return $this->response->setJSON($data);
     }
 
     public function verData()

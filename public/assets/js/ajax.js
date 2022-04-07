@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
     // data table
-    $('#example').DataTable({
-        "ordering": false
-    });
+    // $('#example').DataTable({
+    //     "ordering": false
+    // });
     // =======================================================================================
 
     // Clientes Start

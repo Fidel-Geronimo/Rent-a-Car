@@ -165,3 +165,29 @@ CRITICAL - 2022-04-06 04:43:15 --> Trying to access array offset on value of typ
 #3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+ERROR - 2022-04-06 08:23:48 --> Column 'cliente' cannot be null
+CRITICAL - 2022-04-06 22:35:36 --> Undefined variable $id
+#0 C:\xampp\htdocs\rentacar\app\Controllers\EmpleadosController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\EmpleadosController->borrar()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 22:35:43 --> Undefined variable $id
+#0 C:\xampp\htdocs\rentacar\app\Controllers\EmpleadosController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\EmpleadosController->borrar()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-06 22:44:32 --> Undefined variable $datos
+#0 C:\xampp\htdocs\rentacar\app\Views\admin\empleados.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\rentacar\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rentacar\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\rentacar\system\Common.php(1089): CodeIgniter\View\View->render('admin/empleados', Array, true)
+#4 C:\xampp\htdocs\rentacar\app\Controllers\EmpleadosController.php(25): view('admin/empleados', Array)
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\EmpleadosController->index()
+#6 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#7 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
