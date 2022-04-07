@@ -21,7 +21,6 @@ class ClientesController extends Controller
             "vehiculos" => "",
             "empleados" => "",
             "reportes" => "",
-            "perfil" => "",
             "data" => $clientes->orderBy('fecha', 'DESC')->findAll()
         ];
         return view("admin/clientes", $data);

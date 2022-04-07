@@ -81,10 +81,6 @@ if (isset($_SESSION["login"])) { ?>
                     <label>Contraseña</label>
                     <input id="pass" name="pass" type="password" class="form-control">
                   </div>
-                  <div class="form-check form-switch d-flex align-items-center mb-3">
-                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                    <label class="form-check-label mb-0 ms-2" for="rememberMe">Remember me</label>
-                  </div>
                   <div class="text-center">
                     <button id="btnEntrar" type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Entrar</button>
                   </div>

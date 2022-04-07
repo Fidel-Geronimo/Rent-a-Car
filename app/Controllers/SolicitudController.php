@@ -17,7 +17,20 @@ class SolicitudController extends Controller
         $data = ['datos' => $solicitud->orderBy('fecha', 'DESC')->findAll()];
         return $this->response->setJSON($data);
     }
-
+    public function solicitudesBoton()
+    {
+        $solicitudes = new SolicitudModel();
+        $data = ['conteo' => $solicitudes->countAll()];
+        if (isset($_SESSION['SolicitudNueva'])) {
+            $dataNotification = [
+                'conteo' => $solicitudes->countAll(),
+                'notificacion' => 'Solicitud Nueva'
+            ];
+            unset($_SESSION['SolicitudNueva']);
+            return $this->response->setJSON($dataNotification);
+        }
+        return $this->response->setJSON($data);
+    }
     public function ProcesarSolicitud()
     {
         $solicitud = new SolicitudModel();
@@ -30,7 +43,7 @@ class SolicitudController extends Controller
         $solicitud = new SolicitudModel();
         $idSolicitud = $this->request->getPost('idSolicitud');
         $solicitud->where('id', $idSolicitud)->delete();
-        $respuesta = ['notificacion'];
+        $respuesta['notificacion'] = "Solicitud Eliminada";
         return $this->response->setJSON($respuesta);
     }
 

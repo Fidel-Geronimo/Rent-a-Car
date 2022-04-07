@@ -25,28 +25,16 @@ class AdminControllerRenta extends Controller
             "clientes" => "",
             "empleados" => "",
             "reportes" => "",
-            "perfil" => "",
-            "data" => $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll(),
             'solicitudes' => $solicitudes->countAll()
         ];
         return view('admin/renta', $colorBotonesPanel);
     }
-
-    public function solicitudesBoton()
+    public function ListarRentas()
     {
-        $solicitudes = new SolicitudModel();
-        $data = ['conteo' => $solicitudes->countAll()];
-        if (isset($_SESSION['SolicitudNueva'])) {
-            $dataNotification = [
-                'conteo' => $solicitudes->countAll(),
-                'notificacion' => 'Solicitud Nueva'
-            ];
-            unset($_SESSION['SolicitudNueva']);
-            return $this->response->setJSON($dataNotification);
-        }
+        $renta = new RentaModel;
+        $data = $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll();
         return $this->response->setJSON($data);
     }
-
 
     public function nuevaRentaAdmin()
     {
@@ -93,17 +81,19 @@ class AdminControllerRenta extends Controller
         ];
         $renta->insert($data);
         $respuesta = ['notificacion' => 'Renta Registrada'];
-        return $this->response->setJSON($data);
+        // $_SESSION["notificacion"] = "Renta Registrada!";
+        return $this->response->setJSON($respuesta);
     }
 
 
-    public function borrar($id)
+    public function borrar()
     {
         $renta = new RentaModel;
-        $renta->where('id', $id)->delete($id);
-        // $_SESSION["notificacion"] = "Empleado Eliminado!";
-
-        return $this->response->redirect(base_url("admin"));
+        $idRenta = $this->request->getPost("idRenta");
+        $renta->where('id', $idRenta)->delete();
+        // $_SESSION["notificacion"] = "Renta Eliminada!";
+        $data = ['notificacion' => "Renta Eliminada!"];
+        return $this->response->setJSON($data);
     }
     public function info()
     {
@@ -135,9 +125,9 @@ class AdminControllerRenta extends Controller
         $rentaCompleta->insert($data);
         $renta->update($idRenta, $estado);
         $respuesta = [
-            'notificacion' => 'Devolucion Completada',
-            'datos' => $renta->where('estado', 0)->orderBy('fecha', 'DESC')->findAll()
+            'notificacion' => 'Devolucion Completada'
         ];
+        // $_SESSION["notificacion"] = "Renta Retornada!";
         return $this->response->setJSON($respuesta);
     }
 }

@@ -1,4 +1,7 @@
-<?= $this->include("includes/header"); ?>
+<?= $this->include("includes/header");
+session_start();
+?>
+
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -81,8 +84,6 @@
 
 <script>
     $(document).ready(function() {
-
-
         // boton editar Vehiculo
         $(".btnEditarVehiculo").click(function(e) {
 
@@ -120,11 +121,8 @@
             });
 
         });
-
         // Vehiculo End
-
         // -=====================Formulario de Renta=========================
-
         $(".btnRentarVehiculo").click(function(e) {
             let idVehiculoRenta = $(this).closest('tr').find(".idVehiculo").text();
             $("#idVehiculoRenta").val(idVehiculoRenta.split(" ").join(""));

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+session_start();
+
 use CodeIgniter\Controller;
 use App\Models\VehiculoModel;
 
@@ -45,9 +47,8 @@ class vehiculosController extends Controller
                 'transmision' => $this->request->getVar('transmisionVehiculo'),
                 'maletas' => $this->request->getVar('maletasVehiculo')
             ];
-            print_r($data);
             $vehiculo->insert($data);
-            // $_SESSION["notificacion"] = "Empleado Registrado!";
+            $_SESSION["notificacion"] = "Nuevo Vehiculo Creado!";
         }
 
         return $this->response->redirect(base_url("/admin/vehiculos"));
@@ -60,7 +61,7 @@ class vehiculosController extends Controller
         unlink($ruta);
 
         $vehiculo->where('id', $id)->delete($id);
-        // $_SESSION["notificacion"] = "Empleado Eliminado!";
+        $_SESSION["notificacion"] = "Vehiculo Eliminado!";
 
         return $this->response->redirect(base_url("/admin/vehiculos"));
     }
@@ -97,8 +98,6 @@ class vehiculosController extends Controller
         ];
         $id = $this->request->getvar('idVehiculo');
         $vehiculo->update($id, $data);
-        // $_SESSION["notificacion"] = "Empleado Editado!";
-
         $validacion = $this->validate([
             'foto' => [
                 'uploaded[foto]',
@@ -120,7 +119,7 @@ class vehiculosController extends Controller
                 $vehiculo->update($id, $data);
             }
         }
-
+        $_SESSION["notificacion"] = "Vehiculo Editado!";
         return $this->response->redirect(base_url("/admin/vehiculos"));
     }
 }

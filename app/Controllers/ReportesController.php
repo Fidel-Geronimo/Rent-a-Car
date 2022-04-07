@@ -15,7 +15,6 @@ class ReportesController extends Controller
             "vehiculos" => "",
             "empleados" => "",
             "reportes" => "active bg-gradient-primary",
-            "perfil" => "",
         ];
         return view('admin/reportes', $colorBotonesPanel);
     }

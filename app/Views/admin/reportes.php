@@ -84,6 +84,7 @@ session_start();
     $(document).ready(function() {
         function iniciarDataTable() {
             $('#tablaReporte').DataTable({
+                stateSave: true,
                 language: {
                     "lengthMenu": "Mostrar _MENU_ registros",
                     "zeroRecords": "No se encontraron resultados",
@@ -92,10 +93,10 @@ session_start();
                     "infoFiltered": "(filtrado de un total de _MAX_ registros)",
                     "sSearch": "Buscar:",
                     "oPaginate": {
-                        "sFirst": "Primero",
-                        "sLast": "Último",
-                        "sNext": "Siguiente",
-                        "sPrevious": "Anterior"
+                        "sFirst": "<<",
+                        "sLast": ">>",
+                        "sNext": ">",
+                        "sPrevious": "<"
                     },
                     "sProcessing": "Procesando...",
                 },
