@@ -18,8 +18,10 @@ if (isset($_SESSION["login"])) { ?>
   <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>/public/assets/admin/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Material Dashboard 2 by Creative Tim
+    Admin Panel
   </title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="<?= base_url() ?>/public/assets/image/favicon.png" type="image/x-icon">
   <!-- alertify -->
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/public/assets/alertify/alertify.css" />
   <!--     Fonts and icons     -->
@@ -55,17 +57,17 @@ if (isset($_SESSION["login"])) { ?>
                   <div class="row mt-3">
                     <div class="col-2 text-center ms-auto">
                       <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-facebook text-white text-lg"></i>
+                        <i class="text-white text-lg">F</i>
                       </a>
                     </div>
                     <div class="col-2 text-center px-1">
                       <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-github text-white text-lg"></i>
+                        <i class=" text-white text-lg">G</i>
                       </a>
                     </div>
                     <div class="col-2 text-center me-auto">
                       <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-google text-white text-lg"></i>
+                        <i class=" text-white text-lg">G</i>
                       </a>
                     </div>
                   </div>
@@ -74,11 +76,11 @@ if (isset($_SESSION["login"])) { ?>
               <div class="card-body">
                 <form autocomplete="off" role="form" class="text-start">
                   <div class="input-group input-group-static mb-4">
-                    <label>Usuario</label>
+                    <label for="usuario">Usuario</label>
                     <input id="usuario" name="usuario" type="text" class="form-control">
                   </div>
                   <div class="input-group input-group-static mb-4">
-                    <label>Contraseña</label>
+                    <label for="pass">Contraseña</label>
                     <input id="pass" name="pass" type="password" class="form-control">
                   </div>
                   <div class="text-center">
@@ -130,7 +132,7 @@ if (isset($_SESSION["login"])) { ?>
               window.location.href = "admin";
             } else {
               alertify.set('notifier', 'position', 'top-right');
-              alertify.success("Usuario No Encontrado");
+              alertify.error("Usuario No Encontrado");
             }
             // console.log(response.notificaion);
 

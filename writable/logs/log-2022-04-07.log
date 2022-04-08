@@ -397,3 +397,114 @@ CRITICAL - 2022-04-07 12:56:19 --> Trying to access array offset on value of typ
 #3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-04-07 23:09:37 --> Call to undefined method App\Models\ClientesModel::getNumRows
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(59): CodeIgniter\Model->__call('getNumRows', Array)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:10:31 --> Call to a member function getNumRows() on array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-07 23:12:40 --> Call to a member function getNumRows() on array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-07 23:15:28 --> Undefined variable $respuest2a
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 93)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:15:53 --> Undefined variable $respuest2a
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:21:15 --> syntax error, unexpected token "}"
+#0 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-07 23:23:19 --> Undefined array key "id"
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:26:20 --> Undefined array key "id"
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:28:26 --> syntax error, unexpected variable "$idVehiculo"
+#0 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-07 23:28:26 --> syntax error, unexpected variable "$idVehiculo"
+#0 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-07 23:28:27 --> syntax error, unexpected variable "$idVehiculo"
+#0 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\rentacar\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-07 23:32:49 --> Undefined array key "id"
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:33:23 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-07 23:34:53 --> Undefined array key "id"
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 97)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-07 23:37:32 --> Undefined array key "id"
+#0 C:\xampp\htdocs\rentacar\app\Controllers\SolicitudController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\SolicitudController->nuevaSolicitud()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudController))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-04-07 23:38:25 --> Column 'cliente' cannot be null

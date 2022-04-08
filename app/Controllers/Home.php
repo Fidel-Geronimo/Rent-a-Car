@@ -4,9 +4,6 @@ namespace App\Controllers;
 
 session_start();
 
-use App\Models\VehiculoModel;
-use App\Models\LoginModel;
-
 class Home extends BaseController
 {
     public function index()

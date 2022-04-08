@@ -106,6 +106,7 @@ session_start(); ?>
 
     function iniciarDataTable() {
         $('#empleadosTable').DataTable({
+            "ordering": false,
             language: {
                 "lengthMenu": "Mostrar _MENU_ registros",
                 "zeroRecords": "No se encontraron resultados",

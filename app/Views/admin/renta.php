@@ -239,6 +239,7 @@ session_start(); ?>
     //============= activacion de data table-============
     function iniciarDataTable() {
         $('#tablaRentas').DataTable({
+            "ordering": false,
             stateSave: true,
             language: {
                 "lengthMenu": "Mostrar _MENU_ registros",

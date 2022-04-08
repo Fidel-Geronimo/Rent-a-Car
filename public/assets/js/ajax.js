@@ -33,6 +33,8 @@ $(document).ready(function () {
     $("#clientFormEdit").validate(); //validacion del formulario al Editar un Cliente
     $("#empleadoForm").validate(); //validacion del formulario al crear un empleado
     $("#empleadoFormEdit").validate(); //validacion del formulario al Editar un empleado
+    $("#vehiculoNuevoForm").validate(); //validacion del formulario al Editar un empleado
+    $("#edicionVehiculo").validate(); //validacion del formulario al Editar un empleado
 
 
     // Clientes End 

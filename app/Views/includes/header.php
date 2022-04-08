@@ -16,11 +16,9 @@ if (!isset($_SESSION["login"])) { ?>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="<?= base_url() ?>/public/assets/admin/img/favicon.png">
-    <title>
-        Admin
-    </title>
-    <!-- alertify -->
+    <title>Admin Panel</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="<?= base_url() ?>/public/assets/image/favicon.png" type="image/x-icon"> <!-- alertify -->
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/public/assets/alertify/alertify.css" />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -39,8 +37,8 @@ if (!isset($_SESSION["login"])) { ?>
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
-                <img src="<?= base_url() ?>/public/assets/admin/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+            <a class="navbar-brand m-0" href="<?= base_url('admin') ?>">
+                <img src=" <?= base_url() ?>/public/assets/image/favicon.png" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold text-white">Admin Panel</span>
             </a>
         </div>
@@ -108,9 +106,9 @@ if (!isset($_SESSION["login"])) { ?>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Admin</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+                    <h6 class="font-weight-bolder mb-0">Rentas Control</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -118,9 +116,8 @@ if (!isset($_SESSION["login"])) { ?>
                     </div>
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
-                            <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
-                                <i class="fa fa-user me-sm-1"></i>
-                                <span class="d-sm-inline d-none">Sign In</span>
+                            <a href="<?= base_url('logincerrar') ?>" class="nav-link text-body font-weight-bold px-0">
+                                <i class="material-icons opacity-10">login</i>
                             </a>
                         </li>
                         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -197,7 +194,7 @@ if (!isset($_SESSION["login"])) { ?>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="clientModalLabelEdit">Nuevo Cliente</h5>
+                <h5 class="modal-title" id="clientModalLabelEdit">Edicion Cliente</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
@@ -367,7 +364,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="tipoVehiculo" class="ms-0">Tipo De Vehiculo</label>
-                                <select class="form-control" id="tipoVehiculo" name="tipoVehiculo">
+                                <select required class="form-control" id="tipoVehiculo" name="tipoVehiculo">
                                     <option>Coche</option>
                                     <option>Jeepeta</option>
                                     <option>Furgoneta</option>
@@ -375,7 +372,7 @@ if (!isset($_SESSION["login"])) { ?>
                             </div>
                             <div class="input-group input-group-static mb-4">
                                 <label for="transmisionVehiculo" class="ms-0">Transimision</label>
-                                <select class="form-control" id="transmisionVehiculo" name="transmisionVehiculo">
+                                <select required class="form-control" id="transmisionVehiculo" name="transmisionVehiculo">
                                     <option>Automatico</option>
                                     <option>Manual</option>
                                     <option>Hibrido</option>
@@ -385,7 +382,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="combustibleVehiculo" class="ms-0">Combustible</label>
-                                <select class="form-control" id="combustibleVehiculo" name="combustibleVehiculo">
+                                <select required class="form-control" id="combustibleVehiculo" name="combustibleVehiculo">
                                     <option>Gasolina</option>
                                     <option>Gasoil</option>
                                     <option>Gas</option>
@@ -393,7 +390,7 @@ if (!isset($_SESSION["login"])) { ?>
                             </div>
                             <div class="input-group input-group-static mb-4">
                                 <label for="estadoVehiculo" class="ms-0">Estado</label>
-                                <select class="form-control" id="estadoVehiculo" name="estadoVehiculo">
+                                <select require class="form-control" id="estadoVehiculo" name="estadoVehiculo">
                                     <option>Nuevo</option>
                                     <option>Usado</option>
                                 </select>
@@ -404,7 +401,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="maletasVehiculo" class="ms-0">Maletas</label>
-                                <select class="form-control" id="maletasVehiculo" name="maletasVehiculo">
+                                <select required class="form-control" id="maletasVehiculo" name="maletasVehiculo">
                                     <option>2</option>
                                     <option>4</option>
                                     <option>5+</option>
@@ -415,7 +412,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="personasVehiculo" class="ms-0">Personas</label>
-                                <select class="form-control" id="personasVehiculo" name="personasVehiculo">
+                                <select required class="form-control" id="personasVehiculo" name="personasVehiculo">
                                     <option>2</option>
                                     <option>4</option>
                                     <option>5+</option>
@@ -446,7 +443,7 @@ if (!isset($_SESSION["login"])) { ?>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <span class="ms-3 mt-2 error" style="color: #e91e63;"></span>
-            <form id="vehiculoNuevoForm" action="<?= base_url('admin/vehiculos/editar') ?>" method="POST" enctype="multipart/form-data">
+            <form id="edicionVehiculo" action="<?= base_url('admin/vehiculos/editar') ?>" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <input id="idVehiculo" name="idVehiculo" type="hidden" value="">
                     <div class="input-group input-group-static mb-4">
@@ -493,7 +490,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="tipoVehiculoEdit" class="ms-0">Tipo De Vehiculo</label>
-                                <select class="form-control" id="tipoVehiculoEdit" name="tipoVehiculoEdit">
+                                <select required class="form-control" id="tipoVehiculoEdit" name="tipoVehiculoEdit">
                                     <option>Coche</option>
                                     <option>Jeepeta</option>
                                     <option>Furgoneta</option>
@@ -501,7 +498,7 @@ if (!isset($_SESSION["login"])) { ?>
                             </div>
                             <div class="input-group input-group-static mb-4">
                                 <label for="transmisionVehiculoEdit" class="ms-0">Transimision</label>
-                                <select class="form-control" id="transmisionVehiculoEdit" name="transmisionVehiculoEdit">
+                                <select required class="form-control" id="transmisionVehiculoEdit" name="transmisionVehiculoEdit">
                                     <option>Automatico</option>
                                     <option>Manual</option>
                                     <option>Hibrido</option>
@@ -511,7 +508,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="combustibleVehiculoEdit" class="ms-0">Combustible</label>
-                                <select class="form-control" id="combustibleVehiculoEdit" name="combustibleVehiculoEdit">
+                                <select required class="form-control" id="combustibleVehiculoEdit" name="combustibleVehiculoEdit">
                                     <option>Gasolina</option>
                                     <option>Gasoil</option>
                                     <option>Gas</option>
@@ -519,7 +516,7 @@ if (!isset($_SESSION["login"])) { ?>
                             </div>
                             <div class="input-group input-group-static mb-4">
                                 <label for="estadoVehiculoEdit" class="ms-0">Estado</label>
-                                <select class="form-control" id="estadoVehiculoEdit" name="estadoVehiculoEdit">
+                                <select required class="form-control" id="estadoVehiculoEdit" name="estadoVehiculoEdit">
                                     <option>Nuevo</option>
                                     <option>Usado</option>
                                 </select>
@@ -530,7 +527,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="maletasVehiculoEdit" class="ms-0">Maletas</label>
-                                <select class="form-control" id="maletasVehiculoEdit" name="maletasVehiculoEdit">
+                                <select required class="form-control" id="maletasVehiculoEdit" name="maletasVehiculoEdit">
                                     <option>2</option>
                                     <option>4</option>
                                     <option>5+</option>
@@ -540,7 +537,7 @@ if (!isset($_SESSION["login"])) { ?>
                         <div class="col-6">
                             <div class="input-group input-group-static mb-4">
                                 <label for="personasVehiculoEdit" class="ms-0">Personas</label>
-                                <select class="form-control" id="personasVehiculoEdit" name="personasVehiculoEdit">
+                                <select required class="form-control" id="personasVehiculoEdit" name="personasVehiculoEdit">
                                     <option>2</option>
                                     <option>4</option>
                                     <option>5+</option>

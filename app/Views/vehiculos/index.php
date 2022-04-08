@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- favicon -->
+    <link rel="shortcut icon" href="<?= base_url() ?>/public/assets/image/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
@@ -14,7 +15,7 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/assets/css/style.css">
 
-    <title>0Humo Rent A Car</title>
+    <title>0Humo</title>
 
 </head>
 
@@ -24,7 +25,7 @@
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
-        <a href="#" class="logo"> <span>max</span>wheels </a>
+        <a href="#" class="logo"> <span>0</span>Humo </a>
         <div id="login-btn">
 
         </div>
@@ -54,7 +55,7 @@
 
         <img data-speed="5" class="home-parallax" src="<?= base_url() ?>/public/assets/image/home-img.png" alt="">
 
-        <a data-speed="7" href="#" class="btn home-parallax">explore cars</a>
+        <a data-speed="7" href="<?= base_url("catalogo") ?>" class="btn home-parallax">explore cars</a>
 
     </section>
 
@@ -72,7 +73,7 @@
             <i class="fas fa-car"></i>
             <div class="content">
                 <h3>4770+</h3>
-                <p>cars sold</p>
+                <p>rented cars</p>
             </div>
         </div>
 
@@ -105,96 +106,96 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-1.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
-                        <div class="price"> <span>price : </span> $62,000/- </div>
+                        <h3>porsche 911 Carrera 4</h3>
+                        <div class="price"> <span>price : </span> $10,000/dia </div>
                         <p>
                             new
                             <span class="fas fa-circle"></span> 2021
                             <span class="fas fa-circle"></span> automatic
-                            <span class="fas fa-circle"></span> petrol
-                            <span class="fas fa-circle"></span> 183mph
+                            <span class="fas fa-circle"></span> gas
+                            <span class="fas fa-circle"></span> 200mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-2.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
-                        <div class="price"> <span>price : </span> $62,000/- </div>
+                        <h3>porsche 718 Cayman </h3>
+                        <div class="price"> <span>price : </span> $30,000/dia </div>
                         <p>
                             new
-                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> 2022
                             <span class="fas fa-circle"></span> automatic
-                            <span class="fas fa-circle"></span> petrol
-                            <span class="fas fa-circle"></span> 183mph
+                            <span class="fas fa-circle"></span> gas
+                            <span class="fas fa-circle"></span> 150mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-3.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
-                        <div class="price"> <span>price : </span> $62,000/- </div>
+                        <h3>porsche 718 Cayman GT4 RS</h3>
+                        <div class="price"> <span>price : </span> $56,000/dia </div>
                         <p>
                             new
-                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> 2019
                             <span class="fas fa-circle"></span> automatic
-                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> gas
                             <span class="fas fa-circle"></span> 183mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-4.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
-                        <div class="price"> <span>price : </span> $62,000/- </div>
+                        <h3>porsche 911 Carrera Cabriolet</h3>
+                        <div class="price"> <span>price : </span> $40,000/dia </div>
                         <p>
                             new
                             <span class="fas fa-circle"></span> 2021
                             <span class="fas fa-circle"></span> automatic
-                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> gas
                             <span class="fas fa-circle"></span> 183mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-5.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
-                        <div class="price"> <span>price : </span> $62,000/- </div>
+                        <h3>porsche 911 Targa 4</h3>
+                        <div class="price"> <span>price : </span> $38,000/dia </div>
                         <p>
                             new
-                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> 2020
                             <span class="fas fa-circle"></span> automatic
                             <span class="fas fa-circle"></span> petrol
-                            <span class="fas fa-circle"></span> 183mph
+                            <span class="fas fa-circle"></span> 283mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-6.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
-                        <div class="price"> <span>price : </span> $62,000/- </div>
+                        <h3>porsche Cayenne E-Hybrid Coupé</h3>
+                        <div class="price"> <span>price : </span> $78,000/dia </div>
                         <p>
                             new
-                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> 2022
                             <span class="fas fa-circle"></span> automatic
-                            <span class="fas fa-circle"></span> petrol
-                            <span class="fas fa-circle"></span> 183mph
+                            <span class="fas fa-circle"></span> gasoil
+                            <span class="fas fa-circle"></span> 193mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
@@ -215,47 +216,43 @@
             <div class="box">
                 <i class="fas fa-car"></i>
                 <h3>car selling</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
-                <a href="#" class="btn"> read more</a>
+                <p>We make sales in our 49 branches in the country, contact us</p>
+
             </div>
 
             <div class="box">
                 <i class="fas fa-tools"></i>
                 <h3>parts repair</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
-                <a href="#" class="btn"> read more</a>
+                <p>We carry out repairs on your vehicle in addition to providing you with the rental service.</p>
+
             </div>
 
             <div class="box">
                 <i class="fas fa-car-crash"></i>
                 <h3>car insurance</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
-                <a href="#" class="btn"> read more</a>
+                <p>If during your stay with us you suffer any breakdown in your vehicle, you can contact us</p>
+
             </div>
 
             <div class="box">
                 <i class="fas fa-car-battery"></i>
                 <h3>battery replacement</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
-                <a href="#" class="btn"> read more</a>
+                <p>Do you have a problem with your batteries? don't worry, we can help you</p>
+
             </div>
 
             <div class="box">
                 <i class="fas fa-gas-pump"></i>
                 <h3>oil change</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
-                <a href="#" class="btn"> read more</a>
+                <p>We have a workshop in all our branches with professional mechanics who will help you</p>
             </div>
 
             <div class="box">
                 <i class="fas fa-headset"></i>
                 <h3>24/7 support</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, nisi.</p>
-                <a href="#" class="btn"> read more</a>
+                <p>Count on us at the time you need, if you suffer any problem, whenever, whatever, contact us</p>
             </div>
-
         </div>
-
     </section>
 
     <section class="featured" id="featured">
@@ -269,7 +266,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-1.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Mercedes-AMG GT</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -277,15 +274,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$55,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-2.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Cayenne E-Hybrid</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -293,15 +290,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$20,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-3.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Renault Clio</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -309,15 +306,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$12,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-4.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Audi Q7</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -325,8 +322,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$55,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
@@ -343,7 +340,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-5.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Kia Sorento Panorami 2022</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -351,15 +348,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$45,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-6.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Honda Civic</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -367,15 +364,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$12,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-7.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Kia Sonet</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -383,15 +380,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$40,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/car-8.png" alt="">
                     <div class="content">
-                        <h3>new model</h3>
+                        <h3>Chevrolet Equinox Lt 2023</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -399,8 +396,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="price">$55,000/-</div>
-                        <a href="#" class="btn">check out</a>
+                        <div class="price">$55,000/dia</div>
+                        <a href="<?= base_url("catalogo") ?>" class="btn">check out</a>
                     </div>
                 </div>
 
@@ -412,7 +409,7 @@
 
     </section>
 
-    <section class="newsletter">
+    <!-- <section class="newsletter">
 
         <h3>subscribe for latest updates</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, suscipit.</p>
@@ -422,7 +419,7 @@
             <input type="submit" value="subscribe">
         </form>
 
-    </section>
+    </section> -->
 
     <section class="reviews" id="reviews">
 
@@ -435,8 +432,8 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/pic-1.png" alt="">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                        <h3>john deo</h3>
+                        <p>I quite liked the user experience of the page and the attention provided in the facilities, plus the seasonal discounts are crazy!</p>
+                        <h3>Geanluis Lorenzo</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -450,8 +447,8 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/pic-2.png" alt="">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                        <h3>john deo</h3>
+                        <p>I am impressed with the attention they gave me at the facilities, when I arrived they offered me immediate attention and gave me some sandwiches to eat! incredible</p>
+                        <h3>Adriel De La Cruz</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -465,8 +462,8 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/pic-3.png" alt="">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
-                        <h3>john deo</h3>
+                        <p>When I arrived in the country I couldn't find a good rent a car, a friend told me to do 0Humo and I immediately contacted them and they attended me quickly, I was simply fantastic</p>
+                        <h3>Fidel Geronimo</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -480,7 +477,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/pic-4.png" alt="">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
+                        <p>I traveled to a small country in Asia, I thought I was not going to find a good rental car to move around the country, 0Humo was there to help me, perfect!</p>
                         <h3>john deo</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -495,7 +492,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/pic-5.png" alt="">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
+                        <p>I had to move from town and I had to buy a new vehicle, I was able to buy mine at the best price in a facility that was close to my house, excellent service</p>
                         <h3>john deo</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -510,7 +507,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/pic-6.png" alt="">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam incidunt quod praesentium iusto id autem possimus assumenda at ut saepe.</p>
+                        <p>Thank God I was able to hire this rent a car, it was a wonderful experience, I openly recommend it to all consumers</p>
                         <h3>john deo</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -536,9 +533,8 @@
 
         <div class="row">
 
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1632137920043!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-
-            <form action="">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25459.374071585466!2d-70.84383348722224!3d18.458339969434995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eba98b6e3b3202f%3A0xe4ab2c4383f09f87!2sSabana%20Yegua%2071000!5e0!3m2!1ses!2sdo!4v1649381708019!5m2!1ses!2sdo" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form>
                 <h3>get in touch</h3>
                 <input type="text" placeholder="your name" class="box">
                 <input type="email" placeholder="your email" class="box">
@@ -546,7 +542,6 @@
                 <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
                 <input type="submit" value="send message" class="btn">
             </form>
-
         </div>
 
     </section>
@@ -557,38 +552,36 @@
 
             <div class="box">
                 <h3>our branches</h3>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> india </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> russia </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+                <a> <i class=" fas fa-map-marker-alt"></i> india </a>
+                <a> <i class=" fas fa-map-marker-alt"></i> japan </a>
+                <a> <i class="fas fa-map-marker-alt"></i> france </a>
+                <a> <i class="fas fa-map-marker-alt"></i> russia </a>
+                <a> <i class="fas fa-map-marker-alt"></i> USA </a>
             </div>
 
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> vehicles </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> services </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+                <a href="#home"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="<?= base_url("catalogo") ?>"> <i class="fas fa-arrow-right"></i> vehicles </a>
+                <a href="#services"> <i class="fas fa-arrow-right"></i> services </a>
+                <a href="#featured"> <i class="fas fa-arrow-right"></i> featured </a>
+                <a href="#reviews"> <i class="fas fa-arrow-right"></i> reviews </a>
+                <a href="#contact"> <i class="fas fa-arrow-right"></i> contact </a>
             </div>
 
             <div class="box">
                 <h3>contact info</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-                <a href="#"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+                <a> <i class="fas fa-phone"></i> +1829-837-xxxx </a>
+                <a> <i class="fas fa-phone"></i> +809-884-xxxx </a>
+                <a> <i class="fas fa-envelope"></i> fidelgeronimo18@gmail.com </a>
+                <a> <i class="fas fa-map-marker-alt"></i> Azua, Sabana yegua - 71000 </a>
             </div>
 
             <div class="box">
                 <h3>contact info</h3>
-                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-                <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+                <a target="_blank" href="https://www.facebook.com/fidel.geronimo.7545/"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a target="_blank" href="https://www.instagram.com/fideljgr/?hl=es"> <i class="fab fa-instagram"></i> instagram </a>
+                <a target="_blank" href="https://www.linkedin.com/in/fidel-geronimo-3b6a04208/"> <i class="fab fa-linkedin"></i> linkedin </a>
             </div>
 
         </div>
