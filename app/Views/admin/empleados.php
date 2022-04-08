@@ -1,5 +1,8 @@
 <?= $this->include("includes/header");
 session_start(); ?>
+<script>
+    document.title = "Admin Empleados";
+</script>
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -151,7 +154,7 @@ session_start(); ?>
                                 </div>
                             </td>
                             <td>
-                                <p class="text-xs font-weight-bold mb-0"${empleados.funcion}</p>
+                                <p class="text-xs font-weight-bold mb-0">${empleados.funcion}</p>
                             </td>
                             <td class="align-middle text-center">
                                 <span class="text-secondary text-xs font-weight-normal">${empleados.telefono}</span>

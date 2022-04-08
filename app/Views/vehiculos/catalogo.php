@@ -331,7 +331,7 @@
                         $.each(response, function(key, vehiculo) {
                             $("#idVehiculo").val(vehiculo['id']);
                             $("#descripcionVehiculo").val(vehiculo['descripcion']);
-                            $("#precioVehiculo").val(vehiculo['precio']);
+                            $("#precio").val(vehiculo['precio']);
                             $("#transmisionVehiculo").val(vehiculo['transmision']);
                             $("#modeloVehiculo").val(vehiculo['modelo']);
                             $("#marcaVehiculo").val(vehiculo['marca']);

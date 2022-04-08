@@ -1,7 +1,9 @@
 <?= $this->include("includes/header");
 session_start();
 ?>
-
+<script>
+    document.title = "Admin Reportes";
+</script>
 <div class="container py-4">
     <div class="row">
         <div class="col-8">

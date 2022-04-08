@@ -463,7 +463,7 @@
                     <img src="<?= base_url() ?>/public/assets/image/pic-3.png" alt="">
                     <div class="content">
                         <p>When I arrived in the country I couldn't find a good rent a car, a friend told me to do 0Humo and I immediately contacted them and they attended me quickly, I was simply fantastic</p>
-                        <h3>Fidel Geronimo</h3>
+                        <h3>Alan Noel</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -478,7 +478,7 @@
                     <img src="<?= base_url() ?>/public/assets/image/pic-4.png" alt="">
                     <div class="content">
                         <p>I traveled to a small country in Asia, I thought I was not going to find a good rental car to move around the country, 0Humo was there to help me, perfect!</p>
-                        <h3>john deo</h3>
+                        <h3>Fidel Geronimo</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -493,7 +493,7 @@
                     <img src="<?= base_url() ?>/public/assets/image/pic-5.png" alt="">
                     <div class="content">
                         <p>I had to move from town and I had to buy a new vehicle, I was able to buy mine at the best price in a facility that was close to my house, excellent service</p>
-                        <h3>john deo</h3>
+                        <h3>Clara Diaz</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -508,7 +508,7 @@
                     <img src="<?= base_url() ?>/public/assets/image/pic-6.png" alt="">
                     <div class="content">
                         <p>Thank God I was able to hire this rent a car, it was a wonderful experience, I openly recommend it to all consumers</p>
-                        <h3>john deo</h3>
+                        <h3>Lisbel Marmol</h3>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>

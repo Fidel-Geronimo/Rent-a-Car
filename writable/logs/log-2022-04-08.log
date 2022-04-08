@@ -1,0 +1,14 @@
+CRITICAL - 2022-04-08 13:06:53 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rentacar\app\Controllers\AdminControllerRenta.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 52)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-08 13:06:54 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\rentacar\app\Controllers\AdminControllerRenta.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 52)
+#1 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(832): App\Controllers\AdminControllerRenta->nuevaRentaAdmin()
+#2 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminControllerRenta))
+#3 C:\xampp\htdocs\rentacar\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rentacar\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

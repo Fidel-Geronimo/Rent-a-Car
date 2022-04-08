@@ -16,7 +16,6 @@ class AdminControllerRenta extends Controller
 
     public function index()
     {
-        $renta = new RentaModel;
         $solicitudes = new SolicitudModel();
 
         $colorBotonesPanel = [

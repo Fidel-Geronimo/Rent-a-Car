@@ -1,6 +1,8 @@
 <?= $this->include("includes/header");
 session_start(); ?>
-
+<script>
+    document.title = "Admin Rentas";
+</script>
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -328,11 +330,17 @@ session_start(); ?>
             success: function(response) {
                 $.each(response.datos, function(indexInArray, datos) {
                     $("#TablasolicitudesPendientes>tbody").append(`<tr>
-                    <td class="align-middle text-center">
-                         <span class="text-secondary text-xs font-weight-normal">${datos['cliente']}</span>
+                    <td>
+                        <div class="d-flex py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                                <h6 class="prueba mb-0 text-xs">${datos['cliente']}</h6>
+                                <p class="text-xs text-secondary mb-0">${datos['telefono']}</p>
+                                <p class="text-xxs text-secondary mb-0">${datos['email']}</p>
+                            </div>
+                        </div>
                     </td>
                     <td>
-                        <div class="d-flex px-2 py-1">
+                        <div class="d-flex py-1">
                             <div>
                                 <img alt='${datos['idvehiculo']}' src="<?= base_url() ?>/public/uploads/${datos['fotovehiculo']}" class="imagenVehiculoSolicitud avatar avatar-xl me-3">
                             </div>
@@ -346,13 +354,7 @@ session_start(); ?>
                         </div>
                     </td>
                     <td class="align-middle text-center">
-                         <span class="text-secondary text-xs font-weight-normal">${datos['telefono']}</span>
-                    </td>
-                    <td class="align-middle text-center">
-                         <span class="text-secondary text-xs font-weight-normal">${datos['email']}</span>
-                    </td>
-                    <td class="align-middle text-center">
-                        <div class="d-flex px-2 py-1">
+                        <div class="d-flex">
                             <div class="d-flex flex-column justify-content-center">
                                 <span class="text-secondary text-xs font-weight-normal">${datos['fecharecogida']}---</span>
                             </div>
@@ -360,9 +362,7 @@ session_start(); ?>
                                 <span class="text-secondary text-xs font-weight-normal">${datos['fechadevolucion']}</span>
                             </div>
                         </div>
-                    </td>
-                    <td class="align-middle text-center">
-                        <div class="d-flex px-2 py-1">
+                        <div class="d-flex">
                             <div class="d-flex flex-column justify-content-center">
                                 <span class="text-secondary text-xs font-weight-normal">${datos['horarecogida']}---</span>
                             </div>
