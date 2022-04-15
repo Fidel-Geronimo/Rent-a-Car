@@ -534,12 +534,14 @@
         <div class="row">
 
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25459.374071585466!2d-70.84383348722224!3d18.458339969434995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eba98b6e3b3202f%3A0xe4ab2c4383f09f87!2sSabana%20Yegua%2071000!5e0!3m2!1ses!2sdo!4v1649381708019!5m2!1ses!2sdo" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <form>
+            <form method="post" action="https://formsubmit.co/8d95b683c1db29374d0485632f5ece29">
                 <h3>get in touch</h3>
-                <input type="text" placeholder="your name" class="box">
-                <input type="email" placeholder="your email" class="box">
-                <input type="tel" placeholder="subject" class="box">
-                <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://0humo.epizy.com/#contact">
+                <input name="name" type="text" placeholder="your name" class="box">
+                <input name="email" type="email" placeholder="your email" class="box">
+                <input name="phone" type="tel" placeholder="subject" class="box">
+                <textarea name="message" placeholder="your message" class="box" cols="30" rows="10"></textarea>
                 <input type="submit" value="send message" class="btn">
             </form>
         </div>
