@@ -386,6 +386,7 @@ if (!isset($_SESSION["login"])) { ?>
                                     <option>Gasolina</option>
                                     <option>Gasoil</option>
                                     <option>Gas</option>
+                                    <option>Electrico</option>
                                 </select>
                             </div>
                             <div class="input-group input-group-static mb-4">
@@ -512,6 +513,7 @@ if (!isset($_SESSION["login"])) { ?>
                                     <option>Gasolina</option>
                                     <option>Gasoil</option>
                                     <option>Gas</option>
+                                    <option>Electrico</option>
                                 </select>
                             </div>
                             <div class="input-group input-group-static mb-4">

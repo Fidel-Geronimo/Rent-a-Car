@@ -85,7 +85,6 @@ class SolicitudController extends Controller
         $solicitud->insert($datos);
         $_SESSION["SolicitudNueva"] = "Alguien Ha Solicitado Renta";
         $respuesta = ['respuesta' => 'Solicitud Enviada!'];
-        sleep(3);
         return $this->response->setJSON($respuesta);
     }
 }

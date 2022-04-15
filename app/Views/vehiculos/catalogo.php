@@ -76,8 +76,8 @@
                         <form id="detalleForm" style="display: none;">
                             <div class="container">
                                 <div class="row">
-                                    <div class="container">
-                                        <img id="fotoVehiculo" class="rounded mx-auto d-block" src="" alt="">
+                                    <div class="text-center">
+                                        <img id="fotoVehiculo" class="rounded img-fluid" src="" alt="">
                                     </div>
                                     <div class="col-6">
                                         <div class="mb-3">
@@ -128,9 +128,7 @@
                                                 <div class="mb-3">
                                                     <label for="maletasVehiculos" class="form-label">Maletas</label>
                                                     <input readonly type="text" class="form-control inputs-personalizados" id="maletasVehiculos">
-
                                                 </div>
-
                                             </div>
                                             <div class="col-6">
                                                 <div class="mb-3">
@@ -328,22 +326,25 @@
                         'idVehiculo': idVehiculo
                     },
                     success: function(response) {
-                        $.each(response, function(key, vehiculo) {
-                            $("#idVehiculo").val(vehiculo['id']);
-                            $("#descripcionVehiculo").val(vehiculo['descripcion']);
-                            $("#precio").val(vehiculo['precio']);
-                            $("#transmisionVehiculo").val(vehiculo['transmision']);
-                            $("#modeloVehiculo").val(vehiculo['modelo']);
-                            $("#marcaVehiculo").val(vehiculo['marca']);
-                            $("#combustibleVehiculo").val(vehiculo['tipocombustible']);
-                            $("#tipoVehiculo").val(vehiculo['tipovehiculo']);
-                            $("#estadoVehiculo").val(vehiculo['estado']);
-                            $("#maletasVehiculos").val(vehiculo['maletas']);
-                            $("#personasVehiculos").val(vehiculo['personas']);
-                            $("#fotoVehiculo").attr("src", '<?= base_url("/public/uploads") ?>/' + vehiculo['foto']);
-                            $(".svg-loader").slideUp();
-                            $("#detalleForm").fadeIn(1000);
-                        });
+                        setTimeout(() => {
+                            $.each(response, function(key, vehiculo) {
+                                $("#idVehiculo").val(vehiculo['id']);
+                                $("#descripcionVehiculo").val(vehiculo['descripcion']);
+                                $("#precio").val(vehiculo['precio']);
+                                $("#transmisionVehiculo").val(vehiculo['transmision']);
+                                $("#modeloVehiculo").val(vehiculo['modelo']);
+                                $("#marcaVehiculo").val(vehiculo['marca']);
+                                $("#combustibleVehiculo").val(vehiculo['tipocombustible']);
+                                $("#tipoVehiculo").val(vehiculo['tipovehiculo']);
+                                $("#estadoVehiculo").val(vehiculo['estado']);
+                                $("#maletasVehiculos").val(vehiculo['maletas']);
+                                $("#personasVehiculos").val(vehiculo['personas']);
+                                $("#fotoVehiculo").attr("src", '<?= base_url("/public/uploads") ?>/' + vehiculo['foto']);
+                                $(".svg-loader").slideUp();
+                                $("#detalleForm").fadeIn(1000);
+                            });
+                        }, 1000)
+
                     }
                 });
             });
@@ -428,12 +429,15 @@
                         url: "catalogo/rentar",
                         data: datos,
                         success: function(response) {
-                            $('#rentaCliente')[0].reset();
-                            $("#rentaCliente").show(1000);
-                            $("#modalRentaVehiculo").modal("hide");
-                            alertify.set('notifier', 'position', 'top-right');
-                            alertify.success(response.respuesta);
-                            // console.log(response);
+                            setTimeout(() => {
+                                $('#rentaCliente')[0].reset();
+                                $("#rentaCliente").show(1000);
+                                $("#modalRentaVehiculo").modal("hide");
+                                alertify.set('notifier', 'position', 'top-right');
+                                alertify.success(response.respuesta);
+                                // console.log(response);
+                            }, 2000)
+
                         }
                     });
                 }

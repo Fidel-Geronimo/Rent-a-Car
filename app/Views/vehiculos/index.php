@@ -106,7 +106,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-1.png" alt="">
                     <div class="content">
-                        <h3>porsche 911 Carrera 4</h3>
+                        <h3>Porsche 911 Carrera 4</h3>
                         <div class="price"> <span>price : </span> $10,000/dia </div>
                         <p>
                             new
@@ -122,7 +122,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-2.png" alt="">
                     <div class="content">
-                        <h3>porsche 718 Cayman </h3>
+                        <h3>Porsche 718 Cayman </h3>
                         <div class="price"> <span>price : </span> $30,000/dia </div>
                         <p>
                             new
@@ -138,7 +138,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-3.png" alt="">
                     <div class="content">
-                        <h3>porsche 718 Cayman GT4 RS</h3>
+                        <h3>Porsche 718 Cayman GT4 RS</h3>
                         <div class="price"> <span>price : </span> $56,000/dia </div>
                         <p>
                             new
@@ -154,7 +154,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-4.png" alt="">
                     <div class="content">
-                        <h3>porsche 911 Carrera Cabriolet</h3>
+                        <h3>Porsche 911 Carrera Cabriolet</h3>
                         <div class="price"> <span>price : </span> $40,000/dia </div>
                         <p>
                             new
@@ -170,7 +170,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-5.png" alt="">
                     <div class="content">
-                        <h3>porsche 911 Targa 4</h3>
+                        <h3>Porsche 911 Targa 4</h3>
                         <div class="price"> <span>price : </span> $38,000/dia </div>
                         <p>
                             new
@@ -186,7 +186,7 @@
                 <div class="swiper-slide box">
                     <img src="<?= base_url() ?>/public/assets/image/vehicle-6.png" alt="">
                     <div class="content">
-                        <h3>porsche Cayenne E-Hybrid Coupé</h3>
+                        <h3>Porsche Cayenne E-Hybrid Coupé</h3>
                         <div class="price"> <span>price : </span> $78,000/dia </div>
                         <p>
                             new
