@@ -541,7 +541,7 @@
                 <input type="hidden" name="_next" value="http://0humo.epizy.com/#contact">
                 <input name="name" type="text" placeholder="your name" class="box">
                 <input name="email" type="email" placeholder="your email" class="box">
-                <input name="phone" type="tel" placeholder="subject" class="box">
+                <input name="phone" type="text" placeholder="subject" class="box">
                 <textarea name="message" placeholder="your message" class="box" cols="30" rows="10"></textarea>
                 <input type="submit" value="send message" class="btn">
             </form>
