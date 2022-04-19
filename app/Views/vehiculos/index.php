@@ -11,7 +11,8 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <!-- animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="<?= base_url() ?>/public/assets/css/style.css">
 
@@ -95,7 +96,7 @@
 
     </section>
 
-    <section class="vehicles" id="vehicles">
+    <section data-aos="fade-up" class="vehicles" id="vehicles">
 
         <h1 class="heading"> popular <span>vehicles</span> </h1>
 
@@ -207,7 +208,7 @@
 
     </section>
 
-    <section class="services" id="services">
+    <section data-aos="flip-left" class="services" id="services">
 
         <h1 class="heading"> our <span>services</span> </h1>
 
@@ -255,7 +256,7 @@
         </div>
     </section>
 
-    <section class="featured" id="featured">
+    <section data-aos="zoom-in-down" class="featured" id="featured">
 
         <h1 class="heading"> <span>featured</span> cars </h1>
 
@@ -421,7 +422,7 @@
 
     </section> -->
 
-    <section class="reviews" id="reviews">
+    <section data-aos="fade-up" class="reviews" id="reviews">
 
         <h1 class="heading"> client's <span>review</span> </h1>
 
@@ -527,7 +528,7 @@
 
     </section>
 
-    <section class="contact" id="contact">
+    <section data-aos="fade-up" class="contact" id="contact">
 
         <h1 class="heading"><span>contact</span> us</h1>
 
@@ -592,7 +593,11 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="<?= base_url() ?>/public/assets/js/script.js"></script>
-
+    <!-- animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 

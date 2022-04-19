@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="<?= base_url() ?>/public/assets/image/favicon.png" type="image/x-icon">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <!-- animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- alertify -->
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/public/assets/alertify/alertify.css">
 
@@ -217,7 +218,7 @@
         <section class="featured" id="featured">
             <div class="featured-catalogo">
                 <?php foreach ($data as $datos) : ?>
-                    <div class="box">
+                    <div data-aos="fade-up" class="box">
                         <input id="" type="hidden" value="<?= $datos['id'] ?>">
                         <img src=" <?= base_url("public/uploads") .  '/' . $datos['foto'] ?>" alt="">
                         <div class="content">
@@ -446,6 +447,11 @@
 
 
         });
+    </script>
+    <!-- animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

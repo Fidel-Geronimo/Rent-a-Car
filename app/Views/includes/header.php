@@ -920,7 +920,7 @@ if (!isset($_SESSION["login"])) { ?>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="table-responsive">
+                <div class="table-responsive-md">
                     <table id="TablasolicitudesPendientes" class="table align-items-center mb-0">
                         <thead>
                             <tr>

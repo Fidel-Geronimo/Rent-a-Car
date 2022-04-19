@@ -8,9 +8,11 @@ use CodeIgniter\Controller;
 use App\Models\SolicitudModel;
 use App\Models\VehiculoModel;
 use App\Models\ClientesModel;
+use App\Models\Push;
 
 class SolicitudController extends Controller
 {
+
     public function index()
     {
         $solicitud = new SolicitudModel();
@@ -20,15 +22,18 @@ class SolicitudController extends Controller
     public function solicitudesBoton()
     {
         $solicitudes = new SolicitudModel();
+        $push = new Push();
         $data = ['conteo' => $solicitudes->countAll()];
-        if (isset($_SESSION['SolicitudNueva'])) {
+        $notifications = $push->countAll();
+        if ($notifications > 0) {
             $dataNotification = [
                 'conteo' => $solicitudes->countAll(),
                 'notificacion' => 'Solicitud Nueva'
             ];
-            unset($_SESSION['SolicitudNueva']);
+            $push->emptyTable();
             return $this->response->setJSON($dataNotification);
         }
+
         return $this->response->setJSON($data);
     }
     public function ProcesarSolicitud()
@@ -83,7 +88,10 @@ class SolicitudController extends Controller
             'diastotales' =>  $this->request->getPost('diasTotales')
         ];
         $solicitud->insert($datos);
-        $_SESSION["SolicitudNueva"] = "Alguien Ha Solicitado Renta";
+        // $_SESSION["SolicitudNueva"] = "Alguien Ha Solicitado Renta";
+        $push = new Push();
+        $pushData = ['cantidad' => 1];
+        $push->insert($pushData);
         $respuesta = ['respuesta' => 'Solicitud Enviada!'];
         return $this->response->setJSON($respuesta);
     }
