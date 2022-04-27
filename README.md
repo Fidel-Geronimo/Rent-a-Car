@@ -29,17 +29,16 @@ Este proyecto es construido por motivos universitarios. Aqui los responsables
 ## Vista Previa Del Sistema 📷
 
 ### Primer Vistazo del cliente: 
-![image](https://user-images.githubusercontent.com/98572888/159933442-cf1bcaa6-84ce-40e9-9473-cce4cf0e3392.png)
+![image](https://user-images.githubusercontent.com/98572888/165414183-67d8934b-a536-4a55-9a05-bd0c962b0d5b.png)
 
 ### Catalogo de Vehiculos Disponibles
-![image](https://user-images.githubusercontent.com/98572888/159933604-4ca3d1b0-ecc2-4398-a368-f83ed09a37ae.png)
+![image](https://user-images.githubusercontent.com/98572888/165414129-ab71fbd8-1ccf-4cb2-870e-eed167e31485.png)
 
 ### Panel Administrativo:
-![image](https://user-images.githubusercontent.com/98572888/159933982-1bbe0783-1d4b-4a70-b524-38f86f636ac0.png)
+![image](https://user-images.githubusercontent.com/98572888/165414300-e9ea4409-301b-4d53-a424-6ed8b81cee93.png)
 
-### Gestion De Empleados:
-![image](https://user-images.githubusercontent.com/98572888/159934050-3e93d985-bacd-42e3-b943-84eaa74cbef7.png)
-
+### Gestion De Vehiculos:
+![image](https://user-images.githubusercontent.com/98572888/165414342-5745c2cd-43e0-4941-b378-860fd08758da.png)
 
 ## Expresiones de Gratitud 🎁
 
