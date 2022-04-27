@@ -3,8 +3,8 @@
 Este es un sistema para un Rent A Car, posee un panel administrativo para gestionar las solicitudes de los clientes, cabe a estacar que tanmbien cuenta con una parte para el cliente, donde este podra realizar sus solicitudes a nuestro negocio y posterior a eso ser gestionadas por el personal administrativo del local mediante el panel administrativo.
 
 ## Project status ⭕
-Este Proyecto se encuentra actualmente en desarrollo, no cuenta con una version beta de prueba.
-Estaremos actualizando el repositorio con las respectivos updates del sistema.❤
+Este Proyecto se encuentra actualmente Publicado, puedes visitarlo y probarlo directamente: http://0humo.epizy.com/
+❤
 
 ## Construido con 🛠️
 
